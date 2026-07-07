@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sandhyaarorafitness.com/sitemap.xml
