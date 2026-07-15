@@ -10,9 +10,7 @@
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0E0E1A">
  
-<!-- Canonical URL - replace with the live domain -->
 <link rel="canonical" href="https://www.sandhyaarorafitness.com/">
-<!-- Open Graph / Social sharing -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sandhya Arora Fitness">
 <meta property="og:title" content="Sandhya Arora Fitness | Personal Trainer & Online Fitness Coach – India & Worldwide">
@@ -30,7 +28,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<!-- Structured data: LocalBusiness, Founder, Services, Reviews, FAQ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -190,10 +187,15 @@
     border-bottom: 1px solid rgba(233,69,96,0.2);
   }
   .nav-logo {
-    font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--white);
-    letter-spacing: -0.3px; text-decoration: none;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
   }
-  .nav-logo span { color: var(--red); }
+  .nav-logo img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+  }
   .nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
   .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; letter-spacing: 0.3px; transition: color 0.2s; }
   .nav-links a:hover { color: var(--white); }
@@ -479,7 +481,7 @@
     padding: 60px; font-size: 14px;
   }
   .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 48px; }
-  .footer-brand .nav-logo { font-size: 20px; display: block; margin-bottom: 14px; }
+  .footer-brand .nav-logo { margin-bottom: 14px; display: inline-flex; }
   .footer-tagline { font-size: 14px; color: rgba(255,255,255,0.35); line-height: 1.6; max-width: 260px; }
   .footer-col h4 { color: var(--white); font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
   .footer-col ul { list-style: none; }
@@ -573,7 +575,7 @@
   }
   /* ─── RESPONSIVE: SMALL MOBILE (≤420px) ─── */
   @media (max-width: 420px) {
-    .nav-logo { font-size: 18px; }
+    .nav-logo img { height: 38px; }
     .section-sub { font-size: 15px; margin-bottom: 40px; }
     .service-card { padding: 26px; }
     .program-header, .program-features, .program-footer { padding-left: 20px; padding-right: 20px; }
@@ -585,9 +587,10 @@
 </style>
 </head>
 <body>
-<!-- ── NAVIGATION ────────────────────────────────────── -->
 <nav>
-  <a href="#home" class="nav-logo">Sandhya<span> Arora</span> Fitness</a>
+  <a href="#home" class="nav-logo">
+    <img src="https://i.ibb.co/vvPXz7xR/Sandhya-Arora-Fitness-logo.jpg" alt="Sandhya Arora Fitness Logo">
+  </a>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
     <span></span><span></span><span></span>
   </button>
@@ -600,7 +603,6 @@
   </ul>
 </nav>
 <main>
-<!-- ── HERO ──────────────────────────────────────────── -->
 <section class="hero" id="home">
   <div class="hero-grid">
     <div class="hero-content">
@@ -653,7 +655,6 @@
     </div>
   </div>
 </section>
-<!-- ── SERVICES ───────────────────────────────────────── -->
 <section class="services" id="services">
   <div class="section-container">
     <p class="section-eyebrow">What I Offer</p>
@@ -691,7 +692,6 @@
     </div>
   </div>
 </section>
-<!-- ── ABOUT ──────────────────────────────────────────── -->
 <section class="about" id="about">
   <div class="section-container">
     <div class="about-grid">
@@ -737,7 +737,6 @@
     </div>
   </div>
 </section>
-<!-- ── TESTIMONIALS ────────────────────────────────────── -->
 <section class="testimonials" id="testimonials">
   <div class="section-container">
     <p class="section-eyebrow" style="color:var(--red-light);">Real Results</p>
@@ -780,7 +779,6 @@
     </div>
   </div>
 </section>
-<!-- ── PROGRAMS ────────────────────────────────────────── -->
 <section class="programs" id="programs">
   <div class="section-container">
     <p class="section-eyebrow">Online Programs</p>
@@ -849,7 +847,6 @@
     </div>
   </div>
 </section>
-<!-- ── FAQ ────────────────────────────────────────────── -->
 <section class="faq" id="faq">
   <div class="section-container">
     <p class="section-eyebrow">FAQs</p>
@@ -882,7 +879,6 @@
     </div>
   </div>
 </section>
-<!-- ── CTA BANNER ─────────────────────────────────────── -->
 <section class="cta-banner" id="contact">
   <h2>Ready to Start Your Fitness Journey?</h2>
   <p>Book a free 30-minute consultation with Sandhya. No commitment required - just an honest conversation about your goals.</p>
@@ -893,13 +889,14 @@
   <p style="margin-top:24px; font-size:13px; color:rgba(255,255,255,0.5);">No commitment · Online &amp; in-person options · Reply within 24 hours</p>
 </section>
 </main>
-<!-- ── FOOTER ──────────────────────────────────────────── -->
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <a href="#home" class="nav-logo" style="text-decoration:none;">Sandhya<span style="color:var(--red);"> Arora</span> Fitness</a>
+      <a href="#home" class="nav-logo">
+        <img src="https://i.ibb.co/vvPXz7xR/Sandhya-Arora-Fitness-logo.jpg" alt="Sandhya Arora Fitness Logo">
+      </a>
       <p class="footer-tagline">Certified personal trainer helping hundreds of people across India and around the world transform their bodies and reclaim their lives.</p>
-      <p style="margin-top:16px; font-size:12px; color:rgba(255,255,255,0.25);">Tagline: Transform. Strengthen. Thrive.</p>
+      <p style="margin-top:16px; font-size:12px; color:rgba(255,255,255,0.25);">Transform. Strengthen. Thrive.</p>
       <div class="footer-social">
         <a href="#" class="soc-btn" aria-label="Instagram">IG</a>
         <a href="#" class="soc-btn" aria-label="YouTube">YT</a>
@@ -943,7 +940,6 @@
     <span>Privacy Policy · Terms &amp; Conditions · Refund Policy</span>
   </div>
 </footer>
-<!-- ── FLOATING WHATSAPP BUTTON ─────────────────────────── -->
 <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20know%20more%20about%20your%20fitness%20programs." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
