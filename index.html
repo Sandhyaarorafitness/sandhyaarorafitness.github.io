@@ -76,21 +76,20 @@
         },
         {
           "@type": "Offer",
-          "price": "7999",
-          "priceCurrency": "INR",
-          "itemOffered": { "@type": "Service", "name": "Kickstart Program (4 Weeks)", "description": "Build habits, lose initial weight, and find your fitness rhythm." }
+          "priceSpecification": { "@type": "PriceSpecification", "minPrice": "600", "maxPrice": "700", "priceCurrency": "INR" },
+          "itemOffered": { "@type": "Service", "name": "Online Personal Training", "description": "1-on-1 live online training sessions, billed per session." }
         },
         {
           "@type": "Offer",
-          "price": "19999",
+          "price": "1200",
           "priceCurrency": "INR",
-          "itemOffered": { "@type": "Service", "name": "Total Transformation Program (12 Weeks)", "description": "The complete lifestyle overhaul — body, nutrition, and mindset." }
+          "itemOffered": { "@type": "Service", "name": "Offline Personal Training", "description": "1-on-1 in-person training sessions, billed per session." }
         },
         {
           "@type": "Offer",
-          "price": "12999",
+          "price": "300",
           "priceCurrency": "INR",
-          "itemOffered": { "@type": "Service", "name": "Strength Builder Program (8 Weeks)", "description": "Lean muscle, body recomposition, and strength you can feel." }
+          "itemOffered": { "@type": "Service", "name": "Group Classes", "description": "Group fitness classes, billed per session." }
         }
       ],
       "review": [
@@ -134,7 +133,7 @@
         {
           "@type": "Question",
           "name": "What's the best program for weight loss?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The 12-Week Total Transformation Program combines customised workouts with nutrition coaching and accountability check-ins for maximum sustainable fat loss and body recomposition." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Online or Offline Personal Training combines customised workouts with nutrition coaching and consistent accountability, session by session, for sustainable fat loss and body recomposition." }
         },
         {
           "@type": "Question",
@@ -390,9 +389,7 @@
   }
   .testi-name { font-size: 14px; font-weight: 600; color: var(--white); }
   .testi-meta { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 2px; }
-  /* ─── PROGRAMS ────────────────────────────────────── */
-  .programs { padding: var(--section-pad); background: var(--cream); }
-  .program-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  /* ─── PRICING / PROGRAM CARDS (shared card component) ── */
   .program-card {
     background: var(--white); border-radius: 14px; overflow: hidden;
     border: 1px solid var(--border); transition: transform 0.2s;
@@ -437,8 +434,15 @@
   .program-cta:hover { background: var(--red-light); }
   .program-card:not(.featured) .program-cta { background: transparent; color: var(--red); border: 1.5px solid var(--red); }
   .program-card:not(.featured) .program-cta:hover { background: var(--red); color: var(--white); }
+  /* ─── PRICING ─────────────────────────────────────── */
+  .pricing { padding: var(--section-pad); background: var(--white); }
+  .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .pricing-billing {
+    font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px;
+    color: var(--muted); margin-top: 6px;
+  }
   /* ─── FAQ ─────────────────────────────────────────── */
-  .faq { padding: var(--section-pad); background: var(--white); }
+  .faq { padding: var(--section-pad); background: var(--cream); }
   .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   .faq-item {
     padding: 24px 28px; border: 1px solid var(--border);
@@ -516,7 +520,7 @@
   }
   /* ─── RESPONSIVE: TABLET LANDSCAPE / SMALL LAPTOP (≤1024px) ─── */
   @media (max-width: 1024px) {
-    .testi-grid, .program-grid { grid-template-columns: repeat(2, 1fr); }
+    .testi-grid, .pricing-grid { grid-template-columns: repeat(2, 1fr); }
     .services-grid { gap: 20px; }
     .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px 28px; }
   }
@@ -542,7 +546,7 @@
     .hero-badge2 { right: 0; top: 20px; padding: 10px 14px; }
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
     .section-container, .cta-banner { padding: 0 28px; }
-    .services-grid, .testi-grid, .program-grid, .faq-grid { grid-template-columns: 1fr; }
+    .services-grid, .testi-grid, .pricing-grid, .faq-grid { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
     .footer-brand { grid-column: 1 / -1; }
     footer { padding: 48px 28px; }
@@ -592,7 +596,7 @@
   <ul class="nav-links" id="navLinks">
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
-    <li><a href="#programs">Programs</a></li>
+    <li><a href="#pricing">Pricing</a></li>
     <li><a href="#testimonials">Results</a></li>
     <li><a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20book%20a%20free%20consultation%20call." class="nav-cta" target="_blank" rel="noopener">Book Free Call</a></li>
   </ul>
@@ -607,7 +611,7 @@
       <p class="hero-sub">Trusted by clients across India and around the world for personalised 1-on-1 training, group classes, and online programs. Real results. No shortcuts. Just you, your goals, and the right guidance.</p>
       <div class="hero-ctas">
         <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20book%20a%20free%20consultation%20call." class="btn-primary" target="_blank" rel="noopener">Book a Free Consultation</a>
-        <a href="#programs" class="btn-outline">Explore Programs</a>
+        <a href="#pricing" class="btn-outline">View Pricing</a>
       </div>
       <div class="hero-trust">
         <div class="trust-item">
@@ -672,8 +676,8 @@
         <div class="service-icon" aria-hidden="true">💻</div>
         <p class="service-tag">Train Anywhere</p>
         <h3 class="service-title">Online Coaching Programs</h3>
-        <p class="service-desc">Structured 4, 8, and 12-week programs with workout plans, nutrition guidance, and weekly check-ins - delivered entirely through your device. Train from anywhere in India or abroad.</p>
-        <a href="#programs" class="service-link">View Programs</a>
+        <p class="service-desc">Live 1-on-1 sessions with workout plans, nutrition guidance, and progress tracking - delivered entirely through your device. Train from anywhere in India or abroad.</p>
+        <a href="#pricing" class="service-link">View Pricing</a>
       </article>
       <article class="service-card">
         <div class="service-icon" aria-hidden="true">🥗</div>
@@ -774,70 +778,72 @@
     </div>
   </div>
 </section>
-<!-- ── PROGRAMS ────────────────────────────────────────── -->
-<section class="programs" id="programs">
+<!-- ── PRICING ─────────────────────────────────────────── -->
+<section class="pricing" id="pricing">
   <div class="section-container">
-    <p class="section-eyebrow">Online Programs</p>
-    <h2 class="section-title">Choose Your Transformation</h2>
-    <p class="section-sub" style="margin-bottom:48px;">Structured programs with workouts, nutrition, weekly check-ins, and WhatsApp support - for every goal and lifestyle.</p>
-    <div class="program-grid">
-      <article class="program-card">
-        <div class="program-header">
-          <p class="program-week">4 Weeks</p>
-          <h3 class="program-name">Kickstart Program</h3>
-          <p class="program-tagline">Build habits, lose initial weight, and find your fitness rhythm.</p>
-        </div>
-        <div class="program-divider"></div>
-        <ul class="program-features">
-          <li>Customised workout plan</li>
-          <li>Nutrition framework guide</li>
-          <li>2 weekly check-in calls</li>
-          <li>WhatsApp support</li>
-          <li>Progress tracking app</li>
-        </ul>
-        <div class="program-footer">
-          <div class="program-price">₹7,999 <span>/ 4 weeks</span></div>
-          <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20am%20interested%20in%20the%20Kickstart%20Program%20(4%20Weeks).%20Please%20share%20more%20details." class="program-cta" target="_blank" rel="noopener">Get Started</a>
-        </div>
-      </article>
+    <p class="section-eyebrow">Pricing</p>
+    <h2 class="section-title">Choose What Fits You Best</h2>
+    <p class="section-sub" style="margin-bottom:48px;">Simple, pay-per-session pricing across online, offline, and group training - so you can start wherever you are.</p>
+    <div class="pricing-grid">
       <article class="program-card featured">
         <span class="popular-badge">Most Popular</span>
         <div class="program-header">
-          <p class="program-week">12 Weeks</p>
-          <h3 class="program-name">Total Transformation</h3>
-          <p class="program-tagline">The complete lifestyle overhaul - body, nutrition, and mindset.</p>
+          <p class="program-week">Online</p>
+          <h3 class="program-name">Online Personal Training</h3>
+          <p class="program-tagline">1-on-1 live coaching from anywhere in the world.</p>
         </div>
         <div class="program-divider"></div>
         <ul class="program-features">
-          <li>Fully customised training</li>
-          <li>Personalised meal framework</li>
-          <li>Weekly video calls</li>
-          <li>Daily WhatsApp support</li>
-          <li>Supplement guidance</li>
-          <li>Progress report & photos</li>
+          <li>1-on-1 Live Training Sessions</li>
+          <li>Personalized Workout Plans</li>
+          <li>Diet & Nutrition Guidance</li>
+          <li>Progress Tracking & Support</li>
+          <li>Train from Anywhere in the World</li>
         </ul>
         <div class="program-footer">
-          <div class="program-price">₹19,999 <span>/ 12 weeks</span></div>
-          <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20am%20interested%20in%20the%20Total%20Transformation%20Program%20(12%20Weeks).%20Please%20share%20more%20details." class="program-cta" target="_blank" rel="noopener">Book This Program</a>
+          <div class="program-price">₹600 – ₹700</div>
+          <p class="pricing-billing">Per Session</p>
+          <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20am%20interested%20in%20Online%20Personal%20Training.%20Please%20share%20more%20details." class="program-cta" target="_blank" rel="noopener">Book Your Session Now</a>
         </div>
       </article>
       <article class="program-card">
         <div class="program-header">
-          <p class="program-week">8 Weeks</p>
-          <h3 class="program-name">Strength Builder</h3>
-          <p class="program-tagline">Lean muscle, body recomposition, and strength you can feel.</p>
+          <p class="program-week">Offline</p>
+          <h3 class="program-name">Offline Personal Training</h3>
+          <p class="program-tagline">1-on-1 in-person coaching at my studio or your location.</p>
         </div>
         <div class="program-divider"></div>
         <ul class="program-features">
-          <li>Strength-focused training plan</li>
-          <li>Protein & macro guidance</li>
-          <li>Weekly check-in calls</li>
-          <li>WhatsApp support</li>
-          <li>Form video reviews</li>
+          <li>1-on-1 In-Person Training</li>
+          <li>Customized Workout Plans</li>
+          <li>Nutrition & Lifestyle Guidance</li>
+          <li>Form Correction & Motivation</li>
+          <li>At My Studio / Your Location</li>
         </ul>
         <div class="program-footer">
-          <div class="program-price">₹12,999 <span>/ 8 weeks</span></div>
-          <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20am%20interested%20in%20the%20Strength%20Builder%20Program%20(8%20Weeks).%20Please%20share%20more%20details." class="program-cta" target="_blank" rel="noopener">Get Started</a>
+          <div class="program-price">₹1,200</div>
+          <p class="pricing-billing">Per Session</p>
+          <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20am%20interested%20in%20Offline%20Personal%20Training.%20Please%20share%20more%20details." class="program-cta" target="_blank" rel="noopener">Book Your Session Now</a>
+        </div>
+      </article>
+      <article class="program-card">
+        <div class="program-header">
+          <p class="program-week">Group</p>
+          <h3 class="program-name">Group Classes</h3>
+          <p class="program-tagline">Fun, energetic group workouts for every fitness level.</p>
+        </div>
+        <div class="program-divider"></div>
+        <ul class="program-features">
+          <li>Fun & Energetic Group Workout</li>
+          <li>Strength, Cardio, Mobility & More</li>
+          <li>All Fitness Levels Welcome</li>
+          <li>Stay Motivated & Consistent</li>
+          <li>Affordable & Effective</li>
+        </ul>
+        <div class="program-footer">
+          <div class="program-price">₹300</div>
+          <p class="pricing-billing">Per Session</p>
+          <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20join%20a%20Group%20Class.%20Please%20share%20more%20details." class="program-cta" target="_blank" rel="noopener">Join A Class Now</a>
         </div>
       </article>
     </div>
@@ -855,7 +861,7 @@
       </div>
       <div class="faq-item">
         <h3 class="faq-q">What's the best program for weight loss?</h3>
-        <p class="faq-a">The 12-Week Total Transformation Program combines customised workouts with nutrition coaching and accountability check-ins for maximum sustainable fat loss and body recomposition.</p>
+        <p class="faq-a">Online or Offline Personal Training combines customised workouts with nutrition coaching and consistent accountability, session by session, for sustainable fat loss and body recomposition.</p>
       </div>
       <div class="faq-item">
         <h3 class="faq-q">Can complete beginners join?</h3>
@@ -908,7 +914,7 @@
       <ul>
         <li><a href="#services">1-on-1 Personal Training</a></li>
         <li><a href="#services">Group Fitness Classes</a></li>
-        <li><a href="#programs">Online Programs</a></li>
+        <li><a href="#pricing">Online Coaching Programs</a></li>
         <li><a href="#services">Nutrition Coaching</a></li>
       </ul>
     </div>
@@ -916,6 +922,7 @@
       <h4>Quick Links</h4>
       <ul>
         <li><a href="#about">About Sandhya</a></li>
+        <li><a href="#pricing">Pricing</a></li>
         <li><a href="#testimonials">Client Results</a></li>
         <li><a href="#faq">FAQs</a></li>
         <li><a href="#contact">Contact</a></li>
