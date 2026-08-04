@@ -7,12 +7,12 @@
 <meta name="description" content="Live 1-on-1 online personal training with Sandhya Arora, from anywhere in the world. Custom workout plans, nutrition guidance, and progress tracking. Book your session today.">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0E0E1A">
-<link rel="canonical" href="https://www.sandhyaarorafitness.com/services/online-fitness-coach/">
+<link rel="canonical" href="https://www.sandhyaarorafitness.com/online-coaching">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sandhya Arora Fitness">
 <meta property="og:title" content="Online Coaching Programs | Sandhya Arora Fitness">
 <meta property="og:description" content="Live 1-on-1 online personal training with Sandhya Arora, from anywhere in the world. Custom workout plans, nutrition guidance, and progress tracking. Book your session today.">
-<meta property="og:url" content="https://www.sandhyaarorafitness.com/services/online-fitness-coach/">
+<meta property="og:url" content="https://www.sandhyaarorafitness.com/online-coaching">
 <meta property="og:image" content="https://i.ibb.co/xt0T9y9H/Sandhya-Arora-Fitness-Hero.png">
 <meta property="og:locale" content="en_IN">
 <meta name="twitter:card" content="summary_large_image">
@@ -24,30 +24,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Service",
-      "name": "Online Coaching Programs",
-      "provider": { "@type": "ExerciseGym", "name": "Sandhya Arora Fitness", "url": "https://www.sandhyaarorafitness.com/" },
-      "areaServed": ["IN", "Worldwide"],
-      "url": "https://www.sandhyaarorafitness.com/services/online-fitness-coach/",
-      "description": "Live 1-on-1 online training sessions with custom workout plans, nutrition guidance, and progress tracking, available worldwide."
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sandhyaarorafitness.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.sandhyaarorafitness.com/#services" },
-        { "@type": "ListItem", "position": 3, "name": "Online Coaching Programs", "item": "https://www.sandhyaarorafitness.com/services/online-fitness-coach/" }
-      ]
-    }
-  ]
-}
-</script>
-
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -426,7 +402,7 @@
     }
     .nav-links.open { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0); }
     .nav-links li { width: 100%; }
-    .nav-links a { display: block; padding: 16px 24px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav-links > li > a { display: block; padding: 16px 24px; border-bottom: 1px solid rgba(255,255,255,0.06); }
     .nav-cta { border-radius: 0 !important; text-align: center; }
     .hero-grid { grid-template-columns: 1fr; gap: 48px; padding: 56px 28px 64px; text-align: left; }
     .hero-visual { order: -1; }
@@ -470,6 +446,7 @@
     .faq-item { padding: 20px; }
     footer { padding: 40px 20px; }
   }
+
   /* ─── SUBPAGE: PAGE HERO ────────────────────────────── */
   .page-hero {
     background: var(--dark2);
@@ -528,19 +505,6 @@
   .testi-grid-solo { display: grid; grid-template-columns: minmax(0,620px); justify-content: center; }
   @media (max-width: 900px) { .page-hero { padding: 128px 0 64px; } }
 
-  /* ─── EXTRA RESPONSIVE POLISH (added) ───────────────── */
-  @media (max-width: 480px) {
-    .hero h1, .page-hero h1 { letter-spacing: -0.5px; }
-    .section-title { letter-spacing: -0.4px; }
-    .btn-primary, .btn-outline, .btn-white, .btn-white-outline { padding: 14px 24px; font-size: 14px; }
-    .pricing-grid-duo, .pricing-grid-solo { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 360px) {
-    .section-container, .cta-banner { padding: 0 18px; }
-    nav { padding: 0 16px; }
-  }
-
-
   /* ─── NAV: SERVICES DROPDOWN ─────────────────────────── */
   .nav-links li.has-dropdown { position: relative; }
   .dropdown-toggle {
@@ -598,25 +562,25 @@
       border-radius: 0; background: rgba(0,0,0,0.22); padding: 4px 0 8px;
     }
     .dropdown-menu::before { display: none; }
-    li.has-dropdown.open .dropdown-menu { display: block; }
+    li.has-dropdown.open .dropdown-menu { display: block; transform: none; }
     .dropdown-menu a { padding: 12px 24px 12px 40px; border-radius: 0; }
   }
-
 </style>
 </head>
 <body>
+<!-- ── NAVIGATION ────────────────────────────────────── -->
 <nav>
-  <a href="/" class="nav-logo">
+  <a href="index.html" class="nav-logo">
     <img src="https://i.ibb.co/vvPXz7xR/Sandhya-Arora-Fitness-logo.jpg" alt="Sandhya Arora Fitness Logo">
   </a>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
     <span></span><span></span><span></span>
   </button>
   <ul class="nav-links" id="navLinks">
-    <li><a href="/#about">About</a></li>
+    <li><a href="index.html#about">About</a></li>
     <li class="has-dropdown">
       <button class="dropdown-toggle" id="servicesDropdownToggle" aria-expanded="false" aria-controls="servicesDropdownMenu">
-        <a href="/#services" style="pointer-events:none;">Services</a>
+        <a href="index.html#services" style="pointer-events:none;">Services</a>
         <span class="dropdown-caret" aria-hidden="true"></span>
       </button>
       <ul class="dropdown-menu" id="servicesDropdownMenu">
@@ -626,16 +590,17 @@
         <li><a href="/services/nutrition-coaching/">Nutrition Coaching<small>Sustainable guidance for Indian food & lifestyle</small></a></li>
       </ul>
     </li>
-    <li><a href="/#pricing">Pricing</a></li>
-    <li><a href="/#testimonials">Results</a></li>
+    <li><a href="index.html#pricing">Pricing</a></li>
+    <li><a href="index.html#testimonials">Results</a></li>
     <li><a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20book%20a%20free%20consultation%20call." class="nav-cta" target="_blank" rel="noopener">Book Free Call</a></li>
   </ul>
 </nav>
+
 <main>
 <!-- ── PAGE HERO ─────────────────────────────────────── -->
 <section class="page-hero">
   <div class="section-container">
-    <p class="breadcrumb"><a href="/">Home</a> / <a href="/#services">Services</a> / Online Coaching Programs</p>
+    <p class="breadcrumb"><a href="index.html">Home</a> / <a href="index.html#services">Services</a> / Online Coaching Programs</p>
     <p class="hero-eyebrow">Train Anywhere</p>
     <h1>Online Coaching, Live 1-on-1 — <em>From Anywhere</em> in the World</h1>
     <p class="hero-sub">Live video training sessions, custom workout plans, nutrition guidance, and progress tracking — all delivered through your phone or laptop, wherever you are.</p>
@@ -645,6 +610,7 @@
     </div>
   </div>
 </section>
+
 <!-- ── WHAT'S INCLUDED ───────────────────────────────── -->
 <section class="services" id="included">
   <div class="section-container">
@@ -662,13 +628,13 @@
         <div class="service-icon" aria-hidden="true">📋</div>
         <p class="service-tag">Built For You</p>
         <h3 class="service-title">Personalized Workout Plans</h3>
-        <p class="service-desc">Plans built around your goals, current fitness, and whatever equipment or space you have available at home. Prefer in-person coaching? See <a href="/services/personal-fitness-trainer/" class="service-link" style="display:inline;">Personal Training</a>.</p>
+        <p class="service-desc">Plans built around your goals, current fitness, and whatever equipment or space you have available at home.</p>
       </article>
       <article class="service-card">
         <div class="service-icon" aria-hidden="true">🥗</div>
         <p class="service-tag">Fuel The Work</p>
         <h3 class="service-title">Diet & Nutrition Guidance</h3>
-        <p class="service-desc">Practical, sustainable nutrition direction that fits your lifestyle and food preferences, wherever in the world you're based. Explore <a href="/services/nutrition-coaching/" class="service-link" style="display:inline;">Nutrition Coaching</a> in more detail.</p>
+        <p class="service-desc">Practical, sustainable nutrition direction that fits your lifestyle and food preferences, wherever in the world you're based.</p>
       </article>
       <article class="service-card">
         <div class="service-icon" aria-hidden="true">🌍</div>
@@ -679,6 +645,7 @@
     </div>
   </div>
 </section>
+
 <!-- ── PRICING ──────────────────────────────────────── -->
 <section class="pricing" id="pricing">
   <div class="section-container">
@@ -710,6 +677,7 @@
     </div>
   </div>
 </section>
+
 <!-- ── TESTIMONIAL ──────────────────────────────────── -->
 <section class="testimonials" id="testimonial">
   <div class="section-container">
@@ -722,26 +690,42 @@
         <p class="testi-quote">"The online coaching program was exactly what I needed as a busy working mom. Structured, achievable, and so motivating. Sandhya checks in constantly - you never feel alone."</p>
         <div class="testi-author">
           <div class="testi-avatar" aria-hidden="true">RS</div>
-          <div><p class="testi-name">Ritu Sharma</p><p class="testi-meta">Postpartum recovery · Online Coaching · Mumbai</p></div>
+          <div>
+            <p class="testi-name">Ritu Sharma</p>
+            <p class="testi-meta">Postpartum recovery · Online Coaching · Mumbai</p>
+          </div>
         </div>
       </article>
     </div>
   </div>
 </section>
+
 <!-- ── FAQ ──────────────────────────────────────────── -->
 <section class="faq" id="faq">
   <div class="section-container">
     <p class="section-eyebrow">FAQs</p>
     <h2 class="section-title" style="margin-bottom:44px;">Common Questions</h2>
     <div class="faq-grid">
-      <div class="faq-item"><h3 class="faq-q">Do you offer online fitness training?</h3><p class="faq-a">Yes! All coaching is available fully online via live video sessions and app-based tracking - from anywhere in India or abroad.</p></div>
-      <div class="faq-item"><h3 class="faq-q">Do I need gym equipment for online training?</h3><p class="faq-a">No gym required! Sessions can be designed for home workouts with minimal equipment, or fully equipped gym sessions. You tell us what you have, and the plan adapts to you.</p></div>
-      <div class="faq-item"><h3 class="faq-q">How soon will I see results?</h3><p class="faq-a">Most clients notice visible changes in energy, strength, and body composition within the first 3–4 weeks. Significant transformation results are typically visible by 8–12 weeks with consistency.</p></div>
-      <div class="faq-item"><h3 class="faq-q">What if I'm in a different time zone?</h3><p class="faq-a">Not a problem - sessions are scheduled around what works for you, wherever you're based in the world.</p></div>
+      <div class="faq-item">
+        <h3 class="faq-q">Do you offer online fitness training?</h3>
+        <p class="faq-a">Yes! All coaching is available fully online via live video sessions and app-based tracking - from anywhere in India or abroad.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q">Do I need gym equipment for online training?</h3>
+        <p class="faq-a">No gym required! Sessions can be designed for home workouts with minimal equipment, or fully equipped gym sessions. You tell us what you have, and the plan adapts to you.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q">How soon will I see results?</h3>
+        <p class="faq-a">Most clients notice visible changes in energy, strength, and body composition within the first 3–4 weeks. Significant transformation results are typically visible by 8–12 weeks with consistency.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q">What if I'm in a different time zone?</h3>
+        <p class="faq-a">Not a problem - sessions are scheduled around what works for you, wherever you're based in the world.</p>
+      </div>
     </div>
-    <p style="margin-top:32px; font-size:14px; color:var(--muted); text-align:center;">Looking for something else? Explore <a href="/services/group-fitness-classes/" style="color:var(--red); font-weight:600; text-decoration:none;">Group Fitness Classes</a> or <a href="/services/personal-fitness-trainer/" style="color:var(--red); font-weight:600; text-decoration:none;">1-on-1 Personal Training</a>.</p>
   </div>
 </section>
+
 <!-- ── CTA BANNER ───────────────────────────────────── -->
 <section class="cta-banner" id="contact">
   <h2>Ready to Train From Anywhere?</h2>
@@ -752,12 +736,13 @@
   </div>
   <p style="margin-top:24px; font-size:13px; color:rgba(255,255,255,0.5);">No commitment · Available worldwide · Reply within 24 hours</p>
 </section>
-</main>
 
+</main>
+<!-- ── FOOTER ──────────────────────────────────────────── -->
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <a href="/" class="nav-logo">
+      <a href="index.html" class="nav-logo">
         <img src="https://i.ibb.co/vvPXz7xR/Sandhya-Arora-Fitness-logo.jpg" alt="Sandhya Arora Fitness Logo">
       </a>
       <p class="footer-tagline">Certified personal trainer helping hundreds of people across India and around the world transform their bodies and reclaim their lives.</p>
@@ -772,20 +757,20 @@
     <div class="footer-col">
       <h4>Services</h4>
       <ul>
-        <li><a href="/services/personal-fitness-trainer/">1-on-1 Personal Training</a></li>
-        <li><a href="/services/group-fitness-classes/">Group Fitness Classes</a></li>
-        <li><a href="/services/online-fitness-coach/">Online Coaching Programs</a></li>
-        <li><a href="/services/nutrition-coaching/">Nutrition Coaching</a></li>
+        <li><a href="personal-training.html">1-on-1 Personal Training</a></li>
+        <li><a href="group-classes.html">Group Fitness Classes</a></li>
+        <li><a href="online-coaching.html">Online Coaching Programs</a></li>
+        <li><a href="nutrition-coaching.html">Nutrition Coaching</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Quick Links</h4>
       <ul>
-        <li><a href="/#about">About Sandhya</a></li>
-        <li><a href="/#pricing">Pricing</a></li>
-        <li><a href="/#testimonials">Client Results</a></li>
-        <li><a href="/#faq">FAQs</a></li>
-        <li><a href="/#contact">Contact</a></li>
+        <li><a href="index.html#about">About Sandhya</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="index.html#testimonials">Client Results</a></li>
+        <li><a href="index.html#faq">FAQs</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -806,12 +791,15 @@
     <span>Privacy Policy · Terms &amp; Conditions · Refund Policy</span>
   </div>
 </footer>
+
+<!-- ── FLOATING WHATSAPP BUTTON ─────────────────────────── -->
 <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20know%20more%20about%20your%20fitness%20programs." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
     <path d="M12.004 2.003c-5.514 0-9.997 4.483-9.997 9.997 0 1.763.464 3.482 1.345 4.997L2 22l5.117-1.341a9.96 9.96 0 0 0 4.887 1.245h.004c5.514 0 9.997-4.483 9.997-9.997 0-2.671-1.04-5.182-2.928-7.07a9.937 9.937 0 0 0-7.07-2.831zm0 18.166h-.003a8.163 8.163 0 0 1-4.16-1.14l-.298-.177-3.037.796.811-2.96-.194-.304a8.163 8.163 0 0 1-1.253-4.361c0-4.509 3.669-8.178 8.178-8.178 2.184 0 4.238.851 5.783 2.398a8.126 8.126 0 0 1 2.396 5.783c-.001 4.509-3.67 8.178-8.223 8.178z"/>
   </svg>
 </a>
+
 <script>
   // Smooth scroll for same-page anchor links only
   document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -891,5 +879,6 @@
     }
   });
 </script>
+
 </body>
 </html>
