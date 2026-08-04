@@ -7,12 +7,12 @@
 <meta name="description" content="Fully customised 1-on-1 personal training with Sandhya Arora - online or in-person. Personalized workout plans, nutrition guidance, and real accountability. Book your session today.">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0E0E1A">
-<link rel="canonical" href="https://www.sandhyaarorafitness.com/personal-training">
+<link rel="canonical" href="https://www.sandhyaarorafitness.com/services/personal-fitness-trainer/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sandhya Arora Fitness">
 <meta property="og:title" content="1-on-1 Personal Training | Sandhya Arora Fitness">
 <meta property="og:description" content="Fully customised 1-on-1 personal training with Sandhya Arora - online or in-person. Personalized workout plans, nutrition guidance, and real accountability. Book your session today.">
-<meta property="og:url" content="https://www.sandhyaarorafitness.com/personal-training">
+<meta property="og:url" content="https://www.sandhyaarorafitness.com/services/personal-fitness-trainer/">
 <meta property="og:image" content="https://i.ibb.co/xt0T9y9H/Sandhya-Arora-Fitness-Hero.png">
 <meta property="og:locale" content="en_IN">
 <meta name="twitter:card" content="summary_large_image">
@@ -24,6 +24,30 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "1-on-1 Personal Training",
+      "provider": { "@type": "ExerciseGym", "name": "Sandhya Arora Fitness", "url": "https://www.sandhyaarorafitness.com/" },
+      "areaServed": ["IN", "Worldwide"],
+      "url": "https://www.sandhyaarorafitness.com/services/personal-fitness-trainer/",
+      "description": "Fully customised 1-on-1 training sessions, online or in-person, built around individual goals, fitness level, and schedule."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sandhyaarorafitness.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.sandhyaarorafitness.com/#services" },
+        { "@type": "ListItem", "position": 3, "name": "1-on-1 Personal Training", "item": "https://www.sandhyaarorafitness.com/services/personal-fitness-trainer/" }
+      ]
+    }
+  ]
+}
+</script>
+
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -446,7 +470,6 @@
     .faq-item { padding: 20px; }
     footer { padding: 40px 20px; }
   }
-
   /* ─── SUBPAGE: PAGE HERO ────────────────────────────── */
   .page-hero {
     background: var(--dark2);
@@ -504,31 +527,115 @@
   /* ─── SUBPAGE: SINGLE / DUO TESTIMONIAL ───────────────── */
   .testi-grid-solo { display: grid; grid-template-columns: minmax(0,620px); justify-content: center; }
   @media (max-width: 900px) { .page-hero { padding: 128px 0 64px; } }
+
+  /* ─── EXTRA RESPONSIVE POLISH (added) ───────────────── */
+  @media (max-width: 480px) {
+    .hero h1, .page-hero h1 { letter-spacing: -0.5px; }
+    .section-title { letter-spacing: -0.4px; }
+    .btn-primary, .btn-outline, .btn-white, .btn-white-outline { padding: 14px 24px; font-size: 14px; }
+    .pricing-grid-duo, .pricing-grid-solo { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 360px) {
+    .section-container, .cta-banner { padding: 0 18px; }
+    nav { padding: 0 16px; }
+  }
+
+
+  /* ─── NAV: SERVICES DROPDOWN ─────────────────────────── */
+  .nav-links li.has-dropdown { position: relative; }
+  .dropdown-toggle {
+    display: flex; align-items: center; gap: 6px; cursor: pointer;
+    background: none; border: none; font: inherit; color: inherit;
+    padding: 0; letter-spacing: 0.3px;
+  }
+  .dropdown-caret {
+    width: 9px; height: 9px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor;
+    transform: rotate(45deg); transition: transform 0.2s; margin-top: -3px; flex-shrink: 0;
+  }
+  li.has-dropdown.open .dropdown-caret { transform: rotate(-135deg); margin-top: 3px; }
+  .dropdown-menu {
+    list-style: none; position: absolute; top: calc(100% + 14px); left: 50%;
+    transform: translate(-50%, -8px); min-width: 260px;
+    background: var(--dark2); border: 1px solid rgba(233,69,96,0.22);
+    border-radius: 12px; padding: 10px; box-shadow: 0 24px 48px -14px rgba(0,0,0,0.55);
+    opacity: 0; visibility: hidden; pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 210;
+  }
+  .dropdown-menu::before {
+    content: ''; position: absolute; top: -6px; left: 50%; transform: translateX(-50%) rotate(45deg);
+    width: 12px; height: 12px; background: var(--dark2); border-left: 1px solid rgba(233,69,96,0.22);
+    border-top: 1px solid rgba(233,69,96,0.22);
+  }
+  .dropdown-menu li { width: 100%; }
+  .dropdown-menu a {
+    display: flex; flex-direction: column; gap: 2px; padding: 11px 14px; border-radius: 8px;
+    color: rgba(255,255,255,0.8); text-decoration: none; font-size: 14px; font-weight: 500;
+    border-bottom: none !important;
+  }
+  .dropdown-menu a small { color: rgba(255,255,255,0.4); font-size: 11.5px; font-weight: 400; }
+  .dropdown-menu a:hover { background: rgba(233,69,96,0.14); color: var(--white); }
+  @media (hover: hover) and (pointer: fine) {
+    li.has-dropdown:hover .dropdown-menu,
+    li.has-dropdown:focus-within .dropdown-menu {
+      opacity: 1; visibility: visible; pointer-events: auto; transform: translate(-50%, 0);
+    }
+    li.has-dropdown:hover .dropdown-caret { transform: rotate(-135deg); margin-top: 3px; }
+  }
+  li.has-dropdown.open .dropdown-menu {
+    opacity: 1; visibility: visible; pointer-events: auto; transform: translate(-50%, 0);
+  }
+  /* ─── NAV: MOBILE DROPDOWN → ACCORDION ───────────────── */
+  @media (max-width: 900px) {
+    .nav-links li.has-dropdown { display: flex; flex-direction: column; }
+    .dropdown-toggle {
+      width: 100%; padding: 16px 24px; justify-content: space-between;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .dropdown-menu {
+      position: static; transform: none; opacity: 1; visibility: visible; pointer-events: auto;
+      display: none; min-width: 0; width: 100%; box-shadow: none; border: none;
+      border-radius: 0; background: rgba(0,0,0,0.22); padding: 4px 0 8px;
+    }
+    .dropdown-menu::before { display: none; }
+    li.has-dropdown.open .dropdown-menu { display: block; }
+    .dropdown-menu a { padding: 12px 24px 12px 40px; border-radius: 0; }
+  }
+
 </style>
 </head>
 <body>
-<!-- ── NAVIGATION ────────────────────────────────────── -->
 <nav>
-  <a href="index.html" class="nav-logo">
+  <a href="/" class="nav-logo">
     <img src="https://i.ibb.co/vvPXz7xR/Sandhya-Arora-Fitness-logo.jpg" alt="Sandhya Arora Fitness Logo">
   </a>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
     <span></span><span></span><span></span>
   </button>
   <ul class="nav-links" id="navLinks">
-    <li><a href="index.html#about">About</a></li>
-    <li><a href="index.html#services">Services</a></li>
-    <li><a href="index.html#pricing">Pricing</a></li>
-    <li><a href="index.html#testimonials">Results</a></li>
+    <li><a href="/#about">About</a></li>
+    <li class="has-dropdown">
+      <button class="dropdown-toggle" id="servicesDropdownToggle" aria-expanded="false" aria-controls="servicesDropdownMenu">
+        <a href="/#services" style="pointer-events:none;">Services</a>
+        <span class="dropdown-caret" aria-hidden="true"></span>
+      </button>
+      <ul class="dropdown-menu" id="servicesDropdownMenu">
+        <li><a href="/services/personal-fitness-trainer/">1-on-1 Personal Training<small>Fully customised in-person or online coaching</small></a></li>
+        <li><a href="/services/online-fitness-coach/">Online Coaching Programs<small>Live 1-on-1 training from anywhere</small></a></li>
+        <li><a href="/services/group-fitness-classes/">Group Fitness Classes<small>HIIT, strength & functional training</small></a></li>
+        <li><a href="/services/nutrition-coaching/">Nutrition Coaching<small>Sustainable guidance for Indian food & lifestyle</small></a></li>
+      </ul>
+    </li>
+    <li><a href="/#pricing">Pricing</a></li>
+    <li><a href="/#testimonials">Results</a></li>
     <li><a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20book%20a%20free%20consultation%20call." class="nav-cta" target="_blank" rel="noopener">Book Free Call</a></li>
   </ul>
 </nav>
-
 <main>
 <!-- ── PAGE HERO ─────────────────────────────────────── -->
 <section class="page-hero">
   <div class="section-container">
-    <p class="breadcrumb"><a href="index.html">Home</a> / <a href="index.html#services">Services</a> / 1-on-1 Personal Training</p>
+    <p class="breadcrumb"><a href="/">Home</a> / <a href="/#services">Services</a> / 1-on-1 Personal Training</p>
     <p class="hero-eyebrow">Most Popular Service</p>
     <h1>1-on-1 Personal Training,<br>Built <em>Entirely</em> Around You</h1>
     <p class="hero-sub">No cookie-cutter plans. Every session — online or in-person — is designed around your goals, your fitness level, and your schedule. This is the fastest way to see real, lasting results.</p>
@@ -538,7 +645,6 @@
     </div>
   </div>
 </section>
-
 <!-- ── WHAT'S INCLUDED ───────────────────────────────── -->
 <section class="services" id="included">
   <div class="section-container">
@@ -556,7 +662,7 @@
         <div class="service-icon" aria-hidden="true">🥗</div>
         <p class="service-tag">Fuel The Work</p>
         <h3 class="service-title">Diet & Nutrition Guidance</h3>
-        <p class="service-desc">Training alone isn't enough. You'll get practical nutrition direction that fits your lifestyle and food preferences, no crash diets involved.</p>
+        <p class="service-desc">Training alone isn't enough. You'll get practical nutrition direction that fits your lifestyle and food preferences, no crash diets involved. Want nutrition-only support? See <a href="/services/nutrition-coaching/" class="service-link" style="display:inline;">Nutrition Coaching</a>.</p>
       </article>
       <article class="service-card">
         <div class="service-icon" aria-hidden="true">📈</div>
@@ -568,12 +674,11 @@
         <div class="service-icon" aria-hidden="true">🌍</div>
         <p class="service-tag">Your Choice</p>
         <h3 class="service-title">Online or In-Person</h3>
-        <p class="service-desc">Train live over video from anywhere in the world, or in-person at my studio or your preferred location. Same personal attention, either way.</p>
+        <p class="service-desc">Train live over video from anywhere in the world - see <a href="/services/online-fitness-coach/" class="service-link" style="display:inline;">Online Coaching</a> - or in-person at my studio or your preferred location. Same personal attention, either way.</p>
       </article>
     </div>
   </div>
 </section>
-
 <!-- ── PRICING ──────────────────────────────────────── -->
 <section class="pricing" id="pricing">
   <div class="section-container">
@@ -625,7 +730,6 @@
     </div>
   </div>
 </section>
-
 <!-- ── TESTIMONIAL ──────────────────────────────────── -->
 <section class="testimonials" id="testimonial">
   <div class="section-container">
@@ -638,42 +742,26 @@
         <p class="testi-quote">"Sandhya completely changed my relationship with fitness. I lost 14 kg in 4 months and have never felt stronger. The program was personalised, progressive, and actually enjoyable."</p>
         <div class="testi-author">
           <div class="testi-avatar" aria-hidden="true">PM</div>
-          <div>
-            <p class="testi-name">Priya Mehta</p>
-            <p class="testi-meta">14 kg weight loss · 1-on-1 Training · Bangalore</p>
-          </div>
+          <div><p class="testi-name">Priya Mehta</p><p class="testi-meta">14 kg weight loss · 1-on-1 Training · Bangalore</p></div>
         </div>
       </article>
     </div>
   </div>
 </section>
-
 <!-- ── FAQ ──────────────────────────────────────────── -->
 <section class="faq" id="faq">
   <div class="section-container">
     <p class="section-eyebrow">FAQs</p>
     <h2 class="section-title" style="margin-bottom:44px;">Common Questions</h2>
     <div class="faq-grid">
-      <div class="faq-item">
-        <h3 class="faq-q">Can complete beginners join?</h3>
-        <p class="faq-a">Absolutely. Sandhya specialises in meeting clients at every fitness level. Complete beginners are warmly welcome - sessions are always calibrated to your current fitness.</p>
-      </div>
-      <div class="faq-item">
-        <h3 class="faq-q">Do I need gym equipment for online sessions?</h3>
-        <p class="faq-a">No gym required! Sessions can be designed for home workouts with minimal equipment, or fully equipped gym sessions. You tell us what you have, and the plan adapts to you.</p>
-      </div>
-      <div class="faq-item">
-        <h3 class="faq-q">How soon will I see results?</h3>
-        <p class="faq-a">Most clients notice visible changes in energy, strength, and body composition within the first 3–4 weeks. Significant transformation results are typically visible by 8–12 weeks with consistency.</p>
-      </div>
-      <div class="faq-item">
-        <h3 class="faq-q">Can I switch between online and offline sessions?</h3>
-        <p class="faq-a">Yes - many clients mix formats depending on travel and schedule. Just let Sandhya know when booking each session.</p>
-      </div>
+      <div class="faq-item"><h3 class="faq-q">Can complete beginners join?</h3><p class="faq-a">Absolutely. Sandhya specialises in meeting clients at every fitness level. Complete beginners are warmly welcome - sessions are always calibrated to your current fitness.</p></div>
+      <div class="faq-item"><h3 class="faq-q">Do I need gym equipment for online sessions?</h3><p class="faq-a">No gym required! Sessions can be designed for home workouts with minimal equipment, or fully equipped gym sessions. You tell us what you have, and the plan adapts to you.</p></div>
+      <div class="faq-item"><h3 class="faq-q">How soon will I see results?</h3><p class="faq-a">Most clients notice visible changes in energy, strength, and body composition within the first 3–4 weeks. Significant transformation results are typically visible by 8–12 weeks with consistency.</p></div>
+      <div class="faq-item"><h3 class="faq-q">Can I switch between online and offline sessions?</h3><p class="faq-a">Yes - many clients mix formats depending on travel and schedule. Just let Sandhya know when booking each session.</p></div>
     </div>
+    <p style="margin-top:32px; font-size:14px; color:var(--muted); text-align:center;">Looking for something else? Explore <a href="/services/group-fitness-classes/" style="color:var(--red); font-weight:600; text-decoration:none;">Group Fitness Classes</a> or <a href="/services/nutrition-coaching/" style="color:var(--red); font-weight:600; text-decoration:none;">Nutrition Coaching</a>.</p>
   </div>
 </section>
-
 <!-- ── CTA BANNER ───────────────────────────────────── -->
 <section class="cta-banner" id="contact">
   <h2>Ready to Start Training With Sandhya?</h2>
@@ -684,13 +772,12 @@
   </div>
   <p style="margin-top:24px; font-size:13px; color:rgba(255,255,255,0.5);">No commitment · Online &amp; in-person options · Reply within 24 hours</p>
 </section>
-
 </main>
-<!-- ── FOOTER ──────────────────────────────────────────── -->
+
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <a href="index.html" class="nav-logo">
+      <a href="/" class="nav-logo">
         <img src="https://i.ibb.co/vvPXz7xR/Sandhya-Arora-Fitness-logo.jpg" alt="Sandhya Arora Fitness Logo">
       </a>
       <p class="footer-tagline">Certified personal trainer helping hundreds of people across India and around the world transform their bodies and reclaim their lives.</p>
@@ -705,20 +792,20 @@
     <div class="footer-col">
       <h4>Services</h4>
       <ul>
-        <li><a href="personal-training.html">1-on-1 Personal Training</a></li>
-        <li><a href="group-classes.html">Group Fitness Classes</a></li>
-        <li><a href="online-coaching.html">Online Coaching Programs</a></li>
-        <li><a href="nutrition-coaching.html">Nutrition Coaching</a></li>
+        <li><a href="/services/personal-fitness-trainer/">1-on-1 Personal Training</a></li>
+        <li><a href="/services/group-fitness-classes/">Group Fitness Classes</a></li>
+        <li><a href="/services/online-fitness-coach/">Online Coaching Programs</a></li>
+        <li><a href="/services/nutrition-coaching/">Nutrition Coaching</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Quick Links</h4>
       <ul>
-        <li><a href="index.html#about">About Sandhya</a></li>
-        <li><a href="index.html#pricing">Pricing</a></li>
-        <li><a href="index.html#testimonials">Client Results</a></li>
-        <li><a href="index.html#faq">FAQs</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="/#about">About Sandhya</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="/#testimonials">Client Results</a></li>
+        <li><a href="/#faq">FAQs</a></li>
+        <li><a href="/#contact">Contact</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -739,17 +826,14 @@
     <span>Privacy Policy · Terms &amp; Conditions · Refund Policy</span>
   </div>
 </footer>
-
-<!-- ── FLOATING WHATSAPP BUTTON ─────────────────────────── -->
 <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20know%20more%20about%20your%20fitness%20programs." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
     <path d="M12.004 2.003c-5.514 0-9.997 4.483-9.997 9.997 0 1.763.464 3.482 1.345 4.997L2 22l5.117-1.341a9.96 9.96 0 0 0 4.887 1.245h.004c5.514 0 9.997-4.483 9.997-9.997 0-2.671-1.04-5.182-2.928-7.07a9.937 9.937 0 0 0-7.07-2.831zm0 18.166h-.003a8.163 8.163 0 0 1-4.16-1.14l-.298-.177-3.037.796.811-2.96-.194-.304a8.163 8.163 0 0 1-1.253-4.361c0-4.509 3.669-8.178 8.178-8.178 2.184 0 4.238.851 5.783 2.398a8.126 8.126 0 0 1 2.396 5.783c-.001 4.509-3.67 8.178-8.223 8.178z"/>
   </svg>
 </a>
-
 <script>
-  // Smooth scroll for anchor links (same-page only)
+  // Smooth scroll for same-page anchor links only
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       const id = a.getAttribute('href');
@@ -759,6 +843,7 @@
       }
     });
   });
+
   // Mobile nav toggle
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
@@ -766,22 +851,65 @@
     const isOpen = navLinks.classList.toggle('open');
     navToggle.classList.toggle('open');
     navToggle.setAttribute('aria-expanded', String(isOpen));
+    if (!isOpen) closeDropdown();
   });
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
+
+  // Close mobile menu when a plain link (not the dropdown toggle) is clicked
+  navLinks.querySelectorAll('a:not(.dropdown-toggle a)').forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (link.closest('.dropdown-toggle')) return;
       navLinks.classList.remove('open');
       navToggle.classList.remove('open');
       navToggle.setAttribute('aria-expanded', 'false');
     });
   });
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 900) {
+
+  // Services dropdown: click/tap toggle (works for touch + keyboard; hover handles desktop via CSS)
+  const dropdownToggle = document.getElementById('servicesDropdownToggle');
+  const dropdownParent = dropdownToggle ? dropdownToggle.closest('.has-dropdown') : null;
+
+  function closeDropdown() {
+    if (dropdownParent) {
+      dropdownParent.classList.remove('open');
+      dropdownToggle.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  if (dropdownToggle && dropdownParent) {
+    dropdownToggle.addEventListener('click', (e) => {
+      // Ignore clicks on the inline "Services" link itself (it navigates on desktop hover-off / mobile tap-through)
+      if (window.innerWidth <= 900) {
+        e.preventDefault();
+        const isOpen = dropdownParent.classList.toggle('open');
+        dropdownToggle.setAttribute('aria-expanded', String(isOpen));
+      }
+    });
+  }
+
+  // Close dropdown / mobile menu on outside click
+  document.addEventListener('click', (e) => {
+    if (dropdownParent && !dropdownParent.contains(e.target)) closeDropdown();
+    if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && e.target !== navToggle && !navToggle.contains(e.target)) {
       navLinks.classList.remove('open');
       navToggle.classList.remove('open');
       navToggle.setAttribute('aria-expanded', 'false');
     }
   });
-</script>
 
+  // Close dropdown on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeDropdown();
+  });
+
+  // Reset everything on resize back to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) {
+      navLinks.classList.remove('open');
+      navToggle.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      closeDropdown();
+    }
+  });
+</script>
 </body>
 </html>
