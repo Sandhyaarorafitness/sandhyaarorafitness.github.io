@@ -9,10 +9,7 @@
 <meta name="author" content="Sandhya Arora">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0E0E1A">
- 
-<!-- Canonical URL - replace with the live domain -->
 <link rel="canonical" href="https://www.sandhyaarorafitness.com/">
-<!-- Open Graph / Social sharing -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sandhya Arora Fitness">
 <meta property="og:title" content="Sandhya Arora Fitness | Personal Trainer & Online Fitness Coach – India & Worldwide">
@@ -20,7 +17,6 @@
 <meta property="og:url" content="https://www.sandhyaarorafitness.com/">
 <meta property="og:image" content="https://i.ibb.co/xt0T9y9H/Sandhya-Arora-Fitness-Hero.png">
 <meta property="og:locale" content="en_IN">
- 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Sandhya Arora Fitness | Personal Trainer & Online Fitness Coach – India & Worldwide">
 <meta name="twitter:description" content="Certified personal fitness trainer offering 1-on-1 coaching, group classes, and online fitness programs for clients across India and worldwide.">
@@ -30,7 +26,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<!-- Structured data: LocalBusiness, Founder, Services, Reviews, FAQ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -45,10 +40,7 @@
       "telephone": "+91-8882629003",
       "email": "sandhya@sandhyaarorafitness.com",
       "priceRange": "₹₹",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "IN"
-      },
+      "address": { "@type": "PostalAddress", "addressCountry": "IN" },
       "areaServed": ["IN", "Worldwide"],
       "founder": { "@id": "https://www.sandhyaarorafitness.com/#founder" },
       "sameAs": [
@@ -57,60 +49,23 @@
         "https://www.facebook.com/sandhyaarorafitness",
         "https://www.linkedin.com/company/sandhyaarorafitness"
       ],
-      "makesOffer": [
-        {
-          "@type": "Offer",
-          "itemOffered": { "@type": "Service", "name": "1-on-1 Personal Training", "description": "Fully customised training sessions designed around individual goals, fitness level, and schedule." }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": { "@type": "Service", "name": "Group Fitness Classes", "description": "High-energy HIIT, strength, yoga-fusion, and functional training classes with a supportive community." }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": { "@type": "Service", "name": "Online Coaching Programs", "description": "Structured 4, 8, and 12-week online fitness programs with workout plans, nutrition guidance, and weekly check-ins." }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": { "@type": "Service", "name": "Nutrition Coaching", "description": "Sustainable nutrition guidance tailored to Indian food and lifestyle." }
-        },
-        {
-          "@type": "Offer",
-          "priceSpecification": { "@type": "PriceSpecification", "minPrice": "600", "maxPrice": "700", "priceCurrency": "INR" },
-          "itemOffered": { "@type": "Service", "name": "Online Personal Training", "description": "1-on-1 live online training sessions, billed per session." }
-        },
-        {
-          "@type": "Offer",
-          "price": "1200",
-          "priceCurrency": "INR",
-          "itemOffered": { "@type": "Service", "name": "Offline Personal Training", "description": "1-on-1 in-person training sessions, billed per session." }
-        },
-        {
-          "@type": "Offer",
-          "price": "300",
-          "priceCurrency": "INR",
-          "itemOffered": { "@type": "Service", "name": "Group Classes", "description": "Group fitness classes, billed per session." }
-        }
-      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Fitness Services",
+        "itemListElement": [
+          { "@type": "Offer", "url": "https://www.sandhyaarorafitness.com/services/personal-fitness-trainer/", "itemOffered": { "@type": "Service", "name": "1-on-1 Personal Training", "description": "Fully customised training sessions designed around individual goals, fitness level, and schedule." } },
+          { "@type": "Offer", "url": "https://www.sandhyaarorafitness.com/services/group-fitness-classes/", "itemOffered": { "@type": "Service", "name": "Group Fitness Classes", "description": "High-energy HIIT, strength, yoga-fusion, and functional training classes with a supportive community." } },
+          { "@type": "Offer", "url": "https://www.sandhyaarorafitness.com/services/online-fitness-coach/", "itemOffered": { "@type": "Service", "name": "Online Coaching Programs", "description": "Structured online fitness programs with workout plans, nutrition guidance, and weekly check-ins." } },
+          { "@type": "Offer", "url": "https://www.sandhyaarorafitness.com/services/nutrition-coaching/", "itemOffered": { "@type": "Service", "name": "Nutrition Coaching", "description": "Sustainable nutrition guidance tailored to Indian food and lifestyle." } },
+          { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "600", "maxPrice": "700", "priceCurrency": "INR" }, "itemOffered": { "@type": "Service", "name": "Online Personal Training", "description": "1-on-1 live online training sessions, billed per session." } },
+          { "@type": "Offer", "price": "1200", "priceCurrency": "INR", "itemOffered": { "@type": "Service", "name": "Offline Personal Training", "description": "1-on-1 in-person training sessions, billed per session." } },
+          { "@type": "Offer", "price": "300", "priceCurrency": "INR", "itemOffered": { "@type": "Service", "name": "Group Classes", "description": "Group fitness classes, billed per session." } }
+        ]
+      },
       "review": [
-        {
-          "@type": "Review",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "author": { "@type": "Person", "name": "Priya Mehta" },
-          "reviewBody": "Sandhya completely changed my relationship with fitness. Lost 14 kg in 4 months and never felt stronger."
-        },
-        {
-          "@type": "Review",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "author": { "@type": "Person", "name": "Ritu Sharma" },
-          "reviewBody": "The online coaching program was exactly what I needed as a busy working mom. Structured, achievable, and motivating."
-        },
-        {
-          "@type": "Review",
-          "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-          "author": { "@type": "Person", "name": "Ananya Kapoor" },
-          "reviewBody": "Sandhya's group classes are genuinely fun, challenging, and results-driven. Lost inches and gained confidence."
-        }
+        { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "author": { "@type": "Person", "name": "Priya Mehta" }, "reviewBody": "Sandhya completely changed my relationship with fitness. Lost 14 kg in 4 months and never felt stronger." },
+        { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "author": { "@type": "Person", "name": "Ritu Sharma" }, "reviewBody": "The online coaching program was exactly what I needed as a busy working mom. Structured, achievable, and motivating." },
+        { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "author": { "@type": "Person", "name": "Ananya Kapoor" }, "reviewBody": "Sandhya's group classes are genuinely fun, challenging, and results-driven. Lost inches and gained confidence." }
       ]
     },
     {
@@ -122,44 +77,27 @@
       "worksFor": { "@id": "https://www.sandhyaarorafitness.com/#business" }
     },
     {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sandhyaarorafitness.com/" }
+      ]
+    },
+    {
       "@type": "FAQPage",
       "@id": "https://www.sandhyaarorafitness.com/#faq",
       "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Do you offer online fitness training?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes! All services including 1-on-1 coaching, group classes, and structured programs are available fully online via video sessions and app-based tracking - from anywhere in India or abroad." }
-        },
-        {
-          "@type": "Question",
-          "name": "What's the best program for weight loss?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Online or Offline Personal Training combines customised workouts with nutrition coaching and consistent accountability, session by session, for sustainable fat loss and body recomposition." }
-        },
-        {
-          "@type": "Question",
-          "name": "Can complete beginners join?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. Sandhya specialises in meeting clients at every fitness level. Complete beginners are warmly welcome - sessions and programs are always calibrated to your current fitness." }
-        },
-        {
-          "@type": "Question",
-          "name": "Do I need gym equipment for online training?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No gym required! Programs can be designed for home workouts with minimal equipment, or fully equipped gym sessions. You tell us what you have, and the plan adapts to you." }
-        },
-        {
-          "@type": "Question",
-          "name": "How soon will I see results?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Most clients notice visible changes in energy, strength, and body composition within the first 3–4 weeks. Significant transformation results are typically visible by 8–12 weeks with consistency." }
-        },
-        {
-          "@type": "Question",
-          "name": "Is nutrition coaching included in programs?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes - all structured programs include a personalised nutrition framework. Detailed standalone nutrition coaching is also available as a separate service for those focused primarily on diet." }
-        }
+        { "@type": "Question", "name": "Do you offer online fitness training?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! All services including 1-on-1 coaching, group classes, and structured programs are available fully online via video sessions and app-based tracking - from anywhere in India or abroad." } },
+        { "@type": "Question", "name": "What's the best program for weight loss?", "acceptedAnswer": { "@type": "Answer", "text": "Online or Offline Personal Training combines customised workouts with nutrition coaching and consistent accountability, session by session, for sustainable fat loss and body recomposition." } },
+        { "@type": "Question", "name": "Can complete beginners join?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. Sandhya specialises in meeting clients at every fitness level. Complete beginners are warmly welcome - sessions and programs are always calibrated to your current fitness." } },
+        { "@type": "Question", "name": "Do I need gym equipment for online training?", "acceptedAnswer": { "@type": "Answer", "text": "No gym required! Programs can be designed for home workouts with minimal equipment, or fully equipped gym sessions. You tell us what you have, and the plan adapts to you." } },
+        { "@type": "Question", "name": "How soon will I see results?", "acceptedAnswer": { "@type": "Answer", "text": "Most clients notice visible changes in energy, strength, and body composition within the first 3–4 weeks. Significant transformation results are typically visible by 8–12 weeks with consistency." } },
+        { "@type": "Question", "name": "Is nutrition coaching included in programs?", "acceptedAnswer": { "@type": "Answer", "text": "Yes - all structured programs include a personalised nutrition framework. Detailed standalone nutrition coaching is also available as a separate service for those focused primarily on diet." } }
       ]
     }
   ]
 }
 </script>
+
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -582,12 +520,143 @@
     .faq-item { padding: 20px; }
     footer { padding: 40px 20px; }
   }
+  /* ─── SUBPAGE: PAGE HERO ────────────────────────────── */
+  .page-hero {
+    background: var(--dark2);
+    padding: 148px 0 80px;
+    position: relative; overflow: hidden;
+  }
+  .page-hero::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(233,69,96,0.14) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .page-hero .section-container { position: relative; text-align: center; }
+  .page-hero .hero-eyebrow { margin-left: auto; margin-right: auto; }
+  .page-hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 5vw, 56px); font-weight: 900; line-height: 1.15;
+    color: var(--white); margin-bottom: 20px; letter-spacing: -1px;
+    max-width: 820px; margin-left: auto; margin-right: auto;
+  }
+  .page-hero h1 em { color: var(--red); font-style: normal; }
+  .page-hero .hero-sub { max-width: 620px; margin: 0 auto 36px; }
+  .page-hero .hero-ctas { justify-content: center; }
+  /* ─── SUBPAGE: BREADCRUMB ────────────────────────────── */
+  .breadcrumb {
+    position: relative; font-size: 13px; color: rgba(255,255,255,0.4);
+    margin-bottom: 22px; display: flex; justify-content: center; gap: 8px;
+  }
+  .breadcrumb a { color: rgba(255,255,255,0.55); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--white); }
+  /* ─── SUBPAGE: PRICING VARIANTS ──────────────────────── */
+  .pricing-grid-solo { display: grid; grid-template-columns: minmax(0,380px); justify-content: center; gap: 24px; }
+  .pricing-grid-duo { display: grid; grid-template-columns: repeat(2, minmax(0,340px)); justify-content: center; gap: 24px; }
+  @media (max-width: 700px) { .pricing-grid-duo { grid-template-columns: minmax(0,380px); } }
+  /* ─── SUBPAGE: NOTE CALLOUT ───────────────────────────── */
+  .note-callout {
+    max-width: 640px; margin: 0 auto; text-align: center;
+    background: rgba(233,69,96,0.06); border: 1px solid rgba(233,69,96,0.2);
+    border-radius: 14px; padding: 32px 36px;
+  }
+  .note-callout p { font-size: 15px; color: var(--muted); line-height: 1.7; margin-bottom: 18px; }
+  .note-callout p:last-child { margin-bottom: 0; }
+  .note-callout strong { color: var(--dark2); }
+  /* ─── SUBPAGE: STEPS ──────────────────────────────────── */
+  .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; counter-reset: step; }
+  .step-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 32px 28px; position: relative; }
+  .step-num {
+    width: 40px; height: 40px; border-radius: 50%; background: var(--red);
+    color: var(--white); display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-weight: 700; font-size: 17px; margin-bottom: 18px;
+  }
+  .step-title { font-size: 17px; font-weight: 600; color: var(--dark2); margin-bottom: 8px; }
+  .step-desc { font-size: 14px; color: var(--muted); line-height: 1.6; }
+  @media (max-width: 900px) { .steps-grid { grid-template-columns: 1fr; } }
+  /* ─── SUBPAGE: SINGLE / DUO TESTIMONIAL ───────────────── */
+  .testi-grid-solo { display: grid; grid-template-columns: minmax(0,620px); justify-content: center; }
+  @media (max-width: 900px) { .page-hero { padding: 128px 0 64px; } }
+
+  /* ─── EXTRA RESPONSIVE POLISH (added) ───────────────── */
+  @media (max-width: 480px) {
+    .hero h1, .page-hero h1 { letter-spacing: -0.5px; }
+    .section-title { letter-spacing: -0.4px; }
+    .btn-primary, .btn-outline, .btn-white, .btn-white-outline { padding: 14px 24px; font-size: 14px; }
+    .pricing-grid-duo, .pricing-grid-solo { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 360px) {
+    .section-container, .cta-banner { padding: 0 18px; }
+    nav { padding: 0 16px; }
+  }
+
+
+  /* ─── NAV: SERVICES DROPDOWN ─────────────────────────── */
+  .nav-links li.has-dropdown { position: relative; }
+  .dropdown-toggle {
+    display: flex; align-items: center; gap: 6px; cursor: pointer;
+    background: none; border: none; font: inherit; color: inherit;
+    padding: 0; letter-spacing: 0.3px;
+  }
+  .dropdown-caret {
+    width: 9px; height: 9px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor;
+    transform: rotate(45deg); transition: transform 0.2s; margin-top: -3px; flex-shrink: 0;
+  }
+  li.has-dropdown.open .dropdown-caret { transform: rotate(-135deg); margin-top: 3px; }
+  .dropdown-menu {
+    list-style: none; position: absolute; top: calc(100% + 14px); left: 50%;
+    transform: translate(-50%, -8px); min-width: 260px;
+    background: var(--dark2); border: 1px solid rgba(233,69,96,0.22);
+    border-radius: 12px; padding: 10px; box-shadow: 0 24px 48px -14px rgba(0,0,0,0.55);
+    opacity: 0; visibility: hidden; pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 210;
+  }
+  .dropdown-menu::before {
+    content: ''; position: absolute; top: -6px; left: 50%; transform: translateX(-50%) rotate(45deg);
+    width: 12px; height: 12px; background: var(--dark2); border-left: 1px solid rgba(233,69,96,0.22);
+    border-top: 1px solid rgba(233,69,96,0.22);
+  }
+  .dropdown-menu li { width: 100%; }
+  .dropdown-menu a {
+    display: flex; flex-direction: column; gap: 2px; padding: 11px 14px; border-radius: 8px;
+    color: rgba(255,255,255,0.8); text-decoration: none; font-size: 14px; font-weight: 500;
+    border-bottom: none !important;
+  }
+  .dropdown-menu a small { color: rgba(255,255,255,0.4); font-size: 11.5px; font-weight: 400; }
+  .dropdown-menu a:hover { background: rgba(233,69,96,0.14); color: var(--white); }
+  @media (hover: hover) and (pointer: fine) {
+    li.has-dropdown:hover .dropdown-menu,
+    li.has-dropdown:focus-within .dropdown-menu {
+      opacity: 1; visibility: visible; pointer-events: auto; transform: translate(-50%, 0);
+    }
+    li.has-dropdown:hover .dropdown-caret { transform: rotate(-135deg); margin-top: 3px; }
+  }
+  li.has-dropdown.open .dropdown-menu {
+    opacity: 1; visibility: visible; pointer-events: auto; transform: translate(-50%, 0);
+  }
+  /* ─── NAV: MOBILE DROPDOWN → ACCORDION ───────────────── */
+  @media (max-width: 900px) {
+    .nav-links li.has-dropdown { display: flex; flex-direction: column; }
+    .dropdown-toggle {
+      width: 100%; padding: 16px 24px; justify-content: space-between;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .dropdown-menu {
+      position: static; transform: none; opacity: 1; visibility: visible; pointer-events: auto;
+      display: none; min-width: 0; width: 100%; box-shadow: none; border: none;
+      border-radius: 0; background: rgba(0,0,0,0.22); padding: 4px 0 8px;
+    }
+    .dropdown-menu::before { display: none; }
+    li.has-dropdown.open .dropdown-menu { display: block; }
+    .dropdown-menu a { padding: 12px 24px 12px 40px; border-radius: 0; }
+  }
+
 </style>
 </head>
 <body>
-<!-- ── NAVIGATION ────────────────────────────────────── -->
 <nav>
-  <a href="#home" class="nav-logo">
+  <a href="/" class="nav-logo">
     <img src="https://i.ibb.co/vvPXz7xR/Sandhya-Arora-Fitness-logo.jpg" alt="Sandhya Arora Fitness Logo">
   </a>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
@@ -595,7 +664,18 @@
   </button>
   <ul class="nav-links" id="navLinks">
     <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
+    <li class="has-dropdown">
+      <button class="dropdown-toggle" id="servicesDropdownToggle" aria-expanded="false" aria-controls="servicesDropdownMenu">
+        <a href="#services" style="pointer-events:none;">Services</a>
+        <span class="dropdown-caret" aria-hidden="true"></span>
+      </button>
+      <ul class="dropdown-menu" id="servicesDropdownMenu">
+        <li><a href="/services/personal-fitness-trainer/">1-on-1 Personal Training<small>Fully customised in-person or online coaching</small></a></li>
+        <li><a href="/services/online-fitness-coach/">Online Coaching Programs<small>Live 1-on-1 training from anywhere</small></a></li>
+        <li><a href="/services/group-fitness-classes/">Group Fitness Classes<small>HIIT, strength & functional training</small></a></li>
+        <li><a href="/services/nutrition-coaching/">Nutrition Coaching<small>Sustainable guidance for Indian food & lifestyle</small></a></li>
+      </ul>
+    </li>
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#testimonials">Results</a></li>
     <li><a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20book%20a%20free%20consultation%20call." class="nav-cta" target="_blank" rel="noopener">Book Free Call</a></li>
@@ -614,25 +694,13 @@
         <a href="#pricing" class="btn-outline">View Pricing</a>
       </div>
       <div class="hero-trust">
-        <div class="trust-item">
-          <span class="trust-num">500+</span>
-          <span class="trust-label">Clients Trained</span>
-        </div>
+        <div class="trust-item"><span class="trust-num">500+</span><span class="trust-label">Clients Trained</span></div>
         <div class="trust-divider"></div>
-        <div class="trust-item">
-          <span class="trust-num">10+</span>
-          <span class="trust-label">Years Experience</span>
-        </div>
+        <div class="trust-item"><span class="trust-num">10+</span><span class="trust-label">Years Experience</span></div>
         <div class="trust-divider"></div>
-        <div class="trust-item">
-          <span class="trust-num">4.9★</span>
-          <span class="trust-label">Client Rating</span>
-        </div>
+        <div class="trust-item"><span class="trust-num">4.9★</span><span class="trust-label">Client Rating</span></div>
         <div class="trust-divider"></div>
-        <div class="trust-item">
-          <span class="trust-num">3</span>
-          <span class="trust-label">Certifications</span>
-        </div>
+        <div class="trust-item"><span class="trust-num">3</span><span class="trust-label">Certifications</span></div>
       </div>
     </div>
     <div class="hero-visual">
@@ -663,28 +731,28 @@
         <p class="service-tag">Most Popular</p>
         <h3 class="service-title">1-on-1 Personal Training</h3>
         <p class="service-desc">Fully customised training sessions designed around your goals, fitness level, and schedule. The fastest route to results because every session is 100% built for you.</p>
-        <a href="#contact" class="service-link">Book a Session</a>
+        <a href="/services/personal-fitness-trainer/" class="service-link">Explore Personal Training</a>
       </article>
       <article class="service-card">
         <div class="service-icon" aria-hidden="true">👥</div>
         <p class="service-tag">Community Energy</p>
         <h3 class="service-title">Group Fitness Classes</h3>
         <p class="service-desc">Join high-energy HIIT, strength, yoga-fusion, and functional training classes with a supportive community. Expert coaching at an accessible price.</p>
-        <a href="#contact" class="service-link">Join a Class</a>
+        <a href="/services/group-fitness-classes/" class="service-link">Explore Group Classes</a>
       </article>
       <article class="service-card">
         <div class="service-icon" aria-hidden="true">💻</div>
         <p class="service-tag">Train Anywhere</p>
         <h3 class="service-title">Online Coaching Programs</h3>
         <p class="service-desc">Live 1-on-1 sessions with workout plans, nutrition guidance, and progress tracking - delivered entirely through your device. Train from anywhere in India or abroad.</p>
-        <a href="#pricing" class="service-link">View Pricing</a>
+        <a href="/services/online-fitness-coach/" class="service-link">Explore Online Coaching</a>
       </article>
       <article class="service-card">
         <div class="service-icon" aria-hidden="true">🥗</div>
         <p class="service-tag">Fuel Your Goals</p>
         <h3 class="service-title">Nutrition Coaching</h3>
         <p class="service-desc">Smart, sustainable nutrition guidance tailored to Indian food and your lifestyle. No crash diets - just food that actually fuels your results.</p>
-        <a href="#contact" class="service-link">Learn More</a>
+        <a href="/services/nutrition-coaching/" class="service-link">Explore Nutrition Coaching</a>
       </article>
     </div>
   </div>
@@ -696,18 +764,9 @@
       <div class="about-visual">
         <img src="https://i.ibb.co/hS3YkG3/Sandhya-Arora-Fitness-Intro.jpg" alt="Sandhya Arora - certified personal fitness trainer and coach" width="600" height="800" loading="lazy" decoding="async">
         <div class="about-cert-strip">
-          <div class="cert-item">
-            <span class="cert-label">Certified</span>
-            <span class="cert-val">Coach</span>
-          </div>
-          <div class="cert-item">
-            <span class="cert-label">Nutrition</span>
-            <span class="cert-val">Specialist</span>
-          </div>
-          <div class="cert-item">
-            <span class="cert-label">Women's</span>
-            <span class="cert-val">Fitness Expert</span>
-          </div>
+          <div class="cert-item"><span class="cert-label">Certified</span><span class="cert-val">Coach</span></div>
+          <div class="cert-item"><span class="cert-label">Nutrition</span><span class="cert-val">Specialist</span></div>
+          <div class="cert-item"><span class="cert-label">Women's</span><span class="cert-val">Fitness Expert</span></div>
         </div>
       </div>
       <div class="about-content">
@@ -717,18 +776,9 @@
         <p class="about-body">With over 10 years of certified fitness coaching experience, I've helped hundreds of people across India and around the world transform their bodies, rebuild their confidence, and find a sustainable relationship with fitness.</p>
         <p class="about-body">I blend science-backed training with personalised nutrition guidance, mindset coaching, and genuine accountability - because results aren't built in the gym alone.</p>
         <div class="about-stats">
-          <div class="astat">
-            <div class="astat-num">500+</div>
-            <div class="astat-label">Clients Transformed</div>
-          </div>
-          <div class="astat">
-            <div class="astat-num">10+</div>
-            <div class="astat-label">Years Experience</div>
-          </div>
-          <div class="astat">
-            <div class="astat-num">3</div>
-            <div class="astat-label">Certifications</div>
-          </div>
+          <div class="astat"><div class="astat-num">500+</div><div class="astat-label">Clients Transformed</div></div>
+          <div class="astat"><div class="astat-num">10+</div><div class="astat-label">Years Experience</div></div>
+          <div class="astat"><div class="astat-num">3</div><div class="astat-label">Certifications</div></div>
         </div>
         <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20book%20a%20free%20consultation%20call." class="btn-primary" style="margin-top:8px;" target="_blank" rel="noopener">Book Your Free Consultation</a>
       </div>
@@ -747,10 +797,7 @@
         <p class="testi-quote">"Sandhya completely changed my relationship with fitness. I lost 14 kg in 4 months and have never felt stronger. The program was personalised, progressive, and actually enjoyable."</p>
         <div class="testi-author">
           <div class="testi-avatar" aria-hidden="true">PM</div>
-          <div>
-            <p class="testi-name">Priya Mehta</p>
-            <p class="testi-meta">14 kg weight loss · 12-Week Program · Bangalore</p>
-          </div>
+          <div><p class="testi-name">Priya Mehta</p><p class="testi-meta">14 kg weight loss · 12-Week Program · Bangalore</p></div>
         </div>
       </article>
       <article class="testi-card">
@@ -758,10 +805,7 @@
         <p class="testi-quote">"The online coaching program was exactly what I needed as a busy working mom. Structured, achievable, and so motivating. Sandhya checks in constantly - you never feel alone."</p>
         <div class="testi-author">
           <div class="testi-avatar" aria-hidden="true">RS</div>
-          <div>
-            <p class="testi-name">Ritu Sharma</p>
-            <p class="testi-meta">Postpartum recovery · 8-Week Program · Mumbai</p>
-          </div>
+          <div><p class="testi-name">Ritu Sharma</p><p class="testi-meta">Postpartum recovery · 8-Week Program · Mumbai</p></div>
         </div>
       </article>
       <article class="testi-card">
@@ -769,10 +813,7 @@
         <p class="testi-quote">"I never thought I could enjoy working out. Sandhya's group classes are genuinely fun, challenging, and results-driven. I've lost inches and gained so much confidence."</p>
         <div class="testi-author">
           <div class="testi-avatar" aria-hidden="true">AK</div>
-          <div>
-            <p class="testi-name">Ananya Kapoor</p>
-            <p class="testi-meta">Group Classes · Body recomposition · Delhi</p>
-          </div>
+          <div><p class="testi-name">Ananya Kapoor</p><p class="testi-meta">Group Classes · Body recomposition · Delhi</p></div>
         </div>
       </article>
     </div>
@@ -789,7 +830,7 @@
         <span class="popular-badge">Most Popular</span>
         <div class="program-header">
           <p class="program-week">Online</p>
-          <h3 class="program-name">Online Personal Training</h3>
+          <h3 class="program-name"><a href="/services/online-fitness-coach/" style="color:inherit;text-decoration:none;">Online Personal Training</a></h3>
           <p class="program-tagline">1-on-1 live coaching from anywhere in the world.</p>
         </div>
         <div class="program-divider"></div>
@@ -809,7 +850,7 @@
       <article class="program-card">
         <div class="program-header">
           <p class="program-week">Offline</p>
-          <h3 class="program-name">Offline Personal Training</h3>
+          <h3 class="program-name"><a href="/services/personal-fitness-trainer/" style="color:inherit;text-decoration:none;">Offline Personal Training</a></h3>
           <p class="program-tagline">1-on-1 in-person coaching at my studio or your location.</p>
         </div>
         <div class="program-divider"></div>
@@ -829,7 +870,7 @@
       <article class="program-card">
         <div class="program-header">
           <p class="program-week">Group</p>
-          <h3 class="program-name">Group Classes</h3>
+          <h3 class="program-name"><a href="/services/group-fitness-classes/" style="color:inherit;text-decoration:none;">Group Classes</a></h3>
           <p class="program-tagline">Fun, energetic group workouts for every fitness level.</p>
         </div>
         <div class="program-divider"></div>
@@ -855,30 +896,12 @@
     <p class="section-eyebrow">FAQs</p>
     <h2 class="section-title" style="margin-bottom:44px;">Common Questions</h2>
     <div class="faq-grid">
-      <div class="faq-item">
-        <h3 class="faq-q">Do you offer online fitness training?</h3>
-        <p class="faq-a">Yes! All services including 1-on-1 coaching, group classes, and structured programs are available fully online via video sessions and app-based tracking - from anywhere in India or abroad.</p>
-      </div>
-      <div class="faq-item">
-        <h3 class="faq-q">What's the best program for weight loss?</h3>
-        <p class="faq-a">Online or Offline Personal Training combines customised workouts with nutrition coaching and consistent accountability, session by session, for sustainable fat loss and body recomposition.</p>
-      </div>
-      <div class="faq-item">
-        <h3 class="faq-q">Can complete beginners join?</h3>
-        <p class="faq-a">Absolutely. Sandhya specialises in meeting clients at every fitness level. Complete beginners are warmly welcome - sessions and programs are always calibrated to your current fitness.</p>
-      </div>
-      <div class="faq-item">
-        <h3 class="faq-q">Do I need gym equipment for online training?</h3>
-        <p class="faq-a">No gym required! Programs can be designed for home workouts with minimal equipment, or fully equipped gym sessions. You tell us what you have, and the plan adapts to you.</p>
-      </div>
-      <div class="faq-item">
-        <h3 class="faq-q">How soon will I see results?</h3>
-        <p class="faq-a">Most clients notice visible changes in energy, strength, and body composition within the first 3–4 weeks. Significant transformation results are typically visible by 8–12 weeks with consistency.</p>
-      </div>
-      <div class="faq-item">
-        <h3 class="faq-q">Is nutrition coaching included in programs?</h3>
-        <p class="faq-a">Yes - all structured programs include a personalised nutrition framework. Detailed standalone nutrition coaching is also available as a separate service for those focused primarily on diet.</p>
-      </div>
+      <div class="faq-item"><h3 class="faq-q">Do you offer online fitness training?</h3><p class="faq-a">Yes! All services including 1-on-1 coaching, group classes, and structured programs are available fully online via video sessions and app-based tracking - from anywhere in India or abroad.</p></div>
+      <div class="faq-item"><h3 class="faq-q">What's the best program for weight loss?</h3><p class="faq-a">Online or Offline Personal Training combines customised workouts with nutrition coaching and consistent accountability, session by session, for sustainable fat loss and body recomposition.</p></div>
+      <div class="faq-item"><h3 class="faq-q">Can complete beginners join?</h3><p class="faq-a">Absolutely. Sandhya specialises in meeting clients at every fitness level. Complete beginners are warmly welcome - sessions and programs are always calibrated to your current fitness.</p></div>
+      <div class="faq-item"><h3 class="faq-q">Do I need gym equipment for online training?</h3><p class="faq-a">No gym required! Programs can be designed for home workouts with minimal equipment, or fully equipped gym sessions. You tell us what you have, and the plan adapts to you.</p></div>
+      <div class="faq-item"><h3 class="faq-q">How soon will I see results?</h3><p class="faq-a">Most clients notice visible changes in energy, strength, and body composition within the first 3–4 weeks. Significant transformation results are typically visible by 8–12 weeks with consistency.</p></div>
+      <div class="faq-item"><h3 class="faq-q">Is nutrition coaching included in programs?</h3><p class="faq-a">Yes - all structured programs include a personalised nutrition framework. Detailed standalone nutrition coaching is also available as a separate service for those focused primarily on diet.</p></div>
     </div>
   </div>
 </section>
@@ -893,11 +916,11 @@
   <p style="margin-top:24px; font-size:13px; color:rgba(255,255,255,0.5);">No commitment · Online &amp; in-person options · Reply within 24 hours</p>
 </section>
 </main>
-<!-- ── FOOTER ──────────────────────────────────────────── -->
+
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <a href="#home" class="nav-logo">
+      <a href="/" class="nav-logo">
         <img src="https://i.ibb.co/vvPXz7xR/Sandhya-Arora-Fitness-logo.jpg" alt="Sandhya Arora Fitness Logo">
       </a>
       <p class="footer-tagline">Certified personal trainer helping hundreds of people across India and around the world transform their bodies and reclaim their lives.</p>
@@ -912,10 +935,10 @@
     <div class="footer-col">
       <h4>Services</h4>
       <ul>
-        <li><a href="#services">1-on-1 Personal Training</a></li>
-        <li><a href="#services">Group Fitness Classes</a></li>
-        <li><a href="#pricing">Online Coaching Programs</a></li>
-        <li><a href="#services">Nutrition Coaching</a></li>
+        <li><a href="/services/personal-fitness-trainer/">1-on-1 Personal Training</a></li>
+        <li><a href="/services/group-fitness-classes/">Group Fitness Classes</a></li>
+        <li><a href="/services/online-fitness-coach/">Online Coaching Programs</a></li>
+        <li><a href="/services/nutrition-coaching/">Nutrition Coaching</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -946,7 +969,6 @@
     <span>Privacy Policy · Terms &amp; Conditions · Refund Policy</span>
   </div>
 </footer>
-<!-- ── FLOATING WHATSAPP BUTTON ─────────────────────────── -->
 <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20know%20more%20about%20your%20fitness%20programs." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
@@ -954,7 +976,7 @@
   </svg>
 </a>
 <script>
-  // Smooth scroll for anchor links
+  // Smooth scroll for same-page anchor links only
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       const id = a.getAttribute('href');
@@ -964,6 +986,7 @@
       }
     });
   });
+
   // Mobile nav toggle
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
@@ -971,20 +994,63 @@
     const isOpen = navLinks.classList.toggle('open');
     navToggle.classList.toggle('open');
     navToggle.setAttribute('aria-expanded', String(isOpen));
+    if (!isOpen) closeDropdown();
   });
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
+
+  // Close mobile menu when a plain link (not the dropdown toggle) is clicked
+  navLinks.querySelectorAll('a:not(.dropdown-toggle a)').forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (link.closest('.dropdown-toggle')) return;
       navLinks.classList.remove('open');
       navToggle.classList.remove('open');
       navToggle.setAttribute('aria-expanded', 'false');
     });
   });
-  // Close mobile menu on resize back to desktop
+
+  // Services dropdown: click/tap toggle (works for touch + keyboard; hover handles desktop via CSS)
+  const dropdownToggle = document.getElementById('servicesDropdownToggle');
+  const dropdownParent = dropdownToggle ? dropdownToggle.closest('.has-dropdown') : null;
+
+  function closeDropdown() {
+    if (dropdownParent) {
+      dropdownParent.classList.remove('open');
+      dropdownToggle.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  if (dropdownToggle && dropdownParent) {
+    dropdownToggle.addEventListener('click', (e) => {
+      // Ignore clicks on the inline "Services" link itself (it navigates on desktop hover-off / mobile tap-through)
+      if (window.innerWidth <= 900) {
+        e.preventDefault();
+        const isOpen = dropdownParent.classList.toggle('open');
+        dropdownToggle.setAttribute('aria-expanded', String(isOpen));
+      }
+    });
+  }
+
+  // Close dropdown / mobile menu on outside click
+  document.addEventListener('click', (e) => {
+    if (dropdownParent && !dropdownParent.contains(e.target)) closeDropdown();
+    if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && e.target !== navToggle && !navToggle.contains(e.target)) {
+      navLinks.classList.remove('open');
+      navToggle.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Close dropdown on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeDropdown();
+  });
+
+  // Reset everything on resize back to desktop
   window.addEventListener('resize', () => {
     if (window.innerWidth > 900) {
       navLinks.classList.remove('open');
       navToggle.classList.remove('open');
       navToggle.setAttribute('aria-expanded', 'false');
+      closeDropdown();
     }
   });
 </script>
