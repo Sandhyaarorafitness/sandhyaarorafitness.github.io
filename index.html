@@ -97,7 +97,6 @@
   ]
 }
 </script>
-
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -308,6 +307,79 @@
   .astat { padding: 20px; background: var(--cream); border-radius: 10px; text-align: center; }
   .astat-num { font-size: 30px; font-weight: 700; color: var(--red); font-family: var(--font-display); }
   .astat-label { font-size: 12px; color: var(--muted); margin-top: 4px; }
+  /* ─── WATCH / FEATURED VIDEO ─────────────────────────── */
+  .watch-video { padding: var(--section-pad); background: var(--dark2); position: relative; overflow: hidden; }
+  .watch-video::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(ellipse 60% 50% at 30% 40%, rgba(233,69,96,0.10) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .watch-video .section-container { position: relative; }
+  .watch-video .section-title { color: var(--white); }
+  .watch-video .section-sub { color: rgba(255,255,255,0.55); }
+  .watch-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .watch-points { list-style: none; margin: 28px 0 32px; display: flex; flex-direction: column; gap: 12px; }
+  .watch-points li {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 15px; color: rgba(255,255,255,0.75);
+  }
+  .watch-points li::before { content: '✓'; color: var(--red-light); font-weight: 700; }
+  .watch-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-youtube {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: transparent; color: var(--white);
+    border: 1.5px solid rgba(255,255,255,0.3);
+    padding: 14px 26px; border-radius: 8px; font-size: 14px; font-weight: 600;
+    text-decoration: none; transition: border-color 0.2s, background 0.2s;
+  }
+  .btn-youtube:hover { border-color: var(--white); background: rgba(255,255,255,0.06); }
+  .btn-youtube svg { width: 18px; height: 18px; flex-shrink: 0; }
+  .watch-card-wrap { display: flex; justify-content: center; position: relative; }
+  .watch-card {
+    width: 300px; aspect-ratio: 9/16; max-width: 100%;
+    border-radius: 18px; overflow: hidden; position: relative;
+    background: #000;
+    border: 1px solid rgba(233,69,96,0.25);
+    box-shadow: 0 30px 70px -20px rgba(0,0,0,0.6);
+  }
+  .watch-card img {
+    width: 100%; height: 100%; object-fit: cover;
+  }
+  .watch-card iframe {
+    width: 100%; height: 100%; border: 0; position: absolute; top: 0; left: 0;
+  }
+  .watch-play-overlay {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.05) 45%, rgba(0,0,0,0.55) 100%);
+    cursor: pointer; border: none; padding: 0; width: 100%;
+  }
+  .watch-play-btn {
+    width: 66px; height: 66px; border-radius: 50%;
+    background: var(--red); display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 10px 30px -6px rgba(233,69,96,0.7);
+    transition: transform 0.2s, background 0.2s;
+  }
+  .watch-play-overlay:hover .watch-play-btn { transform: scale(1.08); background: var(--red-light); }
+  .watch-play-btn svg { width: 24px; height: 24px; margin-left: 3px; }
+  .watch-shorts-badge {
+    position: absolute; top: 14px; left: 14px;
+    background: rgba(14,14,26,0.75); backdrop-filter: blur(4px);
+    color: var(--white); font-size: 11px; font-weight: 700; letter-spacing: 0.5px;
+    padding: 6px 12px; border-radius: 20px; display: flex; align-items: center; gap: 6px;
+  }
+  .watch-shorts-badge svg { width: 13px; height: 13px; flex-shrink: 0; }
+  .watch-caption {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 20px 16px 16px; color: var(--white);
+    background: linear-gradient(0deg, rgba(0,0,0,0.75) 0%, transparent 100%);
+    font-size: 13px; font-weight: 500; pointer-events: none;
+  }
+  @media (max-width: 900px) {
+    .watch-grid { grid-template-columns: 1fr; gap: 40px; text-align: left; }
+    .watch-card-wrap { order: -1; }
+  }
   /* ─── TESTIMONIALS ────────────────────────────────── */
   .testimonials { padding: var(--section-pad); background: var(--dark2); }
   .testimonials .section-title { color: var(--white); }
@@ -577,7 +649,6 @@
   /* ─── SUBPAGE: SINGLE / DUO TESTIMONIAL ───────────────── */
   .testi-grid-solo { display: grid; grid-template-columns: minmax(0,620px); justify-content: center; }
   @media (max-width: 900px) { .page-hero { padding: 128px 0 64px; } }
-
   /* ─── EXTRA RESPONSIVE POLISH (added) ───────────────── */
   @media (max-width: 480px) {
     .hero h1, .page-hero h1 { letter-spacing: -0.5px; }
@@ -589,8 +660,6 @@
     .section-container, .cta-banner { padding: 0 18px; }
     nav { padding: 0 16px; }
   }
-
-
   /* ─── NAV: SERVICES DROPDOWN ─────────────────────────── */
   .nav-links li.has-dropdown { position: relative; }
   .dropdown-toggle {
@@ -651,7 +720,6 @@
     li.has-dropdown.open .dropdown-menu { display: block; transform: none; }
     .dropdown-menu a { padding: 12px 24px 12px 40px; border-radius: 0; }
   }
-
 </style>
 </head>
 <body>
@@ -676,6 +744,7 @@
         <li><a href="/services/nutrition-coaching/">Nutrition Coaching<small>Sustainable guidance for Indian food & lifestyle</small></a></li>
       </ul>
     </li>
+    <li><a href="#watch">Watch</a></li>
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#testimonials">Results</a></li>
     <li><a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20book%20a%20free%20consultation%20call." class="nav-cta" target="_blank" rel="noopener">Book Free Call</a></li>
@@ -781,6 +850,45 @@
           <div class="astat"><div class="astat-num">3</div><div class="astat-label">Certifications</div></div>
         </div>
         <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20book%20a%20free%20consultation%20call." class="btn-primary" style="margin-top:8px;" target="_blank" rel="noopener">Book Your Free Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ── WATCH ME IN ACTION ──────────────────────────────── -->
+<section class="watch-video" id="watch">
+  <div class="section-container">
+    <div class="watch-grid">
+      <div class="watch-content-block">
+        <p class="section-eyebrow" style="color:var(--red-light);">Fitness Tips Every Week</p>
+        <h2 class="section-title">Watch Me<br>in Action</h2>
+        <p class="section-sub" style="margin-bottom:0;">Quick, practical fitness advice in under 60 seconds - the same coaching style you'll get in every session.</p>
+        <ul class="watch-points">
+          <li>New tips posted weekly</li>
+          <li>Real form cues, no fluff</li>
+          <li>Home workouts & nutrition hacks</li>
+        </ul>
+        <div class="watch-ctas">
+          <a href="https://www.youtube.com/@sandhyaarorafitness?sub_confirmation=1" class="btn-primary" target="_blank" rel="noopener">Subscribe on YouTube</a>
+          <a href="https://www.youtube.com/@sandhyaarorafitness" class="btn-youtube" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.56A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14C4.5 20.5 12 20.5 12 20.5s7.5 0 9.38-.56a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12Z"/></svg>
+            View More Videos
+          </a>
+        </div>
+      </div>
+      <div class="watch-card-wrap">
+        <div class="watch-card" id="watchCard">
+          <span class="watch-shorts-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.56A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14C4.5 20.5 12 20.5 12 20.5s7.5 0 9.38-.56a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12Z"/></svg>
+            Shorts
+          </span>
+          <img src="https://i.ytimg.com/vi/Td3SD-7DuV4/hqdefault.jpg" alt="Sandhya Arora fitness tip - YouTube Short preview" loading="lazy" width="300" height="533">
+          <button class="watch-play-overlay" id="watchPlayBtn" aria-label="Play video">
+            <span class="watch-play-btn" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg>
+            </span>
+          </button>
+          <div class="watch-caption">Tap to watch on YouTube</div>
+        </div>
       </div>
     </div>
   </div>
@@ -916,7 +1024,6 @@
   <p style="margin-top:24px; font-size:13px; color:rgba(255,255,255,0.5);">No commitment · Online &amp; in-person options · Reply within 24 hours</p>
 </section>
 </main>
-
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
@@ -927,7 +1034,7 @@
       <p style="margin-top:16px; font-size:12px; color:rgba(255,255,255,0.25);">Tagline: Transform. Strengthen. Thrive.</p>
       <div class="footer-social">
         <a href="#" class="soc-btn" aria-label="Instagram">IG</a>
-        <a href="#" class="soc-btn" aria-label="YouTube">YT</a>
+        <a href="https://www.youtube.com/@sandhyaarorafitness" class="soc-btn" aria-label="YouTube" target="_blank" rel="noopener">YT</a>
         <a href="#" class="soc-btn" aria-label="Facebook">FB</a>
         <a href="#" class="soc-btn" aria-label="LinkedIn">IN</a>
       </div>
@@ -945,6 +1052,7 @@
       <h4>Quick Links</h4>
       <ul>
         <li><a href="#about">About Sandhya</a></li>
+        <li><a href="#watch">Watch</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#testimonials">Client Results</a></li>
         <li><a href="#faq">FAQs</a></li>
@@ -986,7 +1094,6 @@
       }
     });
   });
-
   // Mobile nav toggle
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
@@ -996,7 +1103,6 @@
     navToggle.setAttribute('aria-expanded', String(isOpen));
     if (!isOpen) closeDropdown();
   });
-
   // Close mobile menu when a plain link (not the dropdown toggle) is clicked
   navLinks.querySelectorAll('a:not(.dropdown-toggle a)').forEach(link => {
     link.addEventListener('click', (e) => {
@@ -1006,18 +1112,15 @@
       navToggle.setAttribute('aria-expanded', 'false');
     });
   });
-
   // Services dropdown: click/tap toggle (works for touch + keyboard; hover handles desktop via CSS)
   const dropdownToggle = document.getElementById('servicesDropdownToggle');
   const dropdownParent = dropdownToggle ? dropdownToggle.closest('.has-dropdown') : null;
-
   function closeDropdown() {
     if (dropdownParent) {
       dropdownParent.classList.remove('open');
       dropdownToggle.setAttribute('aria-expanded', 'false');
     }
   }
-
   if (dropdownToggle && dropdownParent) {
     dropdownToggle.addEventListener('click', (e) => {
       // Ignore clicks on the inline "Services" link itself (it navigates on desktop hover-off / mobile tap-through)
@@ -1028,7 +1131,6 @@
       }
     });
   }
-
   // Close dropdown / mobile menu on outside click
   document.addEventListener('click', (e) => {
     if (dropdownParent && !dropdownParent.contains(e.target)) closeDropdown();
@@ -1038,12 +1140,10 @@
       navToggle.setAttribute('aria-expanded', 'false');
     }
   });
-
   // Close dropdown on Escape
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeDropdown();
   });
-
   // Reset everything on resize back to desktop
   window.addEventListener('resize', () => {
     if (window.innerWidth > 900) {
@@ -1053,6 +1153,20 @@
       closeDropdown();
     }
   });
+  // Featured video facade: load iframe only on click (no autoplay on page load)
+  const watchPlayBtn = document.getElementById('watchPlayBtn');
+  const watchCard = document.getElementById('watchCard');
+  if (watchPlayBtn && watchCard) {
+    watchPlayBtn.addEventListener('click', () => {
+      const iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube-nocookie.com/embed/Td3SD-7DuV4?autoplay=1&rel=0&modestbranding=1&playsinline=1';
+      iframe.title = 'Sandhya Arora Fitness - YouTube Short';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.allowFullscreen = true;
+      watchCard.innerHTML = '';
+      watchCard.appendChild(iframe);
+    });
+  }
 </script>
 </body>
 </html>
