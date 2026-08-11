@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sandhya Arora Fitness | Personal Trainer & Online Fitness Coach – India & Worldwide</title>
+<title>Sandhya Arora Fitness | Personal Trainer & Online Fitness Coach - India & Worldwide</title>
 <meta name="description" content="Transform your body and mind with Sandhya Arora - certified personal fitness trainer offering 1-on-1 coaching, group classes, and online fitness programs for clients across India and worldwide. Book your free consultation today!">
 <meta name="keywords" content="Sandhya Arora Fitness, Sandhya Arora personal trainer, personal fitness trainer, online fitness coach India, online fitness coach worldwide, personal training for women, weight loss coach online, group fitness classes online, 1 on 1 fitness coaching, body transformation coach, personal trainer for global clients">
 <meta name="author" content="Sandhya Arora">
@@ -12,13 +12,13 @@
 <link rel="canonical" href="https://www.sandhyaarorafitness.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sandhya Arora Fitness">
-<meta property="og:title" content="Sandhya Arora Fitness | Personal Trainer & Online Fitness Coach – India & Worldwide">
+<meta property="og:title" content="Sandhya Arora Fitness | Personal Trainer & Online Fitness Coach - India & Worldwide">
 <meta property="og:description" content="Transform your body and mind with Sandhya Arora - certified personal fitness trainer offering 1-on-1 coaching, group classes, and online fitness programs for clients across India and worldwide.">
 <meta property="og:url" content="https://www.sandhyaarorafitness.com/">
 <meta property="og:image" content="https://i.ibb.co/xt0T9y9H/Sandhya-Arora-Fitness-Hero.png">
 <meta property="og:locale" content="en_IN">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Sandhya Arora Fitness | Personal Trainer & Online Fitness Coach – India & Worldwide">
+<meta name="twitter:title" content="Sandhya Arora Fitness | Personal Trainer & Online Fitness Coach - India & Worldwide">
 <meta name="twitter:description" content="Certified personal fitness trainer offering 1-on-1 coaching, group classes, and online fitness programs for clients across India and worldwide.">
 <meta name="twitter:image" content="https://i.ibb.co/xt0T9y9H/Sandhya-Arora-Fitness-Hero.png">
 <link rel="icon" type="image/png" href="https://i.ibb.co/XfxtDL0F/Sandhya-Arora-Fitness-Favicon.png">
@@ -90,7 +90,7 @@
         { "@type": "Question", "name": "What's the best program for weight loss?", "acceptedAnswer": { "@type": "Answer", "text": "Online or Offline Personal Training combines customised workouts with nutrition coaching and consistent accountability, session by session, for sustainable fat loss and body recomposition." } },
         { "@type": "Question", "name": "Can complete beginners join?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. Sandhya specialises in meeting clients at every fitness level. Complete beginners are warmly welcome - sessions and programs are always calibrated to your current fitness." } },
         { "@type": "Question", "name": "Do I need gym equipment for online training?", "acceptedAnswer": { "@type": "Answer", "text": "No gym required! Programs can be designed for home workouts with minimal equipment, or fully equipped gym sessions. You tell us what you have, and the plan adapts to you." } },
-        { "@type": "Question", "name": "How soon will I see results?", "acceptedAnswer": { "@type": "Answer", "text": "Most clients notice visible changes in energy, strength, and body composition within the first 3–4 weeks. Significant transformation results are typically visible by 8–12 weeks with consistency." } },
+        { "@type": "Question", "name": "How soon will I see results?", "acceptedAnswer": { "@type": "Answer", "text": "Most clients notice visible changes in energy, strength, and body composition within the first 3-4 weeks. Significant transformation results are typically visible by 8-12 weeks with consistency." } },
         { "@type": "Question", "name": "Is nutrition coaching included in programs?", "acceptedAnswer": { "@type": "Answer", "text": "Yes - all structured programs include a personalised nutrition framework. Detailed standalone nutrition coaching is also available as a separate service for those focused primarily on diet." } }
       ]
     }
@@ -113,8 +113,8 @@
     --font-display: 'Playfair Display', Georgia, serif;
     --font-body: 'DM Sans', system-ui, sans-serif;
   }
-  html { scroll-behavior: smooth; }
-  body { font-family: var(--font-body); color: var(--text); background: var(--white); line-height: 1.6; overflow-x: hidden; }
+  html { scroll-behavior: smooth; overflow-x: hidden; max-width: 100vw; }
+  body { font-family: var(--font-body); color: var(--text); background: var(--white); line-height: 1.6; overflow-x: hidden; max-width: 100vw; width: 100%; }
   img { max-width: 100%; display: block; }
   a:focus-visible, button:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
   /* ─── NAV ─────────────────────────────────────────── */
@@ -380,6 +380,105 @@
     .watch-grid { grid-template-columns: 1fr; gap: 40px; text-align: left; }
     .watch-card-wrap { order: -1; }
   }
+  /* ─── VIDEO GALLERY (Trainer / Testimonials / Teaching / Group) ── */
+  .video-gallery { padding: var(--section-pad); background: var(--cream); position: relative; }
+  .vg-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; flex-wrap: wrap; margin-bottom: 40px; }
+  .vg-head .section-sub { margin-bottom: 0; }
+  .vg-headtext { flex: 1; min-width: 260px; }
+  .vg-yt-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: var(--red); font-size: 14px; font-weight: 600; text-decoration: none;
+    border-bottom: 1.5px solid transparent; transition: border-color 0.2s; white-space: nowrap;
+  }
+  .vg-yt-link svg { width: 18px; height: 18px; flex-shrink: 0; }
+  .vg-yt-link:hover { border-color: var(--red); }
+  .vg-tabs {
+    display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 36px;
+    border-bottom: 1px solid var(--border); padding-bottom: 24px;
+  }
+  .vg-tab {
+    background: var(--white); border: 1.5px solid var(--border); color: var(--muted);
+    padding: 11px 22px; border-radius: 30px; font-family: var(--font-body);
+    font-weight: 600; font-size: 13.5px; letter-spacing: 0.2px; cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .vg-tab .vg-tab-count {
+    font-size: 11px; font-weight: 700; background: rgba(0,0,0,0.06); color: var(--muted);
+    border-radius: 20px; padding: 2px 8px; transition: background 0.2s, color 0.2s;
+  }
+  .vg-tab:hover { border-color: rgba(233,69,96,0.4); color: var(--red); transform: translateY(-1px); }
+  .vg-tab.active { background: var(--red); border-color: var(--red); color: var(--white); }
+  .vg-tab.active .vg-tab-count { background: rgba(255,255,255,0.25); color: var(--white); }
+  .vg-panel { display: none; }
+  .vg-panel.active { display: block; animation: vgFadeIn 0.45s ease; }
+  @keyframes vgFadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+  .vg-panel-intro { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; }
+  .vg-panel-icon {
+    width: 40px; height: 40px; border-radius: 10px; background: rgba(233,69,96,0.1);
+    display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;
+  }
+  .vg-panel-desc { font-size: 14.5px; color: var(--muted); line-height: 1.6; }
+  .vg-panel-desc strong { color: var(--dark2); }
+  .vg-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+  .vg-card {
+    aspect-ratio: 9/16; border-radius: 16px; overflow: hidden; position: relative;
+    background: #000; border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 18px 40px -18px rgba(14,14,26,0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .vg-card:hover { transform: translateY(-6px); box-shadow: 0 28px 54px -18px rgba(14,14,26,0.5); }
+  .vg-card img {
+    width: 100%; height: 100%; object-fit: cover; opacity: 0.92;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+  }
+  .vg-card:hover img { transform: scale(1.05); opacity: 1; }
+  .vg-card iframe { width: 100%; height: 100%; border: 0; position: absolute; top: 0; left: 0; }
+  .vg-play {
+    position: absolute; inset: 0; width: 100%; border: none; padding: 0; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(180deg, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.02) 40%, rgba(0,0,0,0.72) 100%);
+  }
+  .vg-play-btn {
+    width: 46px; height: 46px; border-radius: 50%; background: var(--red);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 8px 22px -4px rgba(233,69,96,0.75);
+    transition: transform 0.2s, background 0.2s;
+  }
+  .vg-play:hover .vg-play-btn { transform: scale(1.1); background: var(--red-light); }
+  .vg-play-btn svg { width: 17px; height: 17px; margin-left: 2px; }
+  .vg-badge {
+    position: absolute; top: 10px; left: 10px; z-index: 2;
+    background: rgba(14,14,26,0.72); backdrop-filter: blur(4px); color: var(--white);
+    font-size: 10px; font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase;
+    padding: 5px 9px; border-radius: 20px; display: flex; align-items: center; gap: 4px; pointer-events: none;
+  }
+  .vg-badge svg { width: 11px; height: 11px; flex-shrink: 0; }
+  .vg-caption {
+    position: absolute; bottom: 0; left: 0; right: 0; z-index: 2;
+    padding: 26px 12px 12px; color: var(--white);
+    background: linear-gradient(0deg, rgba(0,0,0,0.85) 0%, transparent 100%);
+    font-size: 12.5px; font-weight: 600; line-height: 1.35; pointer-events: none;
+  }
+  .vg-cta { text-align: center; margin-top: 44px; }
+  @media (max-width: 1100px) { .vg-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 780px) { .vg-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) {
+    .vg-head { flex-direction: column; align-items: flex-start; gap: 14px; }
+    .vg-tabs { gap: 8px; padding-bottom: 20px; }
+    .vg-tab { padding: 9px 16px; font-size: 12.5px; flex: 1 1 auto; justify-content: center; }
+    .vg-grid {
+      display: flex; grid-template-columns: none; overflow-x: auto; scroll-snap-type: x mandatory;
+      gap: 14px; margin: 0 -28px; padding: 4px 28px 10px;
+      -webkit-overflow-scrolling: touch; scrollbar-width: none;
+    }
+    .vg-grid::-webkit-scrollbar { display: none; }
+    .vg-card { flex: 0 0 62vw; scroll-snap-align: start; }
+  }
+  @media (max-width: 420px) {
+    .vg-grid { margin: 0 -20px; padding: 4px 20px 10px; }
+    .vg-card { flex: 0 0 68vw; }
+  }
   /* ─── TESTIMONIALS ────────────────────────────────── */
   .testimonials { padding: var(--section-pad); background: var(--dark2); }
   .testimonials .section-title { color: var(--white); }
@@ -524,7 +623,8 @@
   /* ─── RESPONSIVE: LAPTOP / SMALL DESKTOP (≤1180px) ─── */
   @media (max-width: 1180px) {
     .hero-grid { gap: 44px; padding: 70px 44px; }
-    .section-container, .cta-banner { padding: 0 44px; }
+    .section-container { padding: 0 44px; }
+    .cta-banner { padding: 80px 44px; }
     .about-grid { gap: 50px; }
     .hero-image-frame { width: 380px; height: 480px; }
   }
@@ -555,7 +655,8 @@
     .hero-image-frame { width: min(320px, 80vw); height: min(400px, 60vh); margin: 0 auto; }
     .hero-badge2 { right: 0; top: 20px; padding: 10px 14px; }
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
-    .section-container, .cta-banner { padding: 0 28px; }
+    .section-container { padding: 0 28px; }
+    .cta-banner { padding: 64px 28px; }
     .services-grid, .testi-grid, .pricing-grid, .faq-grid { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
     .footer-brand { grid-column: 1 / -1; }
@@ -657,7 +758,8 @@
     .pricing-grid-duo, .pricing-grid-solo { grid-template-columns: 1fr; }
   }
   @media (max-width: 360px) {
-    .section-container, .cta-banner { padding: 0 18px; }
+    .section-container { padding: 0 18px; }
+    .cta-banner { padding: 64px 18px; }
     nav { padding: 0 16px; }
   }
   /* ─── NAV: SERVICES DROPDOWN ─────────────────────────── */
@@ -745,6 +847,7 @@
       </ul>
     </li>
     <li><a href="#watch">Watch</a></li>
+    <li><a href="#videos">Videos</a></li>
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#testimonials">Results</a></li>
     <li><a href="/blogs/" aria-current="page">Blogs</a></li>
@@ -880,7 +983,6 @@
         <div class="watch-card" id="watchCard">
           <span class="watch-shorts-badge">
             <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.56A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14C4.5 20.5 12 20.5 12 20.5s7.5 0 9.38-.56a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12Z"/></svg>
-            Shorts
           </span>
           <img src="https://i.ytimg.com/vi/Td3SD-7DuV4/hqdefault.jpg" alt="Sandhya Arora fitness tip - YouTube Short preview" loading="lazy" width="300" height="533">
           <button class="watch-play-overlay" id="watchPlayBtn" aria-label="Play video">
@@ -891,6 +993,199 @@
           <div class="watch-caption">Tap to watch on YouTube</div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+<!-- ── VIDEO GALLERY ───────────────────────────────────── -->
+<section class="video-gallery" id="videos">
+  <div class="section-container">
+    <div class="vg-head">
+      <div class="vg-headtext">
+        <p class="section-eyebrow">On The Channel</p>
+        <h2 class="section-title">Every Side of the<br>Journey, On <em style="color:var(--red);font-style:normal;">Video</em></h2>
+        <p class="section-sub">From coaching cues to real client wins, straight from the Sandhya Arora Fitness YouTube channel.</p>
+      </div>
+      <a href="https://youtube.com/@sandhya.arora.fitness/shorts" class="vg-yt-link" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.56A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14C4.5 20.5 12 20.5 12 20.5s7.5 0 9.38-.56a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12Z"/></svg>
+        See all videos on YouTube
+      </a>
+    </div>
+    <div class="vg-tabs" role="tablist" aria-label="Video categories">
+      <button class="vg-tab active" type="button" data-target="vg-trainer" role="tab" aria-selected="true">Trainer Videos</button>
+      <button class="vg-tab" type="button" data-target="vg-testimonials" role="tab" aria-selected="false">Testimonials</button>
+      <button class="vg-tab" type="button" data-target="vg-teaching" role="tab" aria-selected="false">Client & Trainer Teaching</button>
+      <button class="vg-tab" type="button" data-target="vg-group" role="tab" aria-selected="false">Group Training</button>
+    </div>
+    
+    <!-- TRAINER VIDEOS -->
+    <div class="vg-panel active" id="vg-trainer" role="tabpanel">
+      <div class="vg-panel-intro">
+        <span class="vg-panel-icon" aria-hidden="true">🎯</span>
+        <p class="vg-panel-desc"><strong>Sandhya, straight to camera</strong> - form cues, workout breakdowns, and the coaching style you'll get in every session.</p>
+      </div>
+      <div class="vg-grid">
+        <div class="vg-card" data-video-id="xz7A_4tiWbo" data-title="Hand Stand Practice For 21 Days">
+          <span class="vg-badge"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.56A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14C4.5 20.5 12 20.5 12 20.5s7.5 0 9.38-.56a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12Z"/></svg></span>
+          <img class="vg-thumb" alt="" loading="lazy" width="220" height="391">
+          <button class="vg-play" aria-label="Play video">
+            <span class="vg-play-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg></span>
+          </button>
+          <div class="vg-caption">Hand Stand Practice For 21 Days</div>
+        </div>
+        <div class="vg-card" data-video-id="GuecAui7L_c" data-title="Weight Loss & Fat Loss Nutrition Advice">
+          <span class="vg-badge"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.56A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14C4.5 20.5 12 20.5 12 20.5s7.5 0 9.38-.56a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12Z"/></svg></span>
+          <img class="vg-thumb" alt="" loading="lazy" width="220" height="391">
+          <button class="vg-play" aria-label="Play video">
+            <span class="vg-play-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg></span>
+          </button>
+          <div class="vg-caption">Weight Loss & Fat Loss Nutrition Advice</div>
+        </div>
+        <div class="vg-card" data-video-id="L5nKMvSnoYY" data-title="Morning Walk Of A Lazy Girl">
+          <span class="vg-badge"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.56A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14C4.5 20.5 12 20.5 12 20.5s7.5 0 9.38-.56a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12Z"/></svg></span>
+          <img class="vg-thumb" alt="" loading="lazy" width="220" height="391">
+          <button class="vg-play" aria-label="Play video">
+            <span class="vg-play-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg></span>
+          </button>
+          <div class="vg-caption">Morning Walk Of A Lazy Girl</div>
+        </div>
+        <div class="vg-card" data-video-id="2qY36kLogUQ" data-title="Happy Sunset Trainer Routine">
+          <span class="vg-badge"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.56A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14C4.5 20.5 12 20.5 12 20.5s7.5 0 9.38-.56a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12Z"/></svg></span>
+          <img class="vg-thumb" alt="" loading="lazy" width="220" height="391">
+          <button class="vg-play" aria-label="Play video">
+            <span class="vg-play-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg></span>
+          </button>
+          <div class="vg-caption">Happy Sunset Trainer Routine</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- TESTIMONIALS -->
+    <div class="vg-panel" id="vg-testimonials" role="tabpanel">
+      <div class="vg-panel-intro">
+        <span class="vg-panel-icon" aria-hidden="true">💬</span>
+        <p class="vg-panel-desc"><strong>Real clients, real words</strong> - hear directly from the people who trained, showed up, and transformed.</p>
+      </div>
+      <div class="vg-grid">
+        <div class="vg-card" data-video-id="xUJv4gMOYnY" data-title="25 Pushup Challenge">
+          <span class="vg-badge"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.56A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14C4.5 20.5 12 20.5 12 20.5s7.5 0 9.38-.56a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12Z"/></svg></span>
+          <img class="vg-thumb" alt="" loading="lazy" width="220" height="391">
+          <button class="vg-play" aria-label="Play video">
+            <span class="vg-play-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg></span>
+          </button>
+          <div class="vg-caption">25 Pushup Challenge</div>
+        </div>
+        <div class="vg-card" data-video-id="o9aXzuOyA80" data-title="Girls Pull-ups for Toned Body">
+          <span class="vg-badge"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.56A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14C4.5 20.5 12 20.5 12 20.5s7.5 0 9.38-.56a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12Z"/></svg></span>
+          <img class="vg-thumb" alt="" loading="lazy" width="220" height="391">
+          <button class="vg-play" aria-label="Play video">
+            <span class="vg-play-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg></span>
+          </button>
+          <div class="vg-caption">Girls Pull-ups for Toned Body</div>
+        </div>
+        <div class="vg-card" data-video-id="NvAbMljOV3s" data-title="1111 Jumping Jack For Weight Loss">
+          <span class="vg-badge"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.56A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14C4.5 20.5 12 20.5 12 20.5s7.5 0 9.38-.56a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12Z"/></svg></span>
+          <img class="vg-thumb" alt="" loading="lazy" width="220" height="391">
+          <button class="vg-play" aria-label="Play video">
+            <span class="vg-play-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg></span>
+          </button>
+          <div class="vg-caption">1111 Jumping Jack For Weight Loss</div>
+        </div>
+        <div class="vg-card" data-video-id="v8JXpCZS9vY" data-title="Belly Fat Reduction Challenge">
+          <span class="vg-badge"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.56A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14C4.5 20.5 12 20.5 12 20.5s7.5 0 9.38-.56a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12Z"/></svg></span>
+          <img class="vg-thumb" alt="" loading="lazy" width="220" height="391">
+          <button class="vg-play" aria-label="Play video">
+            <span class="vg-play-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg></span>
+          </button>
+          <div class="vg-caption">Belly Fat Reduction Challenge</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- CLIENT & TRAINER TEACHING -->
+    <div class="vg-panel" id="vg-teaching" role="tabpanel">
+      <div class="vg-panel-intro">
+        <span class="vg-panel-icon" aria-hidden="true">🤝</span>
+        <p class="vg-panel-desc"><strong>Coaching in real time</strong> - Sandhya working 1-on-1 with clients, correcting form and teaching technique live.</p>
+      </div>
+      <div class="vg-grid">
+        <div class="vg-card" data-video-id="fQl7CZBA0YA" data-title="Your Trainer Doesn't Know Counting 🤣">
+          <span class="vg-badge"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.56A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14C4.5 20.5 12 20.5 12 20.5s7.5 0 9.38-.56a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12Z"/></svg></span>
+          <img class="vg-thumb" alt="" loading="lazy" width="220" height="391">
+          <button class="vg-play" aria-label="Play video">
+            <span class="vg-play-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg></span>
+          </button>
+          <div class="vg-caption">Your Trainer Doesn't Know Counting 🤣</div>
+        </div>
+        <div class="vg-card" data-video-id="YcJHq3hEIMc" data-title="Girl's Best Chest Workout">
+          <span class="vg-badge"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.56A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14C4.5 20.5 12 20.5 12 20.5s7.5 0 9.38-.56a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12Z"/></svg></span>
+          <img class="vg-thumb" alt="" loading="lazy" width="220" height="391">
+          <button class="vg-play" aria-label="Play video">
+            <span class="vg-play-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg></span>
+          </button>
+          <div class="vg-caption">Girl's Best Chest Workout</div>
+        </div>
+        <div class="vg-card" data-video-id="iFThKb3RHZw" data-title="Stepper Exercises for Cardio">
+          <span class="vg-badge"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.56A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14C4.5 20.5 12 20.5 12 20.5s7.5 0 9.38-.56a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12Z"/></svg></span>
+          <img class="vg-thumb" alt="" loading="lazy" width="220" height="391">
+          <button class="vg-play" aria-label="Play video">
+            <span class="vg-play-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg></span>
+          </button>
+          <div class="vg-caption">Stepper Exercises for Cardio</div>
+        </div>
+        <div class="vg-card" data-video-id="5V-qe28U-Jg" data-title="How To Do Push Ups for Female Beginners">
+          <span class="vg-badge"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.56A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14C4.5 20.5 12 20.5 12 20.5s7.5 0 9.38-.56a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12Z"/></svg></span>
+          <img class="vg-thumb" alt="" loading="lazy" width="220" height="391">
+          <button class="vg-play" aria-label="Play video">
+            <span class="vg-play-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg></span>
+          </button>
+          <div class="vg-caption">How To Do Push Ups for Female Beginners</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- GROUP TRAINING -->
+    <div class="vg-panel" id="vg-group" role="tabpanel">
+      <div class="vg-panel-intro">
+        <span class="vg-panel-icon" aria-hidden="true">👥</span>
+        <p class="vg-panel-desc"><strong>The group energy</strong> - HIIT circuits, strength drills, and the community that keeps everyone showing up.</p>
+      </div>
+      <div class="vg-grid">
+        <div class="vg-card" data-video-id="byWvDHJQp20" data-title="They All Hate Burpees 🤣🤣">
+          <span class="vg-badge"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.56A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14C4.5 20.5 12 20.5 12 20.5s7.5 0 9.38-.56a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12Z"/></svg></span>
+          <img class="vg-thumb" alt="" loading="lazy" width="220" height="391">
+          <button class="vg-play" aria-label="Play video">
+            <span class="vg-play-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg></span>
+          </button>
+          <div class="vg-caption">They All Hate Burpees 🤣🤣</div>
+        </div>
+        <div class="vg-card" data-video-id="Hk60Ppqij2U" data-title="Jumping Jacks In Group">
+          <span class="vg-badge"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.56A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14C4.5 20.5 12 20.5 12 20.5s7.5 0 9.38-.56a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12Z"/></svg></span>
+          <img class="vg-thumb" alt="" loading="lazy" width="220" height="391">
+          <button class="vg-play" aria-label="Play video">
+            <span class="vg-play-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg></span>
+          </button>
+          <div class="vg-caption">Jumping Jacks In Group</div>
+        </div>
+        <div class="vg-card" data-video-id="ry0fD7cgrtk" data-title="Spot Running High-Intensity Workout">
+          <span class="vg-badge"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.56A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14C4.5 20.5 12 20.5 12 20.5s7.5 0 9.38-.56a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12Z"/></svg></span>
+          <img class="vg-thumb" alt="" loading="lazy" width="220" height="391">
+          <button class="vg-play" aria-label="Play video">
+            <span class="vg-play-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg></span>
+          </button>
+          <div class="vg-caption">Spot Running High-Intensity Workout</div>
+        </div>
+        <div class="vg-card" data-video-id="Sl-JjYaR9Zc" data-title="Funny Zumba Dance By Students">
+          <span class="vg-badge"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.56A3.02 3.02 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.02 3.02 0 0 0 2.12 2.14C4.5 20.5 12 20.5 12 20.5s7.5 0 9.38-.56a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8ZM9.6 15.6V8.4L15.8 12Z"/></svg></span>
+          <img class="vg-thumb" alt="" loading="lazy" width="220" height="391">
+          <button class="vg-play" aria-label="Play video">
+            <span class="vg-play-btn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z"/></svg></span>
+          </button>
+          <div class="vg-caption">Funny Zumba Dance By Students</div>
+        </div>
+      </div>
+    </div>
+    <div class="vg-cta">
+      <a href="https://youtube.com/@sandhya.arora.fitness?sub_confirmation=1" class="btn-primary" target="_blank" rel="noopener">Subscribe for New Videos</a>
     </div>
   </div>
 </section>
@@ -906,7 +1201,7 @@
         <p class="testi-quote">"Sandhya completely changed my relationship with fitness. I lost 14 kg in 4 months and have never felt stronger. The program was personalised, progressive, and actually enjoyable."</p>
         <div class="testi-author">
           <div class="testi-avatar" aria-hidden="true">PM</div>
-          <div><p class="testi-name">Priya Mehta</p><p class="testi-meta">14 kg weight loss · 12-Week Program · Bangalore</p></div>
+        <div><p class="testi-name">Priya Mehta</p><p class="testi-meta">14 kg weight loss · 12-Week Program · Bangalore</p></div>
         </div>
       </article>
       <article class="testi-card">
@@ -951,7 +1246,7 @@
           <li>Train from Anywhere in the World</li>
         </ul>
         <div class="program-footer">
-          <div class="program-price">₹1,000 – ₹1,500</div>
+          <div class="program-price">₹1,000 - ₹1,500</div>
           <p class="pricing-billing">Per Session</p>
           <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20am%20interested%20in%20Online%20Personal%20Training.%20Please%20share%20more%20details." class="program-cta" target="_blank" rel="noopener">Book Your Session Now</a>
         </div>
@@ -971,7 +1266,7 @@
           <li>At My Studio / Your Location</li>
         </ul>
         <div class="program-footer">
-          <div class="program-price">₹1,200 – ₹1,500</div>
+          <div class="program-price">₹1,200 - ₹1,500</div>
           <p class="pricing-billing">Per Session</p>
           <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20am%20interested%20in%20Offline%20Personal%20Training.%20Please%20share%20more%20details." class="program-cta" target="_blank" rel="noopener">Book Your Session Now</a>
         </div>
@@ -1009,7 +1304,7 @@
       <div class="faq-item"><h3 class="faq-q">What's the best program for weight loss?</h3><p class="faq-a">Online or Offline Personal Training combines customised workouts with nutrition coaching and consistent accountability, session by session, for sustainable fat loss and body recomposition.</p></div>
       <div class="faq-item"><h3 class="faq-q">Can complete beginners join?</h3><p class="faq-a">Absolutely. Sandhya specialises in meeting clients at every fitness level. Complete beginners are warmly welcome - sessions and programs are always calibrated to your current fitness.</p></div>
       <div class="faq-item"><h3 class="faq-q">Do I need gym equipment for online training?</h3><p class="faq-a">No gym required! Programs can be designed for home workouts with minimal equipment, or fully equipped gym sessions. You tell us what you have, and the plan adapts to you.</p></div>
-      <div class="faq-item"><h3 class="faq-q">How soon will I see results?</h3><p class="faq-a">Most clients notice visible changes in energy, strength, and body composition within the first 3–4 weeks. Significant transformation results are typically visible by 8–12 weeks with consistency.</p></div>
+      <div class="faq-item"><h3 class="faq-q">How soon will I see results?</h3><p class="faq-a">Most clients notice visible changes in energy, strength, and body composition within the first 3-4 weeks. Significant transformation results are typically visible by 8-12 weeks with consistency.</p></div>
       <div class="faq-item"><h3 class="faq-q">Is nutrition coaching included in programs?</h3><p class="faq-a">Yes - all structured programs include a personalised nutrition framework. Detailed standalone nutrition coaching is also available as a separate service for those focused primarily on diet.</p></div>
     </div>
   </div>
@@ -1055,12 +1350,13 @@
         <li><a href="#about">About Sandhya</a></li>
         <li><a href="/blogs/" aria-current="page">Blogs</a></li>
         <li><a href="#watch">Watch</a></li>
+        <li><a href="#videos">Video Gallery</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#testimonials">Client Results</a></li>
         <li><a href="#faq">FAQs</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-    </div>
+      </div>
     <div class="footer-col">
       <h4>Get In Touch</h4>
       <ul>
@@ -1169,6 +1465,41 @@
       watchCard.appendChild(iframe);
     });
   }
+  // Video Gallery: tab switching (Trainer / Testimonials / Teaching / Group)
+  const vgTabs = document.querySelectorAll('.vg-tab');
+  const vgPanels = document.querySelectorAll('.vg-panel');
+  vgTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      vgTabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+      vgPanels.forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      const panel = document.getElementById(tab.dataset.target);
+      if (panel) panel.classList.add('active');
+    });
+  });
+  // Video Gallery: auto-fill thumbnails from data-video-id, load embed only on click
+  document.querySelectorAll('.vg-card').forEach(card => {
+    const videoId = card.dataset.videoId;
+    const title = card.dataset.title || 'Sandhya Arora Fitness - YouTube Short';
+    const thumb = card.querySelector('.vg-thumb');
+    if (thumb && videoId) {
+      thumb.src = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+      thumb.alt = title;
+    }
+    const playBtn = card.querySelector('.vg-play');
+    if (playBtn && videoId) {
+      playBtn.addEventListener('click', () => {
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1`;
+        iframe.title = title;
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.allowFullscreen = true;
+        card.innerHTML = '';
+        card.appendChild(iframe);
+    });
+    }
+  });
 </script>
 </body>
 </html>
