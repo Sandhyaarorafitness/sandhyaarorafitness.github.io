@@ -38,7 +38,14 @@
   
   <url>
     <loc>https://sandhyaarorafitness.com/blogs/</loc>
-    <lastmod>2026-08-26</lastmod>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://sandhyaarorafitness.com/blogs/articles/muscle-recovery-foods/</loc>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
