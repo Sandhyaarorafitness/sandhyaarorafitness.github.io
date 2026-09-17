@@ -3,21 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>1-on-1 Personal Training | Sandhya Arora Fitness</title>
-<meta name="description" content="Fully customised 1-on-1 personal training with Sandhya Arora - online or in-person. Personalized workout plans, nutrition guidance, and real accountability. Book your session today.">
+<title>Personal Fitness Trainer in Delhi & Online | Sandhya Arora Fitness</title>
+<meta name="description" content="Looking for a personal fitness trainer near me or a personal fitness trainer at home? Sandhya Arora Fitness offers 1-on-1 personal fitness training, online personal fitness training, and home-based coaching in Delhi and worldwide for fat loss, strength, muscle gain, and overall wellness.">
+<meta name="keywords" content="personal fitness trainer, personal fitness trainer near me, personal fitness trainer app, personal fitness trainer course, personal fitness trainer certificate, personal fitness trainer courses, personal fitness trainer at home, home personal fitness trainer, personal fitness trainer in delhi, personal fitness trainer online, personal fitness training, personal fitness training course, personal fitness training online, online personal fitness training, Sandhya Arora Fitness, online fitness coach, personal trainer in Delhi, home workout trainer">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0E0E1A">
 <link rel="canonical" href="https://www.sandhyaarorafitness.com/services/personal-fitness-trainer/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sandhya Arora Fitness">
-<meta property="og:title" content="1-on-1 Personal Training | Sandhya Arora Fitness">
-<meta property="og:description" content="Fully customised 1-on-1 personal training with Sandhya Arora - online or in-person. Personalized workout plans, nutrition guidance, and real accountability. Book your session today.">
+<meta property="og:title" content="Personal Fitness Trainer in Delhi & Online | Sandhya Arora Fitness">
+<meta property="og:description" content="1-on-1 personal fitness training and online personal fitness coaching for fat loss, strength, muscle gain, and lifestyle transformation with Sandhya Arora in India and worldwide.">
 <meta property="og:url" content="https://www.sandhyaarorafitness.com/services/personal-fitness-trainer/">
 <meta property="og:image" content="https://i.ibb.co/xt0T9y9H/Sandhya-Arora-Fitness-Hero.png">
 <meta property="og:locale" content="en_IN">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="1-on-1 Personal Training | Sandhya Arora Fitness">
-<meta name="twitter:description" content="Fully customised 1-on-1 personal training with Sandhya Arora - online or in-person. Personalized workout plans, nutrition guidance, and real accountability. Book your session today.">
+<meta name="twitter:title" content="Personal Fitness Trainer in Delhi & Online | Sandhya Arora Fitness">
+<meta name="twitter:description" content="Book a personal fitness trainer near you for online or in-home coaching. Personalized programs for fat loss, strength, and sustainable fitness results.">
 <meta name="twitter:image" content="https://i.ibb.co/xt0T9y9H/Sandhya-Arora-Fitness-Hero.png">
 <link rel="icon" type="image/png" href="https://i.ibb.co/XfxtDL0F/Sandhya-Arora-Fitness-Favicon.png">
 <link rel="apple-touch-icon" href="https://i.ibb.co/XfxtDL0F/Sandhya-Arora-Fitness-Favicon.png">
@@ -369,6 +370,48 @@ crossorigin="anonymous"></script>
     background: var(--dark); color: rgba(255,255,255,0.5);
     padding: 60px; font-size: 14px;
   }
+  /* ─── INSTAGRAM GALLERY ──────────────────────────────── */
+  .instagram-gallery { padding: var(--section-pad); background: var(--cream); position: relative; }
+  .vg-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; flex-wrap: wrap; margin-bottom: 40px; }
+  .vg-head .section-sub { margin-bottom: 0; }
+  .vg-headtext { flex: 1; min-width: 260px; }
+  .vg-yt-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: var(--red); font-size: 14px; font-weight: 600; text-decoration: none;
+    border-bottom: 1.5px solid transparent; transition: border-color 0.2s; white-space: nowrap;
+  }
+  .vg-yt-link svg { width: 18px; height: 18px; flex-shrink: 0; }
+  .vg-yt-link:hover { border-color: var(--red); }
+  
+  .ig-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; }
+  .ig-card {
+    flex: 0 0 calc(33.333% - 16px);
+    max-width: 360px; min-width: 280px;
+    border-radius: 12px; overflow: hidden;
+    border: 1px solid var(--border); box-shadow: 0 18px 40px -18px rgba(14,14,26,0.15);
+    background: var(--white);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .ig-card:hover { transform: translateY(-6px); box-shadow: 0 28px 54px -18px rgba(14,14,26,0.25); }
+  .ig-card iframe { width: 100%; height: 580px; border: none; display: block; }
+
+  @media (max-width: 1024px) {
+    .ig-card { flex: 0 0 calc(50% - 12px); max-width: 400px; }
+  }
+  @media (max-width: 700px) {
+    .ig-grid {
+      flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scroll-snap-type: x mandatory;
+      margin: 0 -28px; padding: 4px 28px 24px;
+      -webkit-overflow-scrolling: touch; scrollbar-width: none;
+    }
+    .ig-grid::-webkit-scrollbar { display: none; }
+    .ig-card { flex: 0 0 80vw; max-width: 340px; scroll-snap-align: center; }
+  }
+  @media (max-width: 420px) {
+    .ig-grid { margin: 0 -20px; padding: 4px 20px 24px; }
+    .ig-card { flex: 0 0 85vw; }
+  }
+
   .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 48px; }
   .footer-brand .nav-logo { margin-bottom: 14px; display: inline-flex; }
   .footer-tagline { font-size: 14px; color: rgba(255,255,255,0.35); line-height: 1.6; max-width: 260px; }
@@ -638,142 +681,213 @@ crossorigin="anonymous"></script>
 <!-- ── PAGE HERO ─────────────────────────────────────── -->
 <section class="page-hero">
   <div class="section-container">
-    <p class="breadcrumb"><a href="/">Home</a> / <a href="/#services">Services</a> / 1-on-1 Personal Training</p>
-    <p class="hero-eyebrow">Most Popular Service</p>
-    <h1>1-on-1 Personal Training,<br>Built <em>Entirely</em> Around You</h1>
-    <p class="hero-sub">No cookie-cutter plans. Every session — online or in-person — is designed around your goals, your fitness level, and your schedule. This is the fastest way to see real, lasting results.</p>
+    <p class="breadcrumb"><a href="/">Home</a> / <a href="/#services">Services</a> / Personal Fitness Trainer</p>
+    <p class="hero-eyebrow">1-on-1 Coaching</p>
+    <h1>Personal Fitness Trainer for <em>Real Results</em> &amp; Sustainable Change</h1>
+    <p class="hero-sub">Looking for a personal fitness trainer near me, a home personal fitness trainer, or reliable online personal fitness training? Sandhya Arora Fitness designs personalised training plans for fat loss, strength, muscle gain, and total body transformation — with expert support every step of the way.</p>
     <div class="hero-ctas">
-      <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20am%20interested%20in%201-on-1%20Personal%20Training.%20Please%20share%20more%20details." class="btn-primary" target="_blank" rel="noopener">Book a Session</a>
-      <a href="#pricing" class="btn-outline">View Pricing</a>
+      <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20am%20looking%20for%20a%20personal%20fitness%20trainer.%20Please%20share%20details%20about%20your%20programs." class="btn-primary" target="_blank" rel="noopener">Book Your Consultation</a>
+      <a href="#pricing" class="btn-outline">See Pricing</a>
     </div>
   </div>
 </section>
+
 <!-- ── WHAT'S INCLUDED ───────────────────────────────── -->
 <section class="services" id="included">
   <div class="section-container">
-    <p class="section-eyebrow">What's Included</p>
-    <h2 class="section-title">Training That Adapts<br>To <em style="color:var(--red);font-style:normal;">You</em>, Not The Other Way Around</h2>
-    <p class="section-sub">Every 1-on-1 client gets a complete, personalised system — not just a workout.</p>
+    <p class="section-eyebrow">What You Get</p>
+    <h2 class="section-title">Personalized Fitness Coaching Built Around <em style="color:var(--red);font-style:normal;">Your Goals</em></h2>
+    <p class="section-sub">This is not generic personal fitness training. Every plan is built around your body, your schedule, your lifestyle, and the exact outcomes you want to achieve.</p>
     <div class="services-grid">
       <article class="service-card">
         <div class="service-icon" aria-hidden="true">📋</div>
         <p class="service-tag">Step One</p>
-        <h3 class="service-title">Personalized Workout Plans</h3>
-        <p class="service-desc">Every plan is built from scratch around your goals, current fitness level, injury history, and the equipment or space you have access to.</p>
+        <h3 class="service-title">Custom Workout Plans</h3>
+        <p class="service-desc">If you are searching for a personal fitness trainer near me, this service gives you a fully custom plan based on your current fitness level, body composition, mobility, schedule, and goals — whether you want fat loss, strength, lean muscle, or improved energy.</p>
       </article>
       <article class="service-card">
         <div class="service-icon" aria-hidden="true">🥗</div>
-        <p class="service-tag">Fuel The Work</p>
-        <h3 class="service-title">Diet & Nutrition Guidance</h3>
-        <p class="service-desc">Training alone isn't enough. You'll get practical nutrition direction that fits your lifestyle and food preferences, no crash diets involved. Want nutrition-only support? See <a href="/services/nutrition-coaching/" class="service-link" style="display:inline;">Nutrition Coaching</a>.</p>
+        <p class="service-tag">Nutrition Support</p>
+        <h3 class="service-title">Lifestyle &amp; Nutrition Guidance</h3>
+        <p class="service-desc">Results come faster when training and nutrition work together. You receive practical, realistic nutrition guidance that fits Indian lifestyles and everyday routines. For deeper dietary support, explore <a href="/services/nutrition-coaching/" class="service-link" style="display:inline;">Nutrition Coaching</a>.</p>
       </article>
       <article class="service-card">
         <div class="service-icon" aria-hidden="true">📈</div>
-        <p class="service-tag">Stay Accountable</p>
-        <h3 class="service-title">Progress Tracking & Support</h3>
-        <p class="service-desc">Regular check-ins and progress tracking keep your plan honest and adjust it as you get stronger, so you're never guessing what's next.</p>
+        <p class="service-tag">Weekly Accountability</p>
+        <h3 class="service-title">Progress Tracking &amp; Adjustments</h3>
+        <p class="service-desc">Your plan evolves as you improve. Weekly check-ins, consistent progress monitoring, and small, smart adjustments help you stay consistent and avoid plateaus.</p>
       </article>
       <article class="service-card">
         <div class="service-icon" aria-hidden="true">🌍</div>
-        <p class="service-tag">Your Choice</p>
-        <h3 class="service-title">Online or In-Person</h3>
-        <p class="service-desc">Train live over video from anywhere in the world - see <a href="/services/online-fitness-coach/" class="service-link" style="display:inline;">Online Coaching</a> - or in-person at my studio or your preferred location. Same personal attention, either way.</p>
+        <p class="service-tag">Flexible Format</p>
+        <h3 class="service-title">Online or In-Person Coaching</h3>
+        <p class="service-desc">Choose online personal fitness training from anywhere or work with a home personal fitness trainer in person. Both options include the same tailored structure and coaching support. See <a href="/services/online-fitness-coach/" class="service-link" style="display:inline;">Online Coaching</a> for more details.</p>
       </article>
     </div>
   </div>
 </section>
+
+<!-- ── WHY CHOOSE THIS SERVICE ─────────────────────── -->
+<section class="about" id="about-service">
+  <div class="section-container about-grid">
+    <div class="about-visual">
+      <img src="https://i.ibb.co/xt0T9y9H/Sandhya-Arora-Fitness-Hero.png" alt="Sandhya Arora personal fitness trainer coaching in Delhi and online">
+      <div class="about-cert-strip">
+        <div class="cert-item">
+          <span class="cert-label">Specialty</span>
+          <span class="cert-val">Fat Loss &amp; Strength</span>
+        </div>
+        <div class="cert-item">
+          <span class="cert-label">Format</span>
+          <span class="cert-val">Online + In-Person</span>
+        </div>
+        <div class="cert-item">
+          <span class="cert-label">Clients</span>
+          <span class="cert-val">India &amp; Worldwide</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="section-eyebrow">Why Clients Choose Sandhya</p>
+      <h2 class="section-title">A Personal Fitness Trainer Who Focuses on Sustainable Change</h2>
+      <p class="about-quote">“I help people build strength, confidence, and healthy routines they can actually maintain — not just short-term motivation.”</p>
+      <p class="about-body">Whether you are a complete beginner, someone restarting after a long break, or already training but stuck in a plateau, this program is designed to meet you where you are. You get expert movement coaching, realistic nutrition advice, and a plan built for consistency.</p>
+      <p class="about-body">From personal fitness trainer in Delhi to online personal fitness training for clients across the globe, every client gets structured support that is clear, motivating, and practical.</p>
+      <div class="about-stats">
+        <div class="astat"><div class="astat-num">1:1</div><div class="astat-label">Dedicated Attention</div></div>
+        <div class="astat"><div class="astat-num">100%</div><div class="astat-label">Customized Plans</div></div>
+        <div class="astat"><div class="astat-num">360°</div><div class="astat-label">Lifestyle Support</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ── PRICING ──────────────────────────────────────── -->
 <section class="pricing" id="pricing">
   <div class="section-container">
     <p class="section-eyebrow">Pricing</p>
-    <h2 class="section-title">Choose Your Format</h2>
-    <p class="section-sub" style="margin-bottom:48px;">Simple, pay-per-session pricing. No long-term lock-in required.</p>
+    <h2 class="section-title">Choose the Right Coaching Format for You</h2>
+    <p class="section-sub" style="margin-bottom:48px;">Flexible options for clients who want in-person support, home-based sessions, or online coaching with the same personalized structure.</p>
     <div class="pricing-grid-duo">
       <article class="program-card featured">
         <span class="popular-badge">Most Popular</span>
         <div class="program-header">
           <p class="program-week">Online</p>
-          <h3 class="program-name">Online Personal Training</h3>
-          <p class="program-tagline">1-on-1 live coaching from anywhere in the world.</p>
+          <h3 class="program-name">Online Personal Fitness Training</h3>
+          <p class="program-tagline">Ideal for clients who want remote coaching, flexible scheduling, and expert guidance from anywhere.</p>
         </div>
         <div class="program-divider"></div>
         <ul class="program-features">
-          <li>1-on-1 Live Training Sessions</li>
-          <li>Personalized Workout Plans</li>
-          <li>Diet & Nutrition Guidance</li>
-          <li>Progress Tracking & Support</li>
-          <li>Train from Anywhere in the World</li>
+          <li>Live 1-on-1 coaching sessions</li>
+          <li>Customized workout programming</li>
+          <li>Nutrition and lifestyle guidance</li>
+          <li>Progress reviews and accountability</li>
+          <li>Suitable for home or gym training</li>
         </ul>
         <div class="program-footer">
           <div class="program-price">₹1,000 – ₹1,500</div>
           <p class="pricing-billing">Per Session</p>
-          <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20am%20interested%20in%20Online%20Personal%20Training.%20Please%20share%20more%20details." class="program-cta" target="_blank" rel="noopener">Book Your Session Now</a>
+          <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20want%20to%20know%20more%20about%20online%20personal%20fitness%20training." class="program-cta" target="_blank" rel="noopener">Book Online Coaching</a>
         </div>
       </article>
       <article class="program-card">
         <div class="program-header">
-          <p class="program-week">Offline</p>
-          <h3 class="program-name">Offline Personal Training</h3>
-          <p class="program-tagline">1-on-1 in-person coaching at my studio or your location.</p>
+          <p class="program-week">In-Person</p>
+          <h3 class="program-name">In-Person Personal Fitness Training</h3>
+          <p class="program-tagline">For clients who want hands-on form correction, direct accountability, and dedicated coaching support.</p>
         </div>
         <div class="program-divider"></div>
         <ul class="program-features">
-          <li>1-on-1 In-Person Training</li>
-          <li>Customized Workout Plans</li>
-          <li>Nutrition & Lifestyle Guidance</li>
-          <li>Form Correction & Motivation</li>
-          <li>At My Studio / Your Location</li>
+          <li>1-on-1 in-person sessions</li>
+          <li>Technique correction and motivation</li>
+          <li>Goal-specific programming</li>
+          <li>Nutrition and habit coaching</li>
+          <li>Available at studio or home sessions</li>
         </ul>
         <div class="program-footer">
           <div class="program-price">₹1,200 – ₹1,500</div>
           <p class="pricing-billing">Per Session</p>
-          <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20am%20interested%20in%20Offline%20Personal%20Training.%20Please%20share%20more%20details." class="program-cta" target="_blank" rel="noopener">Book Your Session Now</a>
+          <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20am%20interested%20in%20in-person%20personal%20fitness%20training." class="program-cta" target="_blank" rel="noopener">Book In-Person Training</a>
         </div>
       </article>
     </div>
   </div>
 </section>
+
 <!-- ── TESTIMONIAL ──────────────────────────────────── -->
 <section class="testimonials" id="testimonial">
   <div class="section-container">
-    <p class="section-eyebrow" style="color:var(--red-light);">Real Results</p>
-    <h2 class="section-title">What Clients Say</h2>
-    <p class="section-sub" style="margin-bottom:48px;">Real people, real 1-on-1 training results.</p>
+    <p class="section-eyebrow" style="color:var(--red-light);">Results You Can Feel</p>
+    <h2 class="section-title">Client Transformations</h2>
+    <p class="section-sub" style="margin-bottom:48px;">Real people, real structure, real progress.</p>
     <div class="testi-grid-solo">
       <article class="testi-card">
         <div class="testi-stars" aria-hidden="true">★★★★★</div>
-        <p class="testi-quote">"Sandhya completely changed my relationship with fitness. I lost 14 kg in 4 months and have never felt stronger. The program was personalised, progressive, and actually enjoyable."</p>
+        <p class="testi-quote">"Sandhya changed my routine, my confidence, and my relationship with training. I lost 14 kg, got stronger, and finally found a plan that fit my life. It was personalised and sustainable from day one."</p>
         <div class="testi-author">
           <div class="testi-avatar" aria-hidden="true">PM</div>
-          <div><p class="testi-name">Priya Mehta</p><p class="testi-meta">14 kg weight loss · 1-on-1 Training · Bangalore</p></div>
+          <div><p class="testi-name">Priya Mehta</p><p class="testi-meta">14 kg weight loss · 1-on-1 personal training · Bengaluru</p></div>
         </div>
       </article>
     </div>
   </div>
 </section>
+
 <!-- ── FAQ ──────────────────────────────────────────── -->
 <section class="faq" id="faq">
   <div class="section-container">
-    <p class="section-eyebrow">FAQs</p>
-    <h2 class="section-title" style="margin-bottom:44px;">Common Questions</h2>
+    <p class="section-eyebrow">Frequently Asked Questions</p>
+    <h2 class="section-title" style="margin-bottom:44px;">Everything You Need to Know Before Booking</h2>
     <div class="faq-grid">
-      <div class="faq-item"><h3 class="faq-q">Can complete beginners join?</h3><p class="faq-a">Absolutely. Sandhya specialises in meeting clients at every fitness level. Complete beginners are warmly welcome - sessions are always calibrated to your current fitness.</p></div>
-      <div class="faq-item"><h3 class="faq-q">Do I need gym equipment for online sessions?</h3><p class="faq-a">No gym required! Sessions can be designed for home workouts with minimal equipment, or fully equipped gym sessions. You tell us what you have, and the plan adapts to you.</p></div>
-      <div class="faq-item"><h3 class="faq-q">How soon will I see results?</h3><p class="faq-a">Most clients notice visible changes in energy, strength, and body composition within the first 3–4 weeks. Significant transformation results are typically visible by 8–12 weeks with consistency.</p></div>
-      <div class="faq-item"><h3 class="faq-q">Can I switch between online and offline sessions?</h3><p class="faq-a">Yes - many clients mix formats depending on travel and schedule. Just let Sandhya know when booking each session.</p></div>
+      <div class="faq-item"><h3 class="faq-q">What is included in your personal fitness training service?</h3><p class="faq-a">Each program includes personalised workout planning, ongoing guidance, progress tracking, and accountability. For clients looking for deeper diet support, nutrition coaching is also available as a companion service.</p></div>
+      <div class="faq-item"><h3 class="faq-q">Do you offer a personal fitness trainer near me in Delhi?</h3><p class="faq-a">Yes. Sandhya offers in-person support for clients seeking a personal fitness trainer in Delhi and flexible online personal fitness training for those outside the city or overseas.</p></div>
+      <div class="faq-item"><h3 class="faq-q">Can I train from home with a personal fitness trainer?</h3><p class="faq-a">Absolutely. Home personal fitness trainer sessions are available for clients who prefer coaching in a familiar environment with minimal equipment or home workout routines.</p></div>
+      <div class="faq-item"><h3 class="faq-q">Do you offer online personal fitness training?</h3><p class="faq-a">Yes. Online personal fitness training is one of the most popular options for busy professionals and clients who want structure, flexibility, and expert coaching without commuting.</p></div>
+      <div class="faq-item"><h3 class="faq-q">Can beginners start with personal fitness training?</h3><p class="faq-a">Absolutely. Sandhya works with both beginners and experienced clients, adapting every plan to your current ability, comfort level, and goals.</p></div>
+      <div class="faq-item"><h3 class="faq-q">How soon will I start seeing results?</h3><p class="faq-a">Many clients feel more energetic, stronger, and more focused within the first few weeks. Visible body composition changes usually become noticeable within 8 to 12 weeks when the plan is followed consistently.</p></div>
     </div>
-    <p style="margin-top:32px; font-size:14px; color:var(--muted); text-align:center;">Looking for something else? Explore <a href="/services/group-fitness-classes/" style="color:var(--red); font-weight:600; text-decoration:none;">Group Fitness Classes</a> or <a href="/services/nutrition-coaching/" style="color:var(--red); font-weight:600; text-decoration:none;">Nutrition Coaching</a>.</p>
+    <p style="margin-top:32px; font-size:14px; color:var(--muted); text-align:center;">Explore more services: <a href="/" style="color:var(--red); font-weight:600; text-decoration:none;">Home</a>, <a href="/services/online-fitness-coach/" style="color:var(--red); font-weight:600; text-decoration:none;">Online Coaching</a>, <a href="/services/group-fitness-classes/" style="color:var(--red); font-weight:600; text-decoration:none;">Group Fitness Classes</a>, <a href="/services/nutrition-coaching/" style="color:var(--red); font-weight:600; text-decoration:none;">Nutrition Coaching</a>, or <a href="/blogs/" style="color:var(--red); font-weight:600; text-decoration:none;">Fitness Blog</a>.</p>
   </div>
 </section>
+
+<!-- ── INSTAGRAM REELS ───────────────────────────────── -->
+<section class="instagram-gallery" id="instagram">
+  <div class="section-container">
+    <div class="vg-head">
+      <div class="vg-headtext">
+        <p class="section-eyebrow">Instagram</p>
+        <h2 class="section-title">Latest on <em style="color:var(--red);font-style:normal;">Instagram</em></h2>
+        <p class="section-sub">Quick fitness tips, transformation motivation, and real client wins from Sandhya Arora Fitness.</p>
+      </div>
+      <a href="https://www.instagram.com/sandhya.arora.fitness?igsi=MTFsdGYyY2JuZjJpcQ==" class="vg-yt-link" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 7h10a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Zm3.5 4.5 5 3-5 3v-6Z" fill="currentColor"/></svg>
+        Follow on Instagram
+      </a>
+    </div>
+    <div class="ig-grid">
+      <div class="ig-card"><iframe src="https://www.instagram.com/reel/DbqJHD-hqYK/embed/" scrolling="no" allowtransparency="true"></iframe></div>
+      <div class="ig-card"><iframe src="https://www.instagram.com/reel/DcnJzpdTfI-/embed/" scrolling="no" allowtransparency="true"></iframe></div>
+      <div class="ig-card"><iframe src="https://www.instagram.com/reel/DcTDHXzzZT5/embed/" scrolling="no" allowtransparency="true"></iframe></div>
+      <div class="ig-card"><iframe src="https://www.instagram.com/reel/Db_N8E-hgBL/embed/" scrolling="no" allowtransparency="true"></iframe></div>
+      <div class="ig-card"><iframe src="https://www.instagram.com/reel/Db4xgTpTmqu/embed/" scrolling="no" allowtransparency="true"></iframe></div>
+      <div class="ig-card"><iframe src="https://www.instagram.com/reel/Db5fD5FhFOA/embed/" scrolling="no" allowtransparency="true"></iframe></div>
+      <div class="ig-card"><iframe src="https://www.instagram.com/reel/Db-vf_ChH-T/embed/" scrolling="no" allowtransparency="true"></iframe></div>
+      <div class="ig-card"><iframe src="https://www.instagram.com/reel/Db6_1xLzyWq/embed/" scrolling="no" allowtransparency="true"></iframe></div>
+      <div class="ig-card"><iframe src="https://www.instagram.com/reel/DbqJHD-hqYK/embed/" scrolling="no" allowtransparency="true"></iframe></div>
+      <div class="ig-card"><iframe src="https://www.instagram.com/reel/DbDZ1bsz_n2/embed/" scrolling="no" allowtransparency="true"></iframe></div>
+    </div>
+  </div>
+</section>
+
 <!-- ── CTA BANNER ───────────────────────────────────── -->
 <section class="cta-banner" id="contact">
-  <h2>Ready to Start Training With Sandhya?</h2>
-  <p>Book a free 30-minute consultation. No commitment required - just an honest conversation about your goals.</p>
+  <h2>Ready to Begin Your Fitness Journey?</h2>
+  <p>Book a free consultation and find the right personal fitness training format for your goals, schedule, and lifestyle.</p>
   <div class="cta-banner-btns">
-    <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20book%20my%20free%2030-minute%20consultation." class="btn-white" target="_blank" rel="noopener">📞 Book on WhatsApp</a>
-    <a href="mailto:sandhya@sandhyaarorafitness.com" class="btn-white-outline">✉ Send an Email</a>
+    <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20am%20interested%20in%20personal%20fitness%20training.%20Please%20share%20more%20details." class="btn-white" target="_blank" rel="noopener">📞 Book on WhatsApp</a>
+    <a href="mailto:sandhya@sandhyaarorafitness.com" class="btn-white-outline">✉ Email Sandhya</a>
   </div>
-  <p style="margin-top:24px; font-size:13px; color:rgba(255,255,255,0.5);">No commitment · Online &amp; in-person options · Reply within 24 hours</p>
+  <p style="margin-top:24px; font-size:13px; color:rgba(255,255,255,0.5);">No pressure · Free consultation · Online or in-person support</p>
 </section>
 </main>
 
