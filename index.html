@@ -26,8 +26,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3761890682449632"
-crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3761890682449632" crossorigin="anonymous"></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -366,6 +365,18 @@ crossorigin="anonymous"></script>
   .vg-yt-link:hover { border-color: var(--red); }
   
   .ig-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; }
+  .reel-category-bar {
+    display: flex; flex-wrap: wrap; gap: 12px; margin: 0 0 28px; justify-content: center;
+  }
+  .reel-category-btn {
+    border: 1px solid rgba(233,69,96,0.2); background: rgba(255,255,255,0.35);
+    color: var(--dark2); padding: 10px 16px; border-radius: 999px; font-weight: 600;
+    font-size: 13px; cursor: pointer; transition: all 0.2s ease; text-transform: none;
+  }
+  .reel-category-btn:hover, .reel-category-btn.active {
+    background: var(--red); border-color: var(--red); color: var(--white);
+    box-shadow: 0 12px 26px -18px rgba(233,69,96,0.85);
+  }
   .ig-card {
     flex: 0 0 calc(33.333% - 16px);
     max-width: 360px; min-width: 280px;
@@ -373,14 +384,29 @@ crossorigin="anonymous"></script>
     border: 1px solid var(--border); box-shadow: 0 18px 40px -18px rgba(14,14,26,0.15);
     background: var(--white);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+    position: relative;
   }
   .ig-card:hover { transform: translateY(-6px); box-shadow: 0 28px 54px -18px rgba(14,14,26,0.25); }
   .ig-card iframe { width: 100%; height: 580px; border: none; display: block; }
+  .reel-preview-link { display: block; height: 580px; background: #000; }
+  .reel-preview-image { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .reel-card-meta {
+    position: absolute; left: 12px; right: 12px; bottom: 12px; display: flex; justify-content: space-between; gap: 8px;
+    pointer-events: none; z-index: 1;
+  }
+  .reel-pill {
+    background: rgba(14,14,26,0.72); color: var(--white); border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(6px); font-size: 11px; font-weight: 700; letter-spacing: 0.8px;
+    text-transform: uppercase; padding: 6px 9px; border-radius: 999px;
+  }
+  .reel-card.hidden { display: none; }
 
   @media (max-width: 1024px) {
     .ig-card { flex: 0 0 calc(50% - 12px); max-width: 400px; }
   }
   @media (max-width: 700px) {
+    .reel-category-bar { justify-content: flex-start; overflow-x: auto; padding-bottom: 8px; scrollbar-width: none; }
+    .reel-category-bar::-webkit-scrollbar { display: none; }
     .ig-grid {
       flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scroll-snap-type: x mandatory;
       margin: 0 -28px; padding: 4px 28px 24px;
@@ -896,7 +922,7 @@ crossorigin="anonymous"></script>
       </div>
       <div class="watch-card-wrap">
         <div class="watch-card" style="background: transparent; border: none; box-shadow: none;">
-          <iframe src="https://www.instagram.com/reel/Dbupm4kBGzd/embed/" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" style="border: 1px solid rgba(233,69,96,0.25); border-radius: 18px; box-shadow: 0 30px 70px -20px rgba(0,0,0,0.6); max-width: 100%;"></iframe>
+          <iframe src="https://www.instagram.com/p/Dbupm4kBGzd/embed/?utm_source=ig_embed" width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media; autoplay; clipboard-write; picture-in-picture; web-share" style="border: 1px solid rgba(233,69,96,0.25); border-radius: 18px; box-shadow: 0 30px 70px -20px rgba(0,0,0,0.6); max-width: 100%;"></iframe>
         </div>
       </div>
     </div>
@@ -910,27 +936,74 @@ crossorigin="anonymous"></script>
       <div class="vg-headtext">
         <p class="section-eyebrow">Join the Community</p>
         <h2 class="section-title">Latest on <em style="color:var(--red);font-style:normal;">Instagram</em></h2>
-        <p class="section-sub">Follow along for daily fitness tips, motivation, and behind-the-scenes content.</p>
+        <p class="section-sub">Public reel highlights grouped by the training and coaching themes visible on the profile.</p>
       </div>
       <a href="https://www.instagram.com/sandhya.arora.fitness?igsi=MTFsdGYyY2JuZjJpcQ==" class="vg-yt-link" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
         Follow on Instagram
       </a>
     </div>
-    <div class="ig-grid">
-      <div class="ig-card"><iframe src="https://www.instagram.com/reel/DbqJHD-hqYK/embed/" scrolling="no" allowtransparency="true"></iframe></div>
-      <div class="ig-card"><iframe src="https://www.instagram.com/reel/DcnJzpdTfI-/embed/" scrolling="no" allowtransparency="true"></iframe></div>
-      <div class="ig-card"><iframe src="https://www.instagram.com/reel/DcTDHXzzZT5/embed/" scrolling="no" allowtransparency="true"></iframe></div>
-      <div class="ig-card"><iframe src="https://www.instagram.com/reel/Db_N8E-hgBL/embed/" scrolling="no" allowtransparency="true"></iframe></div>
-      <div class="ig-card"><iframe src="https://www.instagram.com/reel/Db4xgTpTmqu/embed/" scrolling="no" allowtransparency="true"></iframe></div>
-      <div class="ig-card"><iframe src="https://www.instagram.com/reel/Db5fD5FhFOA/embed/" scrolling="no" allowtransparency="true"></iframe></div>
-      <div class="ig-card"><iframe src="https://www.instagram.com/reel/Db-vf_ChH-T/embed/" scrolling="no" allowtransparency="true"></iframe></div>
-      <div class="ig-card"><iframe src="https://www.instagram.com/reel/Db6_1xLzyWq/embed/" scrolling="no" allowtransparency="true"></iframe></div>
-      <div class="ig-card"><iframe src="https://www.instagram.com/reel/DbqJHD-hqYK/embed/" scrolling="no" allowtransparency="true"></iframe></div>
-      <div class="ig-card"><iframe src="https://www.instagram.com/reel/DbDZ1bsz_n2/embed/" scrolling="no" allowtransparency="true"></iframe></div>
+
+    <div class="reel-category-bar" aria-label="Instagram content categories">
+      <button class="reel-category-btn active" type="button" data-category="all">All</button>
+      <button class="reel-category-btn" type="button" data-category="trainer">Know Your Trainer</button>
+      <button class="reel-category-btn" type="button" data-category="online">Online Training</button>
+      <button class="reel-category-btn" type="button" data-category="offline">Offline / Client Training</button>
+      <button class="reel-category-btn" type="button" data-category="group">Group Training</button>
+      <button class="reel-category-btn" type="button" data-category="results">Testimonials & Results</button>
+      <button class="reel-category-btn" type="button" data-category="nutrition">Nutrition & Education</button>
+    </div>
+
+    <div class="ig-grid" id="reelGrid">
+      <!-- TRAINER PREVIEWS: local images preserve the card layout when Instagram blocks embeds -->
+      <div class="ig-card reel-card" data-category="trainer"><a class="reel-preview-link" href="https://www.instagram.com/reel/Dcgqe_CvHHC/?stkn=NTc4MTIwNjQ2YQ==" target="_blank" rel="noopener"><img class="reel-preview-image" src="assets/images/trainer-Dcgqe_CvHHC.jpg" alt="Watch Sandhya Arora trainer reel on Instagram"></a><div class="reel-card-meta"><span class="reel-pill">Trainer</span><span class="reel-pill">Intro</span></div></div>
+      <div class="ig-card reel-card" data-category="trainer"><a class="reel-preview-link" href="https://www.instagram.com/reel/DcgUuqTPzU6/?stkn=MXM2amtieDA5MTRuZg==" target="_blank" rel="noopener"><img class="reel-preview-image" src="assets/images/trainer-DcgUuqTPzU6.jpg" alt="Watch Sandhya Arora trainer reel on Instagram"></a><div class="reel-card-meta"><span class="reel-pill">Trainer</span><span class="reel-pill">Bio</span></div></div>
+      <div class="ig-card reel-card" data-category="trainer"><iframe src="https://www.instagram.com/p/Dcd9uNgxlKc/embed/?utm_source=ig_embed" scrolling="no" allowtransparency="true" allow="encrypted-media; autoplay; clipboard-write; picture-in-picture; web-share"></iframe><div class="reel-card-meta"><span class="reel-pill">Trainer</span><span class="reel-pill">Story</span></div></div>
+      <div class="ig-card reel-card" data-category="trainer"><a class="reel-preview-link" href="https://www.instagram.com/reel/DcdX4QkPgbX/?stkn=MWNmYjZlMTlmZ3N4ZQ==" target="_blank" rel="noopener"><img class="reel-preview-image" src="assets/images/trainer-DcdX4QkPgbX.jpg" alt="Watch Sandhya Arora trainer reel on Instagram"></a><div class="reel-card-meta"><span class="reel-pill">Trainer</span><span class="reel-pill">Approach</span></div></div>
+      <div class="ig-card reel-card" data-category="trainer"><a class="reel-preview-link" href="https://www.instagram.com/reel/DbIIfp_pdTO/?stkn=MTNleGxreXg4cjlxNQ==" target="_blank" rel="noopener"><img class="reel-preview-image" src="assets/images/trainer-DbIIfp_pdTO.jpg" alt="Watch Sandhya Arora trainer reel on Instagram"></a><div class="reel-card-meta"><span class="reel-pill">Trainer</span><span class="reel-pill">Journey</span></div></div>
+      <div class="ig-card reel-card" data-category="trainer"><a class="reel-preview-link" href="https://www.instagram.com/reel/DbID6i1JDba/?stkn=YnJmcWtteG82ajh1" target="_blank" rel="noopener"><img class="reel-preview-image" src="assets/images/trainer-DbID6i1JDba.jpg" alt="Watch Sandhya Arora trainer reel on Instagram"></a><div class="reel-card-meta"><span class="reel-pill">Trainer</span><span class="reel-pill">Values</span></div></div>
+
+      <!-- YOUTUBE SHORTS: local thumbnails avoid player referrer errors in file previews -->
+      <div class="ig-card reel-card" data-category="trainer"><a class="reel-preview-link" href="https://youtube.com/shorts/Vm-TFA7rOek?si=8UxHuBo4yK95nXxN" target="_blank" rel="noopener"><img class="reel-preview-image" src="assets/images/trainer-Vm-TFA7rOek.jpg" alt="Watch Sandhya Arora trainer Short on YouTube"></a><div class="reel-card-meta"><span class="reel-pill">Trainer</span><span class="reel-pill">Short</span></div></div>
+      <div class="ig-card reel-card" data-category="trainer"><a class="reel-preview-link" href="https://youtube.com/shorts/Ax5acMFQBJg?si=Ot19irapErVm9yYP" target="_blank" rel="noopener"><img class="reel-preview-image" src="assets/images/trainer-Ax5acMFQBJg.jpg" alt="Watch Sandhya Arora trainer Short on YouTube"></a><div class="reel-card-meta"><span class="reel-pill">Trainer</span><span class="reel-pill">Short</span></div></div>
+
+      <div class="ig-card reel-card" data-category="results"><iframe src="https://www.instagram.com/p/DcwGQtLTq7n/embed/?utm_source=ig_embed" scrolling="no" allowtransparency="true" allow="encrypted-media; autoplay; clipboard-write; picture-in-picture; web-share"></iframe><div class="reel-card-meta"><span class="reel-pill">Results</span><span class="reel-pill">Client</span></div></div>
+      <div class="ig-card reel-card" data-category="online"><iframe src="https://www.instagram.com/p/DcB41FOTR88/embed/?utm_source=ig_embed" scrolling="no" allowtransparency="true" allow="encrypted-media; autoplay; clipboard-write; picture-in-picture; web-share"></iframe><div class="reel-card-meta"><span class="reel-pill">Online</span><span class="reel-pill">Coaching</span></div></div>
+      <div class="ig-card reel-card" data-category="nutrition"><iframe src="https://www.instagram.com/p/DaZ5UvNzgNl/embed/?utm_source=ig_embed" scrolling="no" allowtransparency="true" allow="encrypted-media; autoplay; clipboard-write; picture-in-picture; web-share"></iframe><div class="reel-card-meta"><span class="reel-pill">Nutrition</span><span class="reel-pill">Tips</span></div></div>
+      <div class="ig-card reel-card" data-category="online"><iframe src="https://www.instagram.com/p/DdbTG3GTQi2/embed/?utm_source=ig_embed" scrolling="no" allowtransparency="true" allow="encrypted-media; autoplay; clipboard-write; picture-in-picture; web-share"></iframe><div class="reel-card-meta"><span class="reel-pill">Online</span><span class="reel-pill">Program</span></div></div>
+      <div class="ig-card reel-card" data-category="group"><iframe src="https://www.instagram.com/p/DdTdQ3FTJOO/embed/?utm_source=ig_embed" scrolling="no" allowtransparency="true" allow="encrypted-media; autoplay; clipboard-write; picture-in-picture; web-share"></iframe><div class="reel-card-meta"><span class="reel-pill">Group</span><span class="reel-pill">Class</span></div></div>
+      <div class="ig-card reel-card" data-category="offline"><iframe src="https://www.instagram.com/p/DdTU1s-T7pC/embed/?utm_source=ig_embed" scrolling="no" allowtransparency="true" allow="encrypted-media; autoplay; clipboard-write; picture-in-picture; web-share"></iframe><div class="reel-card-meta"><span class="reel-pill">Offline</span><span class="reel-pill">Training</span></div></div>
+      <div class="ig-card reel-card" data-category="offline"><iframe src="https://www.instagram.com/p/DdOQiS8TrqW/embed/?utm_source=ig_embed" scrolling="no" allowtransparency="true" allow="encrypted-media; autoplay; clipboard-write; picture-in-picture; web-share"></iframe><div class="reel-card-meta"><span class="reel-pill">Client</span><span class="reel-pill">Form</span></div></div>
+      <div class="ig-card reel-card" data-category="nutrition"><iframe src="https://www.instagram.com/p/DdKy1YEz4iz/embed/?utm_source=ig_embed" scrolling="no" allowtransparency="true" allow="encrypted-media; autoplay; clipboard-write; picture-in-picture; web-share"></iframe><div class="reel-card-meta"><span class="reel-pill">Education</span><span class="reel-pill">Nutrition</span></div></div>
+      <div class="ig-card reel-card" data-category="results"><iframe src="https://www.instagram.com/p/DdKtoNszL2r/embed/?utm_source=ig_embed" scrolling="no" allowtransparency="true" allow="encrypted-media; autoplay; clipboard-write; picture-in-picture; web-share"></iframe><div class="reel-card-meta"><span class="reel-pill">Results</span><span class="reel-pill">Testimonial</span></div></div>
+      <div class="ig-card reel-card" data-category="nutrition"><iframe src="https://www.instagram.com/p/DdHXj8aNqHM/embed/?utm_source=ig_embed" scrolling="no" allowtransparency="true" allow="encrypted-media; autoplay; clipboard-write; picture-in-picture; web-share"></iframe><div class="reel-card-meta"><span class="reel-pill">Education</span><span class="reel-pill">Workout</span></div></div>
     </div>
   </div>
 </section>
+
+<script>
+  (function () {
+    const buttons = document.querySelectorAll('.reel-category-btn');
+    const cards = document.querySelectorAll('.reel-card');
+
+    function applyFilter(category) {
+      cards.forEach((card) => {
+        const match = category === 'all' || card.dataset.category === category;
+        card.classList.toggle('hidden', !match);
+      });
+
+      buttons.forEach((button) => {
+        const active = button.dataset.category === category;
+        button.classList.toggle('active', active);
+        button.setAttribute('aria-pressed', String(active));
+      });
+    }
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => applyFilter(button.dataset.category));
+    });
+  })();
+</script>
 
 <!-- ── TESTIMONIALS ────────────────────────────────────── -->
 <section class="testimonials" id="testimonials">
