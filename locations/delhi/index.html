@@ -23,6 +23,14 @@
     }
   </script>
   <style>
+    header { background: #0e0e1a; padding: 16px 24px; }
+    header nav { max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; }
+    header a { color: #fff; text-decoration: none; font-weight: 700; }
+    header ul { display: flex; flex-wrap: wrap; gap: 18px; list-style: none; margin: 0; padding: 0; }
+    header ul a { color: rgba(255,255,255,.8); font-size: 14px; }
+    footer { background: #0e0e1a; color: rgba(255,255,255,.7); padding: 32px 24px; }
+    footer .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; }
+    footer a { color: #fff; margin-right: 16px; text-decoration: none; }
     body { font-family: Arial, sans-serif; background: #f8f4f1; color: #1f1d1d; margin: 0; line-height: 1.6; }
     .wrap { max-width: 1100px; margin: 0 auto; padding: 40px 20px 80px; }
     .hero { background: linear-gradient(135deg, #1b1b2b, #292e4b); color: #fff; border-radius: 18px; padding: 42px 32px; }
@@ -40,6 +48,7 @@
   </style>
 </head>
 <body>
+  <header><nav aria-label="Primary navigation"><a href="/">Sandhya Arora Fitness</a><ul><li><a href="/">Home</a></li><li><a href="/services/personal-fitness-trainer/">Services</a></li><li><a href="/locations/" aria-current="page">Locations</a></li><li><a href="/pricing/">Pricing</a></li><li><a href="/blogs/">Blogs</a></li></ul></nav></header>
   <div class="wrap">
     <div class="hero">
       <div class="badge">Delhi Fitness Coaching</div>
@@ -122,5 +131,6 @@
       </div>
     </div>
   </div>
+  <footer><div class="footer-inner"><strong>Sandhya Arora Fitness</strong><div><a href="/locations/">All Locations</a><a href="/locations/gurugram/">Gurugram</a><a href="/locations/noida/">Noida</a><a href="/services/personal-fitness-trainer/">Personal Training</a><a href="/pricing/">Pricing</a></div></div></footer>
 </body>
 </html>
