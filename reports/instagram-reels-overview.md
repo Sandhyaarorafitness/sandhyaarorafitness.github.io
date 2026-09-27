@@ -6,18 +6,19 @@ Reels page: https://www.instagram.com/sandhya.arora.fitness/reels/
 
 ## Publicly visible reel URLs discovered
 
-1. https://www.instagram.com/sandhya.arora.fitness/reel/DcwGQtLTq7n/
-2. https://www.instagram.com/sandhya.arora.fitness/reel/DcB41FOTR88/
-3. https://www.instagram.com/sandhya.arora.fitness/reel/DaZ5UvNzgNl/
-4. https://www.instagram.com/sandhya.arora.fitness/reel/DdbTG3GTQi2/
-5. https://www.instagram.com/sandhya.arora.fitness/reel/DdX-cQuz2dN/
-6. https://www.instagram.com/sandhya.arora.fitness/reel/DdTdQ3FTJOO/
-7. https://www.instagram.com/sandhya.arora.fitness/reel/DdTU1s-T7pC/
-8. https://www.instagram.com/sandhya.arora.fitness/reel/DdOQiS8TrqW/
-9. https://www.instagram.com/sandhya.arora.fitness/reel/DdK1lnXo8yU/
-10. https://www.instagram.com/sandhya.arora.fitness/reel/DdKy1YEz4iz/
-11. https://www.instagram.com/sandhya.arora.fitness/reel/DdKtoNszL2r/
-12. https://www.instagram.com/sandhya.arora.fitness/reel/DdHXj8aNqHM/
+1. https://www.instagram.com/sandhya.arora.fitness/reel/DdtlgxyT246/
+2. https://www.instagram.com/sandhya.arora.fitness/reel/DcwGQtLTq7n/
+3. https://www.instagram.com/sandhya.arora.fitness/reel/DcB41FOTR88/
+4. https://www.instagram.com/sandhya.arora.fitness/reel/DaZ5UvNzgNl/
+5. https://www.instagram.com/sandhya.arora.fitness/reel/DdbTG3GTQi2/
+6. https://www.instagram.com/sandhya.arora.fitness/reel/DdX-cQuz2dN/
+7. https://www.instagram.com/sandhya.arora.fitness/reel/DdTdQ3FTJOO/
+8. https://www.instagram.com/sandhya.arora.fitness/reel/DdTU1s-T7pC/
+9. https://www.instagram.com/sandhya.arora.fitness/reel/DdOQiS8TrqW/
+10. https://www.instagram.com/sandhya.arora.fitness/reel/DdK1lnXo8yU/
+11. https://www.instagram.com/sandhya.arora.fitness/reel/DdKy1YEz4iz/
+12. https://www.instagram.com/sandhya.arora.fitness/reel/DdKtoNszL2r/
+13. https://www.instagram.com/sandhya.arora.fitness/reel/DdHXj8aNqHM/
 
 ## Notes
 
