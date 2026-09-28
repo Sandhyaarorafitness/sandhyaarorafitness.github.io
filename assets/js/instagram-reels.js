@@ -30,6 +30,20 @@
     // ── LATEST REELS (Surfaced first) ─────────────────────────────────
     {
       type: 'instagram',
+      id: 'Ddyw0UtEoRd',
+      url: 'https://www.instagram.com/reel/Ddyw0UtEoRd/',
+      categories: ['online', 'offline'],
+      pills: ['Online', 'Client']
+    },
+    {
+      type: 'instagram',
+      id: 'Dd1N35_z1_Z',
+      url: 'https://www.instagram.com/reel/Dd1N35_z1_Z/',
+      categories: ['trainer'],
+      pills: ['Trainer', 'Latest']
+    },
+    {
+      type: 'instagram',
       id: 'DdtlgxyT246',
       url: 'https://www.instagram.com/reel/DdtlgxyT246/',
       categories: ['nutrition'],

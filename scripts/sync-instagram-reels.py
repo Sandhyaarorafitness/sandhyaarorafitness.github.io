@@ -59,6 +59,8 @@ CATEGORIES = [
 # Order and attributes of all reels
 REELS = [
     # Latest reels on top
+    {'type': 'instagram', 'id': 'Ddyw0UtEoRd', 'categories': 'online offline', 'pills': ['Online', 'Client']},
+    {'type': 'instagram', 'id': 'Dd1N35_z1_Z', 'categories': 'trainer', 'pills': ['Trainer', 'Latest']},
     {'type': 'instagram', 'id': 'DdtlgxyT246', 'categories': 'nutrition', 'pills': ['Nutrition', 'Tips']},
     {'type': 'instagram', 'id': 'DaZ5UvNzgNl', 'categories': 'strength offline', 'pills': ['Strength', 'Training']},
     {'type': 'instagram', 'id': 'DcB41FOTR88', 'categories': 'offline results', 'pills': ['Client', 'Testimonial']},
