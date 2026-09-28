@@ -141,7 +141,7 @@ def generate_section_html(asset_prefix, script_src):
     </div>
   </div>
 </section>
-<script src="{script_src}" defer></script>'''
+<script src="{script_src}?v=2" defer></script>'''
 
 def update_page(page_info):
     file_path = page_info['file']
