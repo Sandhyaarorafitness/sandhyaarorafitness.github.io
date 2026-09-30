@@ -23,7 +23,8 @@
     { id: 'offline', label: 'Offline / Client Training' },
     { id: 'group', label: 'Group Training' },
     { id: 'results', label: 'Testimonials & Results' },
-    { id: 'nutrition', label: 'Nutrition & Education' }
+    { id: 'nutrition', label: 'Nutrition & Education' },
+    { id: 'podcasts', label: 'Podcasts & Interviews' }
   ];
 
   const REELS_DATA = [
@@ -238,6 +239,71 @@
       url: 'https://www.instagram.com/p/DdHXj8aNqHM/',
       categories: ['nutrition'],
       pills: ['Education', 'Workout']
+    },
+    
+    // ── PODCASTS ──────────────────────────────────────────────────────
+    {
+      type: 'preview',
+      id: 'uRnEExysMfk',
+      url: 'https://youtu.be/uRnEExysMfk',
+      image: 'https://img.youtube.com/vi/uRnEExysMfk/hqdefault.jpg',
+      alt: 'Watch Sandhya Arora Podcast',
+      categories: ['podcasts'],
+      pills: ['Podcast', 'Interview']
+    },
+    {
+      type: 'preview',
+      id: 'rk89VpGFi-8',
+      url: 'https://youtu.be/rk89VpGFi-8',
+      image: 'https://img.youtube.com/vi/rk89VpGFi-8/hqdefault.jpg',
+      alt: 'Watch Sandhya Arora Podcast',
+      categories: ['podcasts'],
+      pills: ['Podcast', 'Cardio']
+    },
+    {
+      type: 'preview',
+      id: '4u45AvshKzc',
+      url: 'https://youtu.be/4u45AvshKzc',
+      image: 'https://img.youtube.com/vi/4u45AvshKzc/hqdefault.jpg',
+      alt: 'Watch Sandhya Arora Podcast',
+      categories: ['podcasts'],
+      pills: ['Podcast', 'Supplements']
+    },
+    {
+      type: 'preview',
+      id: 'sSUVB1vAMtc',
+      url: 'https://youtu.be/sSUVB1vAMtc',
+      image: 'https://img.youtube.com/vi/sSUVB1vAMtc/hqdefault.jpg',
+      alt: 'Watch Sandhya Arora Podcast',
+      categories: ['podcasts'],
+      pills: ['Podcast', 'Weight Loss']
+    },
+    {
+      type: 'preview',
+      id: 'xZrsDhNHck0',
+      url: 'https://youtu.be/xZrsDhNHck0',
+      image: 'https://img.youtube.com/vi/xZrsDhNHck0/hqdefault.jpg',
+      alt: 'Watch Sandhya Arora Podcast',
+      categories: ['podcasts'],
+      pills: ['Podcast', 'Fat Loss']
+    },
+    {
+      type: 'preview',
+      id: 'eDiH_oHCT1A',
+      url: 'https://youtu.be/eDiH_oHCT1A',
+      image: 'https://img.youtube.com/vi/eDiH_oHCT1A/hqdefault.jpg',
+      alt: 'Watch Sandhya Arora Podcast',
+      categories: ['podcasts'],
+      pills: ['Podcast', 'Protein']
+    },
+    {
+      type: 'preview',
+      id: 'Dm4uYBz7eVg',
+      url: 'https://youtu.be/Dm4uYBz7eVg',
+      image: 'https://img.youtube.com/vi/Dm4uYBz7eVg/hqdefault.jpg',
+      alt: 'Watch Sandhya Arora Podcast',
+      categories: ['podcasts'],
+      pills: ['Podcast', 'Therapy']
     }
   ];
 
