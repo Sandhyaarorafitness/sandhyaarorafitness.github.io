@@ -412,6 +412,8 @@
   
   .featured-media { position: relative; overflow: hidden; min-height: 380px; }
   .featured-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+  .featured-media.trainer-image-frame { min-height: 0; aspect-ratio: 16/9; background: var(--dark2); }
+  .trainer-image-frame img { object-fit: contain; }
   .featured-card:hover .featured-media img { transform: scale(1.04); }
   .featured-media::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 60%, rgba(10,10,20,0.4) 100%); }
   
@@ -453,6 +455,8 @@
   
   .card-media { position: relative; aspect-ratio: 16/10; overflow: hidden; background: var(--dark2); }
   .card-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+  .trainer-article-card .card-media { aspect-ratio: 16/9; }
+  .trainer-article-card .card-media img { object-fit: contain; }
   .blog-card:hover .card-media img { transform: scale(1.05); }
   
   .card-cat-badge {
@@ -654,7 +658,7 @@
   <div class="section-container">
     <p class="featured-label">Latest Spotlight</p>
     <a class="featured-card" href="https://sandhyaarorafitness.com/blogs/articles/looking-for-a-personal-trainer-9-things-to-check-before-you-pay/" aria-label="Read the latest article: Looking for a Personal Trainer? 9 Things to Check Before You Pay for Training">
-      <div class="featured-media">
+      <div class="featured-media trainer-image-frame">
         <span class="featured-badge">New Release</span>
         <img src="/assets/images/sandhya-arora-fitness-trainer.png" alt="Personal trainer coaching a client during a strength-training session" width="1365" height="768" loading="eager" fetchpriority="high" decoding="async">
       </div>
@@ -685,7 +689,7 @@
     <div class="blog-grid" id="blogGrid">
       
       <!-- ARTICLE 0: Choosing a Personal Trainer -->
-      <article class="blog-card" data-category="personal-training" data-category-label="Personal Training" data-title="Looking for a Personal Trainer? 9 Things to Check Before You Pay for Training" data-description="Use these 9 practical checks to assess a personal trainer's qualifications, safety, coaching style, reviews and pricing before you pay.">
+      <article class="blog-card trainer-article-card" data-category="personal-training" data-category-label="Personal Training" data-title="Looking for a Personal Trainer? 9 Things to Check Before You Pay for Training" data-description="Use these 9 practical checks to assess a personal trainer's qualifications, safety, coaching style, reviews and pricing before you pay.">
         <a href="https://sandhyaarorafitness.com/blogs/articles/looking-for-a-personal-trainer-9-things-to-check-before-you-pay/" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;" aria-label="Read: Looking for a Personal Trainer? 9 Things to Check Before You Pay for Training">
           <div class="card-media">
             <span class="card-cat-badge">Personal Training</span>
