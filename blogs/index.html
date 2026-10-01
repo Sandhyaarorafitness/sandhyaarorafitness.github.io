@@ -402,7 +402,7 @@
   .featured-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
   
   .featured-card {
-    display: grid; grid-template-columns: 1.2fr 1fr; gap: 0; align-items: stretch;
+    display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 0; align-items: stretch;
     background: var(--white); border-radius: 24px; overflow: hidden; text-decoration: none; color: inherit;
     box-shadow: var(--shadow-soft); transition: all 0.6s ease; border: 1px solid rgba(0,0,0,0.03);
     opacity: 0; transform: translateY(24px); position: relative; width: 100%;
@@ -410,7 +410,7 @@
   .featured-card.in-view { opacity: 1; transform: translateY(0); }
   .featured-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); }
   
-  .featured-media { position: relative; overflow: hidden; min-height: 380px; min-width: 0; }
+  .featured-media { position: relative; overflow: hidden; min-height: 380px; min-width: 0; width: 100%; height: 100%; }
   .featured-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
   .featured-media.trainer-image-frame { min-height: 0; aspect-ratio: 16/9; background: var(--dark2); }
   .trainer-image-frame img { object-fit: contain; }
