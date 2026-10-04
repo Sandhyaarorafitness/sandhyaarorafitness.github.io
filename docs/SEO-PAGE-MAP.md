@@ -78,6 +78,7 @@ This page map reflects the public HTML routes currently in the repository and th
 - Index: Yes
 
 ### Blog articles
+- https://sandhyaarorafitness.com/blogs/articles/nutrition-coach/
 - https://sandhyaarorafitness.com/blogs/articles/benefits-of-personal-training/
 - https://sandhyaarorafitness.com/blogs/articles/best-supplements-for-performance/
 - https://sandhyaarorafitness.com/blogs/articles/human-performance-nutrition/
