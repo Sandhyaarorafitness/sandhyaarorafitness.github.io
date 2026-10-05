@@ -31,6 +31,34 @@
     // ── LATEST REELS (Surfaced first) ─────────────────────────────────
     {
       type: 'instagram',
+      id: 'DcYlpVEttaY',
+      url: 'https://www.instagram.com/sandhya.arora.fitness/reel/DcYlpVEttaY/',
+      categories: ['trainer'],
+      pills: ['Trainer', 'Latest']
+    },
+    {
+      type: 'instagram',
+      id: 'DZ62YP3Tp1Q',
+      url: 'https://www.instagram.com/sandhya.arora.fitness/reel/DZ62YP3Tp1Q/',
+      categories: ['trainer'],
+      pills: ['Trainer', 'Latest']
+    },
+    {
+      type: 'instagram',
+      id: 'DY6g1vxBgYm',
+      url: 'https://www.instagram.com/sandhya.arora.fitness/reel/DY6g1vxBgYm/',
+      categories: ['trainer'],
+      pills: ['Trainer', 'Latest']
+    },
+    {
+      type: 'instagram',
+      id: 'DdC5SL7T3vv',
+      url: 'https://www.instagram.com/deepak.joon.hr/reel/DdC5SL7T3vv/',
+      categories: ['trainer'],
+      pills: ['Trainer', 'Latest']
+    },
+    {
+      type: 'instagram',
       id: 'Ddyw0UtEoRd',
       url: 'https://www.instagram.com/reel/Ddyw0UtEoRd/',
       categories: ['online', 'offline'],
