@@ -31,6 +31,69 @@
     // ── LATEST REELS (Surfaced first) ─────────────────────────────────
     {
       type: 'instagram',
+      id: 'DaPHrqPz8nW',
+      url: 'https://www.instagram.com/reels/DaPHrqPz8nW/',
+      categories: ['trainer'],
+      pills: ['Trainer', 'Latest']
+    },
+    {
+      type: 'instagram',
+      id: 'DdoUZ80TNcM',
+      url: 'https://www.instagram.com/reels/DdoUZ80TNcM/',
+      categories: ['online'],
+      pills: ['Online', 'Latest']
+    },
+    {
+      type: 'instagram',
+      id: 'DdC5SL7T3vv',
+      url: 'https://www.instagram.com/reels/DdC5SL7T3vv/',
+      categories: ['online'],
+      pills: ['Online', 'Latest']
+    },
+    {
+      type: 'instagram',
+      id: 'DakQj9jT9nT',
+      url: 'https://www.instagram.com/reels/DakQj9jT9nT/',
+      categories: ['online'],
+      pills: ['Online', 'Latest']
+    },
+    {
+      type: 'instagram',
+      id: 'DafIbbcTx1b',
+      url: 'https://www.instagram.com/reels/DafIbbcTx1b/',
+      categories: ['online'],
+      pills: ['Online', 'Latest']
+    },
+    {
+      type: 'instagram',
+      id: 'DVdFS9_gRuQ',
+      url: 'https://www.instagram.com/reels/DVdFS9_gRuQ/',
+      categories: ['online'],
+      pills: ['Online', 'Latest']
+    },
+    {
+      type: 'instagram',
+      id: 'DUxvV73gV27',
+      url: 'https://www.instagram.com/reels/DUxvV73gV27/',
+      categories: ['online'],
+      pills: ['Online', 'Latest']
+    },
+    {
+      type: 'instagram',
+      id: 'DQi3A2GgXTq',
+      url: 'https://www.instagram.com/reels/DQi3A2GgXTq/',
+      categories: ['online'],
+      pills: ['Online', 'Latest']
+    },
+    {
+      type: 'instagram',
+      id: 'DOksttSASiW',
+      url: 'https://www.instagram.com/reels/DOksttSASiW/',
+      categories: ['online'],
+      pills: ['Online', 'Latest']
+    },
+    {
+      type: 'instagram',
       id: 'DcYlpVEttaY',
       url: 'https://www.instagram.com/sandhya.arora.fitness/reel/DcYlpVEttaY/',
       categories: ['trainer'],
@@ -47,13 +110,6 @@
       type: 'instagram',
       id: 'DY6g1vxBgYm',
       url: 'https://www.instagram.com/sandhya.arora.fitness/reel/DY6g1vxBgYm/',
-      categories: ['trainer'],
-      pills: ['Trainer', 'Latest']
-    },
-    {
-      type: 'instagram',
-      id: 'DdC5SL7T3vv',
-      url: 'https://www.instagram.com/deepak.joon.hr/reel/DdC5SL7T3vv/',
       categories: ['trainer'],
       pills: ['Trainer', 'Latest']
     },
@@ -101,13 +157,6 @@
     },
 
     // ── HIGHLIGHTED REELS ─────────────────────────────────────────────
-    {
-      type: 'instagram',
-      id: 'DdoUZ80TNcM',
-      url: 'https://www.instagram.com/reel/DdoUZ80TNcM/',
-      categories: ['trainer'],
-      pills: ['Trainer', 'Story']
-    },
     {
       type: 'instagram',
       id: 'DdX-cQuz2dN',
