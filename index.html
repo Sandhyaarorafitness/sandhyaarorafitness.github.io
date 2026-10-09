@@ -69,7 +69,10 @@
           { "@type": "Offer", "url": "https://sandhyaarorafitness.com/services/group-fitness-classes/", "itemOffered": { "@type": "Service", "name": "Group Fitness Classes", "description": "High-energy HIIT, strength, yoga-fusion, and functional training classes with a supportive community." } },
           { "@type": "Offer", "url": "https://sandhyaarorafitness.com/services/online-fitness-coach/", "itemOffered": { "@type": "Service", "name": "Online Coaching Programs", "description": "Structured online fitness programs with workout plans, nutrition guidance, and weekly check-ins." } },
           { "@type": "Offer", "url": "https://sandhyaarorafitness.com/services/nutrition-coaching/", "itemOffered": { "@type": "Service", "name": "Nutrition Coaching", "description": "Sustainable nutrition guidance tailored to Indian food and lifestyle." } },
-          { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1000", "maxPrice": "1500", "priceCurrency": "INR" }, "itemOffered": { "@type": "Service", "name": "Online Personal Training", "description": "1-on-1 live online training sessions, billed per session." } },
+          { "@type": "Offer", "name": "3 Days a Week Online Personal Training - India", "price": "11999", "priceCurrency": "INR", "description": "12 live sessions, valid for 1 month. Original price INR 15000." },
+          { "@type": "Offer", "name": "3 Days a Week Online Personal Training - International", "price": "149", "priceCurrency": "USD", "description": "12 live sessions, valid for 1 month. Original price USD 200." },
+          { "@type": "Offer", "name": "5 Days a Week Online Personal Training - India", "price": "19999", "priceCurrency": "INR", "description": "20 live sessions, valid for 1 month. Original price INR 24999." },
+          { "@type": "Offer", "name": "5 Days a Week Online Personal Training - International", "price": "249", "priceCurrency": "USD", "description": "20 live sessions, valid for 1 month. Original price USD 300." },
           { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1200", "maxPrice": "1500", "priceCurrency": "INR" }, "itemOffered": { "@type": "Service", "name": "Offline Personal Training", "description": "1-on-1 in-person training sessions, billed per session." } },
           { "@type": "Offer", "price": "300", "priceCurrency": "INR", "itemOffered": { "@type": "Service", "name": "Group Classes", "description": "Group fitness classes, billed per session." } }
         ]
@@ -488,6 +491,11 @@
   .program-footer { padding: 24px 28px 28px; }
   .program-price { font-size: 28px; font-weight: 700; color: var(--dark2); }
   .program-price span { font-size: 14px; color: var(--muted); font-weight: 400; }
+  .monthly-package-price + .monthly-package-price { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); }
+  .monthly-package-label { color: var(--muted); font-size: 11px; font-weight: 600; }
+  .monthly-package-current { margin-top: 3px; color: var(--dark2); font-size: 18px; font-weight: 700; }
+  .monthly-package-current s, .monthly-package-international s { color: var(--muted); font-size: 13px; font-weight: 400; }
+  .monthly-package-international { margin-top: 2px; color: var(--muted); font-size: 12px; }
   .program-cta {
     display: block; text-align: center; margin-top: 16px;
     background: var(--red); color: var(--white);
@@ -1048,8 +1056,8 @@
   <div class="section-container">
     <p class="section-eyebrow">Pricing</p>
     <h2 class="section-title">Choose What Fits You Best</h2>
-    <p class="section-sub" style="margin-bottom:20px;">Simple, pay-per-session pricing across online, offline, and group training - so you can start wherever you are.</p>
-    <p style="margin-bottom:48px; color:var(--muted); font-size:14px;">Monthly online packages: 3 days/week · 12 sessions · 1 month — India <s>₹15,000</s> <strong>₹11,999</strong>; international <s>$200</s> <strong>$149</strong>. 5 days/week · 20 sessions · 1 month — India <s>₹24,999</s> <strong>₹19,999</strong>; international <s>$300</s> <strong>$249</strong>. <a href="/pricing/" style="color:var(--red); font-weight:600;">Compare packages</a>.</p>
+    <p class="section-sub" style="margin-bottom:20px;">Monthly online training packages, with separate per-session pricing for offline and group training.</p>
+    <p style="margin-bottom:48px; color:var(--muted); font-size:14px;">Compare <a href="/pricing/" style="color:var(--red); font-weight:600;">all online package details</a>.</p>
     <div class="pricing-grid">
       <article class="program-card featured">
         <span class="popular-badge">Most Popular</span>
@@ -1067,9 +1075,9 @@
           <li>Train from Anywhere in the World</li>
         </ul>
         <div class="program-footer">
-          <div class="program-price">₹1,000 - ₹1,500</div>
-          <p class="pricing-billing">Per Session</p>
-          <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20am%20interested%20in%20Online%20Personal%20Training.%20Please%20share%20more%20details." class="program-cta" target="_blank" rel="noopener">Book Your Session Now</a>
+          <div class="monthly-package-price"><p class="monthly-package-label">3 days/week · 12 sessions · 1 month</p><p class="monthly-package-current"><s>₹15,000</s> ₹11,999</p><p class="monthly-package-international">International: <s>$200</s> $149 USD</p></div>
+          <div class="monthly-package-price"><p class="monthly-package-label">5 days/week · 20 sessions · 1 month</p><p class="monthly-package-current"><s>₹24,999</s> ₹19,999</p><p class="monthly-package-international">International: <s>$300</s> $249 USD</p></div>
+          <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20am%20interested%20in%20the%20monthly%20online%20personal%20training%20packages." class="program-cta" target="_blank" rel="noopener">Ask About Monthly Packages</a>
         </div>
       </article>
       <article class="program-card">

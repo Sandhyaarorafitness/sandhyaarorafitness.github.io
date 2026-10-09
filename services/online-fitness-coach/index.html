@@ -52,12 +52,12 @@ crossorigin="anonymous"></script>
       "keywords": "online fitness coach, personal online fitness trainer, online fitness classes, online fitness coach in India, online fitness coach Delhi",
       "url": "https://sandhyaarorafitness.com/services/online-fitness-coach/",
       "description": "Live 1-on-1 online fitness coaching with a certified trainer: custom workout plans, real-time form correction, nutrition guidance and weekly progress reviews, delivered over video anywhere in India or worldwide.",
-      "offers": {
-        "@type": "Offer",
-        "url": "https://sandhyaarorafitness.com/pricing/",
-        "availability": "https://schema.org/InStock",
-        "priceSpecification": { "@type": "PriceSpecification", "priceCurrency": "INR", "minPrice": "1000", "maxPrice": "1500" }
-      }
+      "offers": [
+        { "@type": "Offer", "name": "3 Days a Week - India", "price": "11999", "priceCurrency": "INR", "description": "12 live sessions, valid for 1 month. Original price INR 15000.", "url": "https://sandhyaarorafitness.com/pricing/" },
+        { "@type": "Offer", "name": "3 Days a Week - International", "price": "149", "priceCurrency": "USD", "description": "12 live sessions, valid for 1 month. Original price USD 200.", "url": "https://sandhyaarorafitness.com/pricing/" },
+        { "@type": "Offer", "name": "5 Days a Week - India", "price": "19999", "priceCurrency": "INR", "description": "20 live sessions, valid for 1 month. Original price INR 24999.", "url": "https://sandhyaarorafitness.com/pricing/" },
+        { "@type": "Offer", "name": "5 Days a Week - International", "price": "249", "priceCurrency": "USD", "description": "20 live sessions, valid for 1 month. Original price USD 300.", "url": "https://sandhyaarorafitness.com/pricing/" }
+      ]
     },
     {
       "@type": "Person",
@@ -84,7 +84,7 @@ crossorigin="anonymous"></script>
         {"@type": "Question", "name": "Do you offer a personal online fitness trainer in India and abroad?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Sandhya Arora coaches clients across India, including Delhi NCR, Mumbai, Bengaluru, Hyderabad, Pune and Chennai, as well as clients in the UAE, UK, US, Canada, Singapore and Australia. Sessions are scheduled around your time zone."}},
         {"@type": "Question", "name": "Do I need gym equipment for online fitness classes?", "acceptedAnswer": {"@type": "Answer", "text": "No. Programming is built around what you actually have, whether that is a small space at home, a pair of dumbbells, resistance bands or a fully equipped gym. You share your setup during the assessment and every session is designed to match it."}},
         {"@type": "Question", "name": "How soon will I see results from online fitness coaching?", "acceptedAnswer": {"@type": "Answer", "text": "Most clients notice better energy, sleep and strength within the first 3 to 4 weeks. Visible changes in body composition usually appear between 8 and 12 weeks when training, nutrition and recovery stay consistent."}},
-        {"@type": "Question", "name": "How much does an online fitness coach cost in India?", "acceptedAnswer": {"@type": "Answer", "text": "Live 1-on-1 online personal training with Sandhya Arora is priced at ₹1,000 to ₹1,500 per session, depending on the format and how often you train. Monthly coaching packages are also available on the pricing page."}},
+        {"@type": "Question", "name": "How much does an online fitness coach cost?", "acceptedAnswer": {"@type": "Answer", "text": "For clients in India, the 3-days-a-week monthly package is ₹11,999 (originally ₹15,000) and the 5-days-a-week package is ₹19,999 (originally ₹24,999). International clients pay $149 (originally $200) or $249 (originally $300), respectively. Both packages are valid for 1 month."}},
         {"@type": "Question", "name": "Are online fitness classes for ladies available?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Many clients are women who prefer private, judgement-free coaching at home. All sessions are 1-on-1 and confidential, and programming adapts to goals such as fat loss, postpartum recovery, strength and hormonal changes."}},
         {"@type": "Question", "name": "Are online fitness classes live or recorded?", "acceptedAnswer": {"@type": "Answer", "text": "Every session is live and interactive. Sandhya watches your movement and corrects technique in real time. Exercise demonstrations and notes are shared for reference so you can repeat movements correctly between sessions."}},
         {"@type": "Question", "name": "Do you offer online fitness trainer certification or coach jobs?", "acceptedAnswer": {"@type": "Answer", "text": "No. This page is for clients looking for coaching. Sandhya Arora Fitness is a coaching practice and does not run online fitness trainer courses, certification programmes or job placements."}},
@@ -359,6 +359,11 @@ crossorigin="anonymous"></script>
   .program-footer { padding: 24px 28px 28px; }
   .program-price { font-size: 28px; font-weight: 700; color: var(--dark2); }
   .program-price span { font-size: 14px; color: var(--muted); font-weight: 400; }
+  .monthly-package-price + .monthly-package-price { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); }
+  .monthly-package-label { color: var(--muted); font-size: 11px; font-weight: 600; }
+  .monthly-package-current { margin-top: 3px; color: var(--dark2); font-size: 18px; font-weight: 700; }
+  .monthly-package-current s, .monthly-package-international s { color: var(--muted); font-size: 13px; font-weight: 400; }
+  .monthly-package-international { margin-top: 2px; color: var(--muted); font-size: 12px; }
   .program-cta {
     display: block; text-align: center; margin-top: 16px;
     background: var(--red); color: var(--white);
@@ -876,7 +881,7 @@ crossorigin="anonymous"></script>
           <tr style="border-top:1px solid var(--border);"><th scope="row" style="padding:14px 18px; text-align:left; color:var(--dark2); font-weight:600;">Travel and relocation</th><td style="padding:14px 18px;">Programme continues wherever you are</td><td style="padding:14px 18px;">Usually pauses when you move</td><td style="padding:14px 18px;">No plan to continue</td></tr>
           <tr style="border-top:1px solid var(--border); background:rgba(233,69,96,0.03);"><th scope="row" style="padding:14px 18px; text-align:left; color:var(--dark2); font-weight:600;">Nutrition support</th><td style="padding:14px 18px;">Built into the coaching programme</td><td style="padding:14px 18px;">Often a separate add-on</td><td style="padding:14px 18px;">Self-research only</td></tr>
           <tr style="border-top:1px solid var(--border);"><th scope="row" style="padding:14px 18px; text-align:left; color:var(--dark2); font-weight:600;">Progress reviews</th><td style="padding:14px 18px;">Weekly, based on logged data</td><td style="padding:14px 18px;">Depends on the trainer</td><td style="padding:14px 18px;">None</td></tr>
-          <tr style="border-top:1px solid var(--border); background:rgba(233,69,96,0.03);"><th scope="row" style="padding:14px 18px; text-align:left; color:var(--dark2); font-weight:600;">Typical price</th><td style="padding:14px 18px;">₹1,000 – ₹1,500 per session</td><td style="padding:14px 18px;">Premium rates for travel and space</td><td style="padding:14px 18px;">Gym membership only</td></tr>
+          <tr style="border-top:1px solid var(--border); background:rgba(233,69,96,0.03);"><th scope="row" style="padding:14px 18px; text-align:left; color:var(--dark2); font-weight:600;">Typical price</th><td style="padding:14px 18px;">₹11,999/month (3 days/week) or ₹19,999/month (5 days/week); international: $149 or $249 USD/month</td><td style="padding:14px 18px;">Premium rates for travel and space</td><td style="padding:14px 18px;">Gym membership only</td></tr>
           <tr style="border-top:1px solid var(--border);"><th scope="row" style="padding:14px 18px; text-align:left; color:var(--dark2); font-weight:600;">Best suited to</th><td style="padding:14px 18px;">Busy clients, home training, clients worldwide</td><td style="padding:14px 18px;">Clients who want hands-on sessions in Delhi NCR</td><td style="padding:14px 18px;">Self-motivated experienced lifters</td></tr>
         </tbody>
       </table>
@@ -890,7 +895,7 @@ crossorigin="anonymous"></script>
   <div class="section-container">
     <p class="section-eyebrow">Pricing</p>
     <h2 class="section-title">Online Personal Training Pricing</h2>
-    <p class="section-sub" style="margin-bottom:20px;">Pay per session and train as often as fits your week, from anywhere in India or abroad.</p>
+    <p class="section-sub" style="margin-bottom:20px;">Choose a monthly live-training package for 3 or 5 days per week, from anywhere in India or abroad.</p>
     <p style="margin-bottom:48px; color:var(--muted); font-size:14px;">For monthly coaching packages, <a href="/pricing/" style="color:var(--red); font-weight:600;">compare online personal training pricing and packages</a>.</p>
     <div class="pricing-grid-solo">
       <article class="program-card featured">
@@ -909,9 +914,9 @@ crossorigin="anonymous"></script>
           <li>Train from Anywhere in the World</li>
         </ul>
         <div class="program-footer">
-          <div class="program-price">₹1,000 – ₹1,500</div>
-          <p class="pricing-billing">Per Session</p>
-          <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20am%20interested%20in%20Online%20Personal%20Training.%20Please%20share%20more%20details." class="program-cta" target="_blank" rel="noopener">Book Your Session Now</a>
+          <div class="monthly-package-price"><p class="monthly-package-label">3 days/week · 12 sessions · 1 month</p><p class="monthly-package-current"><s>₹15,000</s> ₹11,999</p><p class="monthly-package-international">International: <s>$200</s> $149 USD</p></div>
+          <div class="monthly-package-price"><p class="monthly-package-label">5 days/week · 20 sessions · 1 month</p><p class="monthly-package-current"><s>₹24,999</s> ₹19,999</p><p class="monthly-package-international">International: <s>$300</s> $249 USD</p></div>
+          <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20am%20interested%20in%20the%20monthly%20online%20personal%20training%20packages." class="program-cta" target="_blank" rel="noopener">Ask About Monthly Packages</a>
         </div>
       </article>
     </div>
@@ -964,7 +969,7 @@ crossorigin="anonymous"></script>
       </div>
       <div class="faq-item">
         <h3 class="faq-q">How much does an online fitness coach cost in India?</h3>
-        <p class="faq-a">Live 1-on-1 online personal training with Sandhya Arora is priced at ₹1,000 to ₹1,500 per session, depending on the format and how often you train. Monthly coaching packages are also available on the <a href="/pricing/" style="color:var(--red); font-weight:600;">pricing page</a>.</p>
+        <p class="faq-a">Monthly live-training packages are available for 3 days a week (12 sessions) and 5 days a week (20 sessions), each valid for 1 month. India pricing is ₹11,999 and ₹19,999 respectively; international pricing is $149 and $249 USD. Original prices are shown on the <a href="/pricing/" style="color:var(--red); font-weight:600;">pricing page</a>.</p>
       </div>
       <div class="faq-item">
         <h3 class="faq-q">Are online fitness classes for ladies available?</h3>
@@ -1022,7 +1027,7 @@ crossorigin="anonymous"></script>
     <p style="font-size: 17px; color: var(--muted); line-height: 1.8; margin-bottom: 22px;">Programming also has to respect physiology and life stage: postpartum recovery, hormonal changes, joint health, and strength goals that a generic fat-loss template ignores. Sessions are private, 1-on-1 and judgement-free, and equipment is whatever you already own. If fat loss is the main goal, our guide on training with a <a href="/blogs/articles/personal-trainer-for-weight-loss/" style="color: var(--red); text-decoration: none;">personal trainer for weight loss</a> shows how the first twelve weeks are structured.</p>
 
     <h3 style="font-size: 28px; color: var(--dark2); margin: 38px 0 16px; font-family: var(--font-display);">What does an online fitness coach cost in India?</h3>
-    <p style="font-size: 17px; color: var(--muted); line-height: 1.8; margin-bottom: 22px;">What you pay depends on the coach's experience, session length, how much support is included and how often you train. At Sandhya Arora Fitness, live 1-on-1 online coaching is priced at ₹1,000 to ₹1,500 per session, with monthly packages available for clients who want a fixed training block. Full details are on the <a href="/pricing/" style="color: var(--red); text-decoration: none;">pricing page</a>.</p>
+    <p style="font-size: 17px; color: var(--muted); line-height: 1.8; margin-bottom: 22px;">At Sandhya Arora Fitness, monthly live online packages include 12 sessions for 3 days a week or 20 sessions for 5 days a week, each valid for 1 month. India pricing is ₹11,999 and ₹19,999; international pricing is $149 and $249 USD. See the <a href="/pricing/" style="color: var(--red); text-decoration: none;">pricing page</a> for original prices and full package details.</p>
     <p style="font-size: 17px; color: var(--muted); line-height: 1.8; margin-bottom: 22px;">Be careful with both extremes. Very cheap plans usually mean templated programming with no live coaching, which is where results quietly disappear. Very expensive plans are not automatically better either. The honest measure is feedback per rupee: how many sessions involve someone watching your form, and how many weeks include a real review of your progress.</p>
 
     <h3 style="font-size: 28px; color: var(--dark2); margin: 38px 0 16px; font-family: var(--font-display);">Training online from Delhi NCR, or anywhere in the world</h3>
