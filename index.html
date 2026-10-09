@@ -36,6 +36,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="/assets/css/monthly-pricing-cards.css" rel="stylesheet">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3761890682449632" crossorigin="anonymous"></script>
 <script type="application/ld+json">
 {
@@ -491,11 +492,6 @@
   .program-footer { padding: 24px 28px 28px; }
   .program-price { font-size: 28px; font-weight: 700; color: var(--dark2); }
   .program-price span { font-size: 14px; color: var(--muted); font-weight: 400; }
-  .monthly-package-price + .monthly-package-price { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); }
-  .monthly-package-label { color: var(--muted); font-size: 11px; font-weight: 600; }
-  .monthly-package-current { margin-top: 3px; color: var(--dark2); font-size: 18px; font-weight: 700; }
-  .monthly-package-current s, .monthly-package-international s { color: var(--muted); font-size: 13px; font-weight: 400; }
-  .monthly-package-international { margin-top: 2px; color: var(--muted); font-size: 12px; }
   .program-cta {
     display: block; text-align: center; margin-top: 16px;
     background: var(--red); color: var(--white);
@@ -509,6 +505,7 @@
   /* ─── PRICING ─────────────────────────────────────── */
   .pricing { padding: var(--section-pad); background: var(--white); }
   .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .service-pricing-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; max-width: 820px; margin: 40px auto 0; }
   .pricing-billing {
     font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px;
     color: var(--muted); margin-top: 6px;
@@ -621,6 +618,7 @@
     .section-container { padding: 0 28px; }
     .cta-banner { padding: 64px 28px; }
     .services-grid, .testi-grid, .pricing-grid, .faq-grid { grid-template-columns: 1fr; }
+    .service-pricing-grid { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
     .footer-brand { grid-column: 1 / -1; }
     footer { padding: 48px 28px; }
@@ -1058,28 +1056,12 @@
     <h2 class="section-title">Choose What Fits You Best</h2>
     <p class="section-sub" style="margin-bottom:20px;">Monthly online training packages, with separate per-session pricing for offline and group training.</p>
     <p style="margin-bottom:48px; color:var(--muted); font-size:14px;">Compare <a href="/pricing/" style="color:var(--red); font-weight:600;">all online package details</a>.</p>
-    <div class="pricing-grid">
-      <article class="program-card featured">
-        <span class="popular-badge">Most Popular</span>
-        <div class="program-header">
-          <p class="program-week">Online</p>
-          <h3 class="program-name"><a href="/services/online-fitness-coach/" style="color:inherit;text-decoration:none;">Online Personal Training</a></h3>
-          <p class="program-tagline">1-on-1 live coaching from anywhere in the world.</p>
-        </div>
-        <div class="program-divider"></div>
-        <ul class="program-features">
-          <li>1-on-1 Live Training Sessions</li>
-          <li>Personalized Workout Plans</li>
-          <li>Diet & Nutrition Guidance</li>
-          <li>Progress Tracking & Support</li>
-          <li>Train from Anywhere in the World</li>
-        </ul>
-        <div class="program-footer">
-          <div class="monthly-package-price"><p class="monthly-package-label">3 days/week · 12 sessions · 1 month</p><p class="monthly-package-current"><s>₹15,000</s> ₹11,999</p><p class="monthly-package-international">International: <s>$200</s> $149 USD</p></div>
-          <div class="monthly-package-price"><p class="monthly-package-label">5 days/week · 20 sessions · 1 month</p><p class="monthly-package-current"><s>₹24,999</s> ₹19,999</p><p class="monthly-package-international">International: <s>$300</s> $249 USD</p></div>
-          <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20am%20interested%20in%20the%20monthly%20online%20personal%20training%20packages." class="program-cta" target="_blank" rel="noopener">Ask About Monthly Packages</a>
-        </div>
-      </article>
+    <div class="monthly-pricing-grid">
+      <article class="price-card"><div class="price-card-head"><p class="package-label">Flexible foundation</p><h3>3 Days a Week</h3><p class="sessions">12 live sessions · 1 month</p><p class="original-price">Original: India INR <s>₹15,000</s> · International USD <s>$200</s></p><div class="price"><span class="price-market">India · INR</span>₹11,999<span>International · USD $149</span></div></div><div class="price-card-body"><ul><li>Live online personal training</li><li>Customized workout plan</li><li>Diet and nutrition guidance</li><li>Progress tracking</li><li>WhatsApp support</li></ul></div><div class="price-card-footer"><a class="btn" href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20am%20interested%20in%20the%203%20days%20a%20week%20online%20training%20package." target="_blank" rel="noopener">Ask About This Package</a></div></article>
+      <article class="price-card"><div class="price-card-head"><p class="package-label">Higher weekly frequency</p><h3>5 Days a Week</h3><p class="sessions">20 live sessions · 1 month</p><p class="original-price">Original: India INR <s>₹24,999</s> · International USD <s>$300</s></p><div class="price"><span class="price-market">India · INR</span>₹19,999<span>International · USD $249</span></div></div><div class="price-card-body"><ul><li>Live online personal training</li><li>Customized workout plan</li><li>Diet and nutrition guidance</li><li>Progress tracking</li><li>WhatsApp support</li></ul></div><div class="price-card-footer"><a class="btn" href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20am%20interested%20in%20the%205%20days%20a%20week%20online%20training%20package." target="_blank" rel="noopener">Ask About This Package</a></div></article>
+    </div>
+    <p class="section-sub" style="margin-top:56px;">In-person and group sessions</p>
+    <div class="service-pricing-grid">
       <article class="program-card">
         <div class="program-header">
           <p class="program-week">Offline</p>
