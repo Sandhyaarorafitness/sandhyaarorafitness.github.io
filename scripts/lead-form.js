@@ -232,7 +232,7 @@
   const container = document.createElement('div');
   container.id = 'saf-lead-popup';
   container.innerHTML = `
-    <button class="saf-floating-btn" id="saf-open-btn">
+    <button class="saf-floating-btn" id="saf-open-btn" data-saf-open>
       <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/><path d="M7 9h10v2H7zm0-3h10v2H7zm0 6h7v2H7z"/></svg>
       Enquire Now
     </button>
@@ -331,16 +331,28 @@
       </div>
     </div>
   `;
-  document.body.appendChild(container);
+  const actionsHost = document.querySelector('[data-saf-lead-actions]');
+  if (actionsHost) {
+    const actionStack = actionsHost.parentElement;
+    const heroCtas = document.querySelector('.hero-ctas');
+    if (heroCtas) heroCtas.after(actionStack);
+    const whatsappButtons = document.querySelectorAll('.whatsapp-float');
+    if (whatsappButtons.length > 1) whatsappButtons[1].remove();
+    if (whatsappButtons[0]) actionsHost.parentElement.prepend(whatsappButtons[0]);
+    actionsHost.appendChild(container);
+  } else {
+    document.body.appendChild(container);
+  }
 
   const modal = document.getElementById('saf-modal');
-  const openBtn = document.getElementById('saf-open-btn');
   const closeBtn = document.getElementById('saf-close-btn');
   const form = document.getElementById('saf-lead-form');
   const submitBtn = document.getElementById('saf-submit-btn');
   const msgBox = document.getElementById('saf-form-msg');
 
-  openBtn.addEventListener('click', () => { modal.classList.add('active'); });
+  document.querySelectorAll('[data-saf-open]').forEach(button => {
+    button.addEventListener('click', () => { modal.classList.add('active'); });
+  });
   closeBtn.addEventListener('click', () => { modal.classList.remove('active'); });
   modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active'); });
 

@@ -25,12 +25,12 @@
 <meta property="og:title" content="Sandhya Arora Fitness | Personal Trainer & Online Fitness Coach - India & Worldwide">
 <meta property="og:description" content="Transform your body and mind with Sandhya Arora - certified personal fitness trainer offering 1-on-1 coaching, group classes, and online fitness programs for clients across India and worldwide.">
 <meta property="og:url" content="https://sandhyaarorafitness.com/">
-<meta property="og:image" content="https://i.ibb.co/xt0T9y9H/Sandhya-Arora-Fitness-Hero.png">
+<meta property="og:image" content="https://sandhyaarorafitness.com/assets/images/sandhya-arora-fitness.jpg">
 <meta property="og:locale" content="en_IN">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Sandhya Arora Fitness | Personal Trainer & Online Fitness Coach - India & Worldwide">
 <meta name="twitter:description" content="Certified personal fitness trainer offering 1-on-1 coaching, group classes, and online fitness programs for clients across India and worldwide.">
-<meta name="twitter:image" content="https://i.ibb.co/xt0T9y9H/Sandhya-Arora-Fitness-Hero.png">
+<meta name="twitter:image" content="https://sandhyaarorafitness.com/assets/images/sandhya-arora-fitness.jpg">
 <link rel="icon" type="image/png" href="https://i.ibb.co/XfxtDL0F/Sandhya-Arora-Fitness-Favicon.png">
 <link rel="apple-touch-icon" href="https://i.ibb.co/XfxtDL0F/Sandhya-Arora-Fitness-Favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -198,10 +198,14 @@
   .hero-eyebrow::before { content: '●'; font-size: 8px; }
   .hero h1 {
     font-family: var(--font-display);
-    font-size: clamp(36px, 5.5vw, 68px); font-weight: 900; line-height: 1.1;
+    font-size: clamp(34px, 4.5vw, 56px); font-weight: 900; line-height: 1.1;
     color: var(--white); margin-bottom: 24px; letter-spacing: -1.5px;
   }
   .hero h1 em { color: var(--red); font-style: normal; }
+  .hero-headline-support {
+    color: var(--white); font-size: clamp(20px, 2.3vw, 28px); font-weight: 600;
+    line-height: 1.3; margin: -8px 0 18px;
+  }
   .hero-sub {
     font-size: 18px; color: rgba(255,255,255,0.65); line-height: 1.7;
     margin-bottom: 40px; font-weight: 300; max-width: 480px;
@@ -579,6 +583,34 @@
   }
   .whatsapp-float:hover { transform: scale(1.08); }
   .whatsapp-float svg { width: 30px; height: 30px; }
+  .home-floating-actions {
+    position: fixed; right: max(24px, env(safe-area-inset-right)); bottom: max(24px, env(safe-area-inset-bottom));
+    z-index: 9998; display: flex; flex-direction: column; align-items: stretch; gap: 10px;
+    width: min(280px, calc(100vw - 32px));
+  }
+  .home-floating-enquiry, #saf-lead-popup { display: contents; }
+  .home-floating-actions .whatsapp-float { position: static; z-index: auto; align-self: flex-end; flex-shrink: 0; }
+  .home-floating-actions .saf-floating-btn {
+    position: static; box-sizing: border-box; width: 100%; justify-content: center;
+    padding: 18px 20px; font-size: 16px; font-weight: 700;
+    animation: enquiry-bob 1.8s ease-in-out infinite;
+  }
+  .home-floating-link {
+    display: flex; align-items: center; justify-content: center; min-height: 50px;
+    box-sizing: border-box; padding: 12px 14px; border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px; background: rgba(14,14,26,0.96); color: var(--white);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3); font-size: 14px; font-weight: 600;
+    line-height: 1.3; text-align: center; text-decoration: none;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .home-floating-link:hover { background: var(--dark2); border-color: var(--red-light); }
+  @keyframes enquiry-bob {
+    0%, 100% { translate: 0 0; }
+    50% { translate: 0 -6px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .home-floating-actions .saf-floating-btn { animation: none; }
+  }
   /* ─── RESPONSIVE: LAPTOP / SMALL DESKTOP (≤1180px) ─── */
   @media (max-width: 1180px) {
     .hero-grid { gap: 44px; padding: 70px 44px; }
@@ -623,6 +655,10 @@
   }
   /* ─── RESPONSIVE: MOBILE (≤600px) ─── */
   @media (max-width: 600px) {
+    .home-floating-actions {
+      position: static; width: 100%; margin-top: 18px; gap: 8px;
+    }
+    .home-floating-actions .whatsapp-float { width: 52px; height: 52px; }
     .hero-ctas { flex-direction: column; }
     .hero-ctas .btn-primary, .hero-ctas .btn-outline { width: 100%; }
     .hero-trust { gap: 16px; }
@@ -819,12 +855,11 @@
 <section class="hero" id="home">
   <div class="hero-grid">
     <div class="hero-content">
-      <p class="hero-eyebrow">Certified Personal Fitness Trainer · India & Global</p>
-      <h1>Transform Your Body.<br><em>Reclaim</em> Your Life.</h1>
-      <p class="hero-sub">Trusted by clients across India and around the world for personalised 1-on-1 training, group classes, and online programs. Real results. No shortcuts. Just you, your goals, and the right guidance.</p>
+      <h1>PERSONALIZED ONLINE FITNESS COACHING.<br><em>WORLDWIDE</em></h1>
+      <p class="hero-headline-support">Build Strength. Lose Fat. Transform Your Life.</p>
+      <p class="hero-sub">Personalized online fitness coaching, strength training, and nutrition guidance for women and busy professionals worldwide - tailored to your goals, lifestyle, and fitness level.</p>
       <div class="hero-ctas">
-        <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20book%20a%20free%20consultation%20call." class="btn-primary" target="_blank" rel="noopener">Book a Free Consultation</a>
-        <a href="#pricing" class="btn-outline">View Pricing</a>
+        <button type="button" class="btn-primary" data-saf-open>START YOUR FITNESS JOURNEY TODAY</button>
       </div>
       <div class="hero-trust">
         <div class="trust-item"><span class="trust-num">500+</span><span class="trust-label">Clients Trained</span></div>
@@ -838,7 +873,7 @@
     </div>
     <div class="hero-visual">
       <div class="hero-image-frame">
-        <img src="https://i.ibb.co/xt0T9y9H/Sandhya-Arora-Fitness-Hero.png" alt="Sandhya Arora, certified personal fitness trainer, coaching a client" width="440" height="560" loading="eager" fetchpriority="high">
+        <img src="/assets/images/sandhya-arora-fitness.jpg" alt="Sandhya Arora demonstrating a strength pose in her fitness studio" width="440" height="560" loading="eager" fetchpriority="high">
         <div class="about-cert-strip" style="flex-direction:column; gap:6px; align-items:flex-start;">
           <span class="cert-label">Certified in</span>
           <span class="cert-val">Personal Training · Nutrition · Women's Fitness</span>
@@ -1146,6 +1181,17 @@
 <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20know%20more%20about%20your%20fitness%20programs." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12.004 2.003c-5.514 0-9.997 4.483-9.997 9.997 0 1.763.464 3.482 1.345 4.997L2 22l5.117-1.341a9.96 9.96 0 0 0 4.887 1.245h.004c5.514 0 9.997-4.483 9.997-9.997 0-2.671-1.04-5.182-2.928-7.07a9.937 9.937 0 0 0-7.07-2.831zm0 18.166h-.003a8.163 8.163 0 0 1-4.16-1.14l-.298-.177-3.037.796.811-2.96-.194-.304a8.163 8.163 0 0 1-1.253-4.361c0-4.509 3.669-8.178 8.178-8.178 2.184 0 4.238.851 5.783 2.398a8.126 8.126 0 0 1 2.396 5.783c-.001 4.509-3.67 8.178-8.223 8.178z"/>
+  </svg>
+</a>
+<div class="home-floating-actions">
+  <div class="home-floating-enquiry" data-saf-lead-actions></div>
+  <a class="home-floating-link" href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20book%20a%20free%20consultation." target="_blank" rel="noopener">Book a Free Consultation</a>
+  <a class="home-floating-link" href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20book%20a%20one-day%20paid%20trial." target="_blank" rel="noopener">Book a One Day Paid Trial</a>
+</div>
+<a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20know%20more%20about%20your%20fitness%20programs." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.173-1.289-.074-1.413-.074-.124-.272-.198-.57-.347z"/>
     <path d="M12.004 2.003c-5.514 0-9.997 4.483-9.997 9.997 0 1.763.464 3.482 1.345 4.997L2 22l5.117-1.341a9.96 9.96 0 0 0 4.887 1.245h.004c5.514 0 9.997-4.483 9.997-9.997 0-2.671-1.04-5.182-2.928-7.07a9.937 9.937 0 0 0-7.07-2.831zm0 18.166h-.003a8.163 8.163 0 0 1-4.16-1.14l-.298-.177-3.037.796.811-2.96-.194-.304a8.163 8.163 0 0 1-1.253-4.361c0-4.509 3.669-8.178 8.178-8.178 2.184 0 4.238.851 5.783 2.398a8.126 8.126 0 0 1 2.396 5.783c-.001 4.509-3.67 8.178-8.223 8.178z"/>
   </svg>
 </a>
