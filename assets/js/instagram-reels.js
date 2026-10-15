@@ -572,13 +572,6 @@
       @media (max-width: 420px) {
         #instagram .ig-card { flex-basis: 76vw; width: 76vw; }
       }
-      @media (prefers-reduced-motion: reduce) {
-        #instagram .ig-grid { animation-play-state: paused; transform: none; }
-        #instagram .ig-grid.is-playing { animation-play-state: running; }
-        #instagram .ig-grid.is-playing:hover, #instagram .ig-grid.is-playing:focus-within { animation-play-state: paused; }
-        #instagram .ig-marquee-window { overflow-x: auto; scrollbar-width: none; }
-        #instagram .ig-marquee-window::-webkit-scrollbar { display: none; }
-      }
     `;
     document.head.appendChild(style);
   }
@@ -595,16 +588,8 @@
     if (!track || !toggle) return;
 
     updateMarqueeDuration(track);
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReducedMotion) {
-      track.classList.add('is-paused');
-      toggle.setAttribute('aria-pressed', 'true');
-      toggle.setAttribute('aria-label', 'Play reel carousel');
-      toggle.setAttribute('title', 'Play reel carousel');
-    }
     toggle.addEventListener('click', () => {
       const paused = track.classList.toggle('is-paused');
-      track.classList.toggle('is-playing', !paused && prefersReducedMotion);
       toggle.setAttribute('aria-pressed', String(paused));
       toggle.setAttribute('aria-label', paused ? 'Play reel carousel' : 'Pause reel carousel');
       toggle.setAttribute('title', paused ? 'Play reel carousel' : 'Pause reel carousel');

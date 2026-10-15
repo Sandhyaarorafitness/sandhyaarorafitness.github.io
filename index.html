@@ -335,14 +335,6 @@
   .home-blog-read span { transition: transform 0.2s ease; }
   .home-blog-card:hover .home-blog-read span { transform: translateX(4px); }
   @keyframes home-blog-marquee { to { transform: translateX(-50%); } }
-  @media (prefers-reduced-motion: reduce) {
-    .home-blog-track { animation-play-state: paused; }
-    .home-blog-track.is-playing { animation-play-state: running; }
-    .home-blog-track.is-playing:hover, .home-blog-track.is-playing:focus-within { animation-play-state: paused; }
-    .home-blog-window { overflow-x: auto; scrollbar-width: none; }
-    .home-blog-window::-webkit-scrollbar { display: none; }
-    .home-blog-window::before, .home-blog-window::after { display: none; }
-  }
   /* ─── ABOUT ───────────────────────────────────────── */
   .about { padding: var(--section-pad); background: var(--white); }
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
@@ -1150,17 +1142,9 @@
     latestBlogTrack.appendChild(duplicateBlogGroup);
   }
   const latestBlogMotionToggle = document.getElementById('homeBlogMotionToggle');
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (latestBlogTrack && latestBlogMotionToggle) {
-    if (prefersReducedMotion) {
-      latestBlogTrack.classList.add('is-paused');
-      latestBlogMotionToggle.setAttribute('aria-pressed', 'true');
-      latestBlogMotionToggle.setAttribute('aria-label', 'Play article carousel');
-      latestBlogMotionToggle.setAttribute('title', 'Play article carousel');
-    }
     latestBlogMotionToggle.addEventListener('click', () => {
       const paused = latestBlogTrack.classList.toggle('is-paused');
-      latestBlogTrack.classList.toggle('is-playing', !paused && prefersReducedMotion);
       latestBlogMotionToggle.setAttribute('aria-pressed', String(paused));
       latestBlogMotionToggle.setAttribute('aria-label', paused ? 'Play article carousel' : 'Pause article carousel');
       latestBlogMotionToggle.setAttribute('title', paused ? 'Play article carousel' : 'Pause article carousel');
