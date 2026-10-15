@@ -434,15 +434,14 @@
           <h2 class="section-title">Latest on <em style="color:var(--red);font-style:normal;">Instagram</em></h2>
           <p class="section-sub">Public reel highlights grouped by the training and coaching themes visible on the profile.</p>
         </div>
-        <a href="https://www.instagram.com/sandhya.arora.fitness?igsi=MTFsdGYyY2JuZjJpcQ==" class="vg-yt-link" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-          Follow on Instagram
-        </a>
+        <div class="vg-actions">
+          <a href="https://www.instagram.com/sandhya.arora.fitness?igsi=MTFsdGYyY2JuZjJpcQ==" class="vg-yt-link" target="_blank" rel="noopener">Follow on Instagram</a>
+          <button class="reel-motion-toggle" type="button" aria-label="Pause reel carousel" title="Pause reel carousel" aria-pressed="false"><span aria-hidden="true"></span></button>
+        </div>
       </div>
 
       <div class="reel-category-bar" aria-label="Instagram content categories">
         ${buttonsHtml}
-        <button class="reel-motion-toggle" type="button" aria-label="Pause reel carousel" title="Pause reel carousel" aria-pressed="false"><span aria-hidden="true"></span></button>
       </div>
 
     </div>
@@ -497,6 +496,7 @@
       #instagram .section-title { color: var(--white); }
       #instagram .section-sub { color: rgba(255,255,255,0.62); }
       #instagram .vg-yt-link { color: var(--red-light); }
+      #instagram .vg-actions { display: inline-flex; align-items: center; gap: 14px; }
       #instagram .reel-category-bar {
         justify-content: center; align-items: center; gap: 10px; margin-bottom: 28px;
       }
@@ -573,8 +573,11 @@
         #instagram .ig-card { flex-basis: 76vw; width: 76vw; }
       }
       @media (prefers-reduced-motion: reduce) {
-        #instagram .ig-grid { animation: none; transform: none; }
-        #instagram .reel-motion-toggle { display: none; }
+        #instagram .ig-grid { animation-play-state: paused; transform: none; }
+        #instagram .ig-grid.is-playing { animation-play-state: running; }
+        #instagram .ig-grid.is-playing:hover, #instagram .ig-grid.is-playing:focus-within { animation-play-state: paused; }
+        #instagram .ig-marquee-window { overflow-x: auto; scrollbar-width: none; }
+        #instagram .ig-marquee-window::-webkit-scrollbar { display: none; }
       }
     `;
     document.head.appendChild(style);
@@ -592,8 +595,16 @@
     if (!track || !toggle) return;
 
     updateMarqueeDuration(track);
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      track.classList.add('is-paused');
+      toggle.setAttribute('aria-pressed', 'true');
+      toggle.setAttribute('aria-label', 'Play reel carousel');
+      toggle.setAttribute('title', 'Play reel carousel');
+    }
     toggle.addEventListener('click', () => {
       const paused = track.classList.toggle('is-paused');
+      track.classList.toggle('is-playing', !paused && prefersReducedMotion);
       toggle.setAttribute('aria-pressed', String(paused));
       toggle.setAttribute('aria-label', paused ? 'Play reel carousel' : 'Pause reel carousel');
       toggle.setAttribute('title', paused ? 'Play reel carousel' : 'Pause reel carousel');

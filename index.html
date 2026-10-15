@@ -295,8 +295,19 @@
   .home-blog-section .section-title { color: var(--white); margin-bottom: 0; }
   .home-blog-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 28px; margin-bottom: 34px; }
   .home-blog-head .section-sub { color: rgba(255,255,255,0.6); margin: 12px 0 0; font-size: 15px; }
+  .home-blog-actions { display: flex; flex: 0 0 auto; align-items: center; gap: 14px; }
   .home-blog-all { flex: 0 0 auto; color: var(--red-light); font-size: 14px; font-weight: 600; text-decoration: none; }
   .home-blog-all:hover { color: var(--white); }
+  .home-blog-motion-toggle {
+    display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px;
+    flex: 0 0 40px; padding: 0; border: 1px solid rgba(255,255,255,0.2); border-radius: 50%;
+    background: rgba(255,255,255,0.04); color: var(--white); cursor: pointer;
+  }
+  .home-blog-motion-toggle span { width: 10px; height: 12px; border-left: 3px solid currentColor; border-right: 3px solid currentColor; }
+  .home-blog-motion-toggle[aria-pressed="true"] span {
+    width: 0; height: 0; border: 0; border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent; border-left: 11px solid currentColor; margin-left: 3px;
+  }
   .home-blog-window { position: relative; overflow: hidden; }
   .home-blog-window::before, .home-blog-window::after {
     content: ''; position: absolute; top: 0; bottom: 0; width: 60px; z-index: 2; pointer-events: none;
@@ -304,7 +315,7 @@
   .home-blog-window::before { left: 0; background: linear-gradient(to right, var(--dark2), transparent); }
   .home-blog-window::after { right: 0; background: linear-gradient(to left, var(--dark2), transparent); }
   .home-blog-track { display: flex; width: max-content; animation: home-blog-marquee 64s linear infinite; }
-  .home-blog-track:hover, .home-blog-track:focus-within { animation-play-state: paused; }
+  .home-blog-track:hover, .home-blog-track:focus-within, .home-blog-track.is-paused { animation-play-state: paused; }
   .home-blog-group { display: flex; flex: 0 0 auto; align-items: stretch; gap: 18px; padding-right: 18px; }
   .home-blog-card {
     width: 300px; flex: 0 0 300px; display: flex; flex-direction: column; overflow: hidden;
@@ -325,10 +336,12 @@
   .home-blog-card:hover .home-blog-read span { transform: translateX(4px); }
   @keyframes home-blog-marquee { to { transform: translateX(-50%); } }
   @media (prefers-reduced-motion: reduce) {
-    .home-blog-track { animation: none; }
-    .home-blog-window { overflow-x: auto; scrollbar-width: thin; }
+    .home-blog-track { animation-play-state: paused; }
+    .home-blog-track.is-playing { animation-play-state: running; }
+    .home-blog-track.is-playing:hover, .home-blog-track.is-playing:focus-within { animation-play-state: paused; }
+    .home-blog-window { overflow-x: auto; scrollbar-width: none; }
+    .home-blog-window::-webkit-scrollbar { display: none; }
     .home-blog-window::before, .home-blog-window::after { display: none; }
-    .home-blog-group[aria-hidden="true"] { display: none; }
   }
   /* ─── ABOUT ───────────────────────────────────────── */
   .about { padding: var(--section-pad); background: var(--white); }
@@ -1094,7 +1107,10 @@
         <h2 class="section-title">Latest Guides &amp; Insights</h2>
         <p class="section-sub">Practical, science-backed reads for training, nutrition, and lasting progress.</p>
       </div>
-      <a class="home-blog-all" href="/blogs/">Explore all articles <span aria-hidden="true">→</span></a>
+      <div class="home-blog-actions">
+        <button class="home-blog-motion-toggle" id="homeBlogMotionToggle" type="button" aria-label="Pause article carousel" title="Pause article carousel" aria-pressed="false"><span aria-hidden="true"></span></button>
+        <a class="home-blog-all" href="/blogs/">Explore all articles <span aria-hidden="true">→</span></a>
+      </div>
     </div>
   </div>
   <div class="home-blog-window" tabindex="0" aria-label="Latest fitness articles">
@@ -1132,6 +1148,23 @@
     duplicateBlogGroup.setAttribute('aria-hidden', 'true');
     duplicateBlogGroup.inert = true;
     latestBlogTrack.appendChild(duplicateBlogGroup);
+  }
+  const latestBlogMotionToggle = document.getElementById('homeBlogMotionToggle');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (latestBlogTrack && latestBlogMotionToggle) {
+    if (prefersReducedMotion) {
+      latestBlogTrack.classList.add('is-paused');
+      latestBlogMotionToggle.setAttribute('aria-pressed', 'true');
+      latestBlogMotionToggle.setAttribute('aria-label', 'Play article carousel');
+      latestBlogMotionToggle.setAttribute('title', 'Play article carousel');
+    }
+    latestBlogMotionToggle.addEventListener('click', () => {
+      const paused = latestBlogTrack.classList.toggle('is-paused');
+      latestBlogTrack.classList.toggle('is-playing', !paused && prefersReducedMotion);
+      latestBlogMotionToggle.setAttribute('aria-pressed', String(paused));
+      latestBlogMotionToggle.setAttribute('aria-label', paused ? 'Play article carousel' : 'Pause article carousel');
+      latestBlogMotionToggle.setAttribute('title', paused ? 'Play article carousel' : 'Pause article carousel');
+    });
   }
 </script>
 
