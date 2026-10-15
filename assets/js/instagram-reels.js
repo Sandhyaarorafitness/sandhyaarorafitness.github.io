@@ -18,17 +18,20 @@
   const REEL_CATEGORIES = [
     { id: 'all', label: 'All' },
     { id: 'trainer', label: 'Know Your Trainer' },
-    { id: 'strength', label: 'Strength Training' },
     { id: 'online', label: 'Online Training' },
-    { id: 'offline', label: 'Offline / Client Training' },
-    { id: 'group', label: 'Group Training' },
-    { id: 'results', label: 'Testimonials & Results' },
-    { id: 'nutrition', label: 'Nutrition & Education' },
-    { id: 'podcasts', label: 'Podcasts & Interviews' }
+    { id: 'results', label: 'Testimonials' },
+    { id: 'podcasts', label: 'Interviews & Podcasts' },
+    { id: 'nutrition', label: 'Nutrition' }
   ];
-
   const REELS_DATA = [
     // ── LATEST REELS (Surfaced first) ─────────────────────────────────
+    {
+      type: 'instagram',
+      id: 'DeeSu0yzaoI',
+      url: 'https://www.instagram.com/reel/DeeSu0yzaoI/?utm_source=ig_web_copy_link&xtok=NTc4MTIwNjQ2YQ==',
+      categories: ['trainer', 'podcasts'],
+      pills: ['Trainer', 'Interview']
+    },
     {
       type: 'instagram',
       id: 'DaPHrqPz8nW',
@@ -409,7 +412,7 @@
 
     const embedUrl = `https://www.instagram.com/reel/${item.id}/embed/?utm_source=ig_embed`;
     return `<div class="ig-card reel-card" data-category="${cats}">` +
-      `<iframe src="${embedUrl}" scrolling="no" allowtransparency="true" allow="encrypted-media; autoplay; clipboard-write; picture-in-picture; web-share"></iframe>` +
+      `<iframe src="${embedUrl}" title="Watch Sandhya Arora fitness reel" loading="lazy" scrolling="no" allowtransparency="true" allow="encrypted-media; autoplay; clipboard-write; picture-in-picture; web-share"></iframe>` +
       `<div class="reel-card-meta">${pillsHtml}</div>` +
       `</div>`;
   }
@@ -421,6 +424,7 @@
     }).join('');
 
     const cardsHtml = REELS_DATA.map(renderCard).join('\n      ');
+    const duplicateCardsHtml = REELS_DATA.map(renderCard).join('\n      ');
 
     return `
     <div class="section-container">
@@ -438,11 +442,19 @@
 
       <div class="reel-category-bar" aria-label="Instagram content categories">
         ${buttonsHtml}
+        <button class="reel-motion-toggle" type="button" aria-label="Pause reel carousel" title="Pause reel carousel" aria-pressed="false"><span aria-hidden="true"></span></button>
       </div>
 
-      <div class="ig-grid" id="reelGrid">
-        ${cardsHtml}
-      </div>
+    </div>
+    <div class="ig-marquee-window">
+        <div class="ig-grid" id="reelGrid">
+          <div class="ig-marquee-group">
+            ${cardsHtml}
+          </div>
+          <div class="ig-marquee-group" aria-hidden="true" inert>
+            ${duplicateCardsHtml}
+          </div>
+        </div>
     </div>`;
   }
 
@@ -461,6 +473,131 @@
       button.classList.toggle('active', active);
       button.setAttribute('aria-pressed', String(active));
     });
+
+    const track = container.querySelector('.ig-grid');
+    if (track) {
+      updateMarqueeDuration(track);
+      track.style.animation = 'none';
+      track.offsetHeight;
+      track.style.animation = '';
+    }
+  }
+
+  function ensureCarouselStyles() {
+    if (document.getElementById('instagram-reels-styles')) return;
+
+    const style = document.createElement('style');
+    style.id = 'instagram-reels-styles';
+    style.textContent = `
+      #instagram.instagram-gallery {
+        overflow: hidden; background: var(--dark); color: var(--white);
+        border-top: 1px solid rgba(255,255,255,0.06);
+      }
+      #instagram .section-eyebrow { color: var(--red-light); }
+      #instagram .section-title { color: var(--white); }
+      #instagram .section-sub { color: rgba(255,255,255,0.62); }
+      #instagram .vg-yt-link { color: var(--red-light); }
+      #instagram .reel-category-bar {
+        justify-content: center; align-items: center; gap: 10px; margin-bottom: 28px;
+      }
+      #instagram .reel-category-btn {
+        background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.14);
+        color: rgba(255,255,255,0.78); white-space: nowrap;
+      }
+      #instagram .reel-category-btn:hover, #instagram .reel-category-btn.active {
+        background: var(--red); border-color: var(--red); color: var(--white);
+      }
+      #instagram .reel-motion-toggle {
+        display: inline-flex; align-items: center; justify-content: center;
+        width: 40px; height: 40px; flex: 0 0 40px; padding: 0;
+        border: 1px solid rgba(255,255,255,0.2); border-radius: 50%;
+        background: rgba(255,255,255,0.04); color: var(--white); cursor: pointer;
+        transition: background 0.2s ease, border-color 0.2s ease;
+      }
+      #instagram .reel-motion-toggle:hover { background: rgba(233,69,96,0.2); border-color: var(--red); }
+      #instagram .reel-motion-toggle span {
+        display: block; width: 10px; height: 12px; border-left: 3px solid currentColor;
+        border-right: 3px solid currentColor;
+      }
+      #instagram .reel-motion-toggle[aria-pressed="true"] span {
+        width: 0; height: 0; border: 0; border-top: 7px solid transparent;
+        border-bottom: 7px solid transparent; border-left: 11px solid currentColor;
+        margin-left: 3px;
+      }
+      #instagram .ig-marquee-window {
+        position: relative; width: 100%; margin-left: 0; overflow: hidden;
+      }
+      #instagram .ig-marquee-window::before, #instagram .ig-marquee-window::after {
+        content: ''; position: absolute; top: 0; bottom: 0; width: clamp(150px, 14vw, 220px); z-index: 2; pointer-events: none;
+      }
+      #instagram .ig-marquee-window::before {
+        left: 0; background: linear-gradient(to right, var(--dark), transparent);
+      }
+      #instagram .ig-marquee-window::after {
+        right: 0; background: linear-gradient(to left, var(--dark), transparent);
+      }
+      #instagram .ig-grid {
+        display: flex; flex-wrap: nowrap; width: max-content; gap: 0; margin: 0;
+        padding: 8px 0 30px; animation: instagram-marquee var(--reel-duration, 120s) linear infinite;
+      }
+      #instagram .ig-grid:hover, #instagram .ig-grid:focus-within, #instagram .ig-grid.is-paused {
+        animation-play-state: paused;
+      }
+      #instagram .ig-marquee-group {
+        display: flex; flex: 0 0 auto; align-items: stretch; gap: 22px; padding-right: 22px;
+      }
+      #instagram .ig-card {
+        flex: 0 0 clamp(230px, 20vw, 280px); width: clamp(230px, 20vw, 280px);
+        min-width: 0; max-width: none; height: auto; aspect-ratio: 9 / 16;
+        overflow: hidden; border-radius: 12px; border: 1px solid rgba(255,255,255,0.12);
+        background: #11111a; box-shadow: 0 18px 42px rgba(0,0,0,0.32);
+        transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+      #instagram .ig-card:hover {
+        transform: translateY(-5px); border-color: rgba(233,69,96,0.55);
+        box-shadow: 0 24px 52px rgba(0,0,0,0.48), 0 0 24px rgba(233,69,96,0.12);
+      }
+      #instagram .ig-card iframe, #instagram .reel-preview-link { width: 100%; height: 100%; border: 0; }
+      #instagram .reel-preview-link { display: block; background: #11111a; }
+      #instagram .reel-card-meta { left: 10px; right: 10px; bottom: 10px; }
+      #instagram .reel-pill { background: rgba(14,14,26,0.82); border-color: rgba(255,255,255,0.14); }
+      @keyframes instagram-marquee { to { transform: translateX(-50%); } }
+      @media (max-width: 700px) {
+        #instagram .vg-head { gap: 20px; margin-bottom: 28px; }
+        #instagram .reel-category-bar { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 8px; scrollbar-width: none; }
+        #instagram .reel-category-bar::-webkit-scrollbar { display: none; }
+        #instagram .ig-card { flex-basis: min(76vw, 290px); width: min(76vw, 290px); }
+        #instagram .ig-marquee-window::before, #instagram .ig-marquee-window::after { width: clamp(72px, 20vw, 120px); }
+      }
+      @media (max-width: 420px) {
+        #instagram .ig-card { flex-basis: 76vw; width: 76vw; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #instagram .ig-grid { animation: none; transform: none; }
+        #instagram .reel-motion-toggle { display: none; }
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  function updateMarqueeDuration(track) {
+    const originalGroup = track.querySelector('.ig-marquee-group');
+    const visibleCards = originalGroup ? originalGroup.querySelectorAll('.reel-card:not(.hidden)').length : 1;
+    track.style.setProperty('--reel-duration', `${Math.max(36, visibleCards * 4)}s`);
+  }
+
+  function initMotionToggle(root) {
+    const track = root.querySelector('.ig-grid');
+    const toggle = root.querySelector('.reel-motion-toggle');
+    if (!track || !toggle) return;
+
+    updateMarqueeDuration(track);
+    toggle.addEventListener('click', () => {
+      const paused = track.classList.toggle('is-paused');
+      toggle.setAttribute('aria-pressed', String(paused));
+      toggle.setAttribute('aria-label', paused ? 'Play reel carousel' : 'Pause reel carousel');
+      toggle.setAttribute('title', paused ? 'Play reel carousel' : 'Pause reel carousel');
+    });
   }
 
   function initInstagramReels() {
@@ -477,7 +614,9 @@
       return;
     }
 
+    ensureCarouselStyles();
     root.innerHTML = renderComponent();
+    initMotionToggle(root);
 
     const buttons = root.querySelectorAll('.reel-category-btn');
     buttons.forEach((btn) => {

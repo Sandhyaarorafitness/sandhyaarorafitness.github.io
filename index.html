@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-IN">
 <head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-14SCYX3WLZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-14SCYX3WLZ');
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sandhya Arora Fitness | Best Personal Trainer in Delhi & Online Fitness Coach India</title>
@@ -36,7 +28,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link href="/assets/css/monthly-pricing-cards.css" rel="stylesheet">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3761890682449632" crossorigin="anonymous"></script>
 <script type="application/ld+json">
 {
@@ -49,8 +40,8 @@
       "alternateName": "Sandhya Arora",
       "description": "Certified personal fitness trainer offering 1-on-1 coaching, group fitness classes, online fitness programs and nutrition coaching across Delhi, India and worldwide, available in-person and online.",
       "url": "https://sandhyaarorafitness.com/",
-      "telephone": ["+91-8882629003", "+91-79829-75764"],
-      "email": ["sandhyaarorafitness@gmail.com", "contact@sandhyaarorafitness.com"],
+      "telephone": "+91-8882629003",
+      "email": "sandhya@sandhyaarorafitness.com",
       "priceRange": "₹₹",
       "address": { "@type": "PostalAddress", "addressCountry": "IN" },
       "areaServed": ["Delhi", "Delhi NCR", "Gurugram", "Noida", "India", "Worldwide"],
@@ -70,10 +61,7 @@
           { "@type": "Offer", "url": "https://sandhyaarorafitness.com/services/group-fitness-classes/", "itemOffered": { "@type": "Service", "name": "Group Fitness Classes", "description": "High-energy HIIT, strength, yoga-fusion, and functional training classes with a supportive community." } },
           { "@type": "Offer", "url": "https://sandhyaarorafitness.com/services/online-fitness-coach/", "itemOffered": { "@type": "Service", "name": "Online Coaching Programs", "description": "Structured online fitness programs with workout plans, nutrition guidance, and weekly check-ins." } },
           { "@type": "Offer", "url": "https://sandhyaarorafitness.com/services/nutrition-coaching/", "itemOffered": { "@type": "Service", "name": "Nutrition Coaching", "description": "Sustainable nutrition guidance tailored to Indian food and lifestyle." } },
-          { "@type": "Offer", "name": "3 Days a Week Online Personal Training - India", "price": "11999", "priceCurrency": "INR", "description": "12 live sessions, valid for 1 month. Original price INR 15000." },
-          { "@type": "Offer", "name": "3 Days a Week Online Personal Training - International", "price": "149", "priceCurrency": "USD", "description": "12 live sessions, valid for 1 month. Original price USD 200." },
-          { "@type": "Offer", "name": "5 Days a Week Online Personal Training - India", "price": "19999", "priceCurrency": "INR", "description": "20 live sessions, valid for 1 month. Original price INR 24999." },
-          { "@type": "Offer", "name": "5 Days a Week Online Personal Training - International", "price": "249", "priceCurrency": "USD", "description": "20 live sessions, valid for 1 month. Original price USD 300." },
+          { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1000", "maxPrice": "1500", "priceCurrency": "INR" }, "itemOffered": { "@type": "Service", "name": "Online Personal Training", "description": "1-on-1 live online training sessions, billed per session." } },
           { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1200", "maxPrice": "1500", "priceCurrency": "INR" }, "itemOffered": { "@type": "Service", "name": "Offline Personal Training", "description": "1-on-1 in-person training sessions, billed per session." } },
           { "@type": "Offer", "price": "300", "priceCurrency": "INR", "itemOffered": { "@type": "Service", "name": "Group Classes", "description": "Group fitness classes, billed per session." } }
         ]
@@ -257,7 +245,7 @@
   .hero-badge2 .b2-sub { font-size: 11px; color: rgba(255,255,255,0.45); margin-top: 2px; }
   .stars { color: var(--red); font-size: 12px; margin-top: 4px; }
   /* ─── SERVICES ────────────────────────────────────── */
-  .services { padding: var(--section-pad); background: var(--cream); }
+  .services { padding: 72px 0; background: var(--cream); }
   .section-container { max-width: 1200px; margin: 0 auto; padding: 0 60px; }
   .section-eyebrow {
     font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
@@ -269,10 +257,12 @@
     margin-bottom: 16px; letter-spacing: -0.8px;
   }
   .section-sub { font-size: 17px; color: var(--muted); max-width: 560px; line-height: 1.7; margin-bottom: 56px; }
-  .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .services-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
   .service-card {
-    background: var(--white); border-radius: 14px; padding: 36px;
-    border: 1px solid var(--border); transition: border-color 0.2s, transform 0.2s;
+    min-width: 0; min-height: 292px; display: flex; flex-direction: column;
+    background: var(--white); border-radius: 10px; padding: 24px 22px;
+    border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(14,14,26,0.045);
+    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
     cursor: default; position: relative; overflow: hidden;
   }
   .service-card::before {
@@ -280,25 +270,66 @@
     background: var(--red); transform: scaleX(0); transform-origin: left;
     transition: transform 0.3s;
   }
-  .service-card:hover { border-color: rgba(233,69,96,0.25); transform: translateY(-3px); }
+  .service-card:hover { border-color: rgba(233,69,96,0.3); transform: translateY(-3px); box-shadow: 0 18px 36px rgba(14,14,26,0.09); }
   .service-card:hover::before { transform: scaleX(1); }
   .service-icon {
-    width: 52px; height: 52px; background: rgba(233,69,96,0.08);
-    border-radius: 12px; display: flex; align-items: center; justify-content: center;
-    font-size: 24px; margin-bottom: 20px; color: var(--red);
+    width: 44px; height: 44px; background: rgba(233,69,96,0.08);
+    border-radius: 10px; display: flex; align-items: center; justify-content: center;
+    font-size: 21px; margin-bottom: 16px; color: var(--red);
   }
   .service-tag {
     font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
     color: var(--red); margin-bottom: 8px;
   }
-  .service-title { font-size: 20px; font-weight: 600; color: var(--dark2); margin-bottom: 12px; }
-  .service-desc { font-size: 15px; color: var(--muted); line-height: 1.65; margin-bottom: 20px; }
+  .service-title { font-size: 18px; line-height: 1.35; font-weight: 600; color: var(--dark2); margin-bottom: 10px; }
+  .service-desc { font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 16px; }
   .service-link {
     font-size: 14px; font-weight: 600; color: var(--red); text-decoration: none;
-    display: inline-flex; align-items: center; gap: 6px;
+    display: inline-flex; align-items: center; gap: 6px; margin-top: auto;
   }
   .service-link::after { content: '→'; transition: transform 0.2s; }
   .service-link:hover::after { transform: translateX(4px); }
+  /* ─── LATEST ARTICLES ───────────────────────────────── */
+  .home-blog-section { padding: 76px 0; background: var(--dark2); color: var(--white); overflow: hidden; }
+  .home-blog-section .section-eyebrow { color: var(--red-light); }
+  .home-blog-section .section-title { color: var(--white); margin-bottom: 0; }
+  .home-blog-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 28px; margin-bottom: 34px; }
+  .home-blog-head .section-sub { color: rgba(255,255,255,0.6); margin: 12px 0 0; font-size: 15px; }
+  .home-blog-all { flex: 0 0 auto; color: var(--red-light); font-size: 14px; font-weight: 600; text-decoration: none; }
+  .home-blog-all:hover { color: var(--white); }
+  .home-blog-window { position: relative; overflow: hidden; }
+  .home-blog-window::before, .home-blog-window::after {
+    content: ''; position: absolute; top: 0; bottom: 0; width: 60px; z-index: 2; pointer-events: none;
+  }
+  .home-blog-window::before { left: 0; background: linear-gradient(to right, var(--dark2), transparent); }
+  .home-blog-window::after { right: 0; background: linear-gradient(to left, var(--dark2), transparent); }
+  .home-blog-track { display: flex; width: max-content; animation: home-blog-marquee 64s linear infinite; }
+  .home-blog-track:hover, .home-blog-track:focus-within { animation-play-state: paused; }
+  .home-blog-group { display: flex; flex: 0 0 auto; align-items: stretch; gap: 18px; padding-right: 18px; }
+  .home-blog-card {
+    width: 300px; flex: 0 0 300px; display: flex; flex-direction: column; overflow: hidden;
+    background: rgba(255,255,255,0.045); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 9px; text-decoration: none; color: var(--white);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .home-blog-card:hover { transform: translateY(-5px); border-color: rgba(233,69,96,0.55); box-shadow: 0 18px 38px rgba(0,0,0,0.25); }
+  .home-blog-media { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #11111a; }
+  .home-blog-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.45s ease; }
+  .home-blog-card:hover .home-blog-media img { transform: scale(1.04); }
+  .home-blog-topic { position: absolute; left: 12px; top: 12px; padding: 6px 9px; border-radius: 4px; background: rgba(14,14,26,0.82); color: var(--white); font-size: 10px; font-weight: 700; text-transform: uppercase; }
+  .home-blog-copy { min-height: 174px; display: flex; flex-direction: column; padding: 18px; }
+  .home-blog-copy h3 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 9px; color: var(--white); font-size: 17px; line-height: 1.35; font-weight: 600; }
+  .home-blog-copy p { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 14px; color: rgba(255,255,255,0.6); font-size: 13px; line-height: 1.55; }
+  .home-blog-read { display: inline-flex; align-items: center; gap: 7px; margin-top: auto; color: var(--red-light); font-size: 12px; font-weight: 700; text-transform: uppercase; }
+  .home-blog-read span { transition: transform 0.2s ease; }
+  .home-blog-card:hover .home-blog-read span { transform: translateX(4px); }
+  @keyframes home-blog-marquee { to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) {
+    .home-blog-track { animation: none; }
+    .home-blog-window { overflow-x: auto; scrollbar-width: thin; }
+    .home-blog-window::before, .home-blog-window::after { display: none; }
+    .home-blog-group[aria-hidden="true"] { display: none; }
+  }
   /* ─── ABOUT ───────────────────────────────────────── */
   .about { padding: var(--section-pad); background: var(--white); }
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
@@ -622,7 +653,8 @@
   /* ─── RESPONSIVE: TABLET LANDSCAPE / SMALL LAPTOP (≤1024px) ─── */
   @media (max-width: 1024px) {
     .testi-grid, .pricing-grid { grid-template-columns: repeat(2, 1fr); }
-    .services-grid { gap: 20px; }
+    .services-grid { gap: 12px; }
+    .service-card { padding: 20px 16px; }
     .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px 28px; }
   }
   /* ─── RESPONSIVE: TABLET PORTRAIT (≤900px) — nav collapses ─── */
@@ -648,7 +680,13 @@
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
     .section-container { padding: 0 28px; }
     .cta-banner { padding: 64px 28px; }
-    .services-grid, .testi-grid, .pricing-grid, .faq-grid { grid-template-columns: 1fr; }
+    .services-grid {
+      display: flex; overflow-x: auto; gap: 14px; margin: 0 -28px; padding: 4px 28px 18px;
+      scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+    }
+    .services-grid::-webkit-scrollbar { display: none; }
+    .service-card { flex: 0 0 clamp(260px, 34vw, 300px); min-height: 280px; scroll-snap-align: start; }
+    .testi-grid, .pricing-grid, .faq-grid { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
     .footer-brand { grid-column: 1 / -1; }
     footer { padding: 48px 28px; }
@@ -668,6 +706,11 @@
     .hero-badge2 { display: none; }
     .hero-grid { padding-top: 48px; }
     .about-stats { grid-template-columns: repeat(2, 1fr); }
+    .home-blog-section { padding: 60px 0; }
+    .home-blog-head { align-items: flex-start; flex-direction: column; gap: 14px; margin-bottom: 26px; }
+    .home-blog-card { width: 82vw; flex-basis: 82vw; }
+    .home-blog-copy { min-height: 164px; }
+    .home-blog-window::before, .home-blog-window::after { width: 24px; }
     .about-cert-strip { padding: 14px 18px; gap: 14px; }
     .cta-banner { padding: 64px 24px; }
     .cta-banner-btns { flex-direction: column; align-items: stretch; }
@@ -681,7 +724,7 @@
   @media (max-width: 420px) {
     .nav-logo img { height: 38px; }
     .section-sub { font-size: 15px; margin-bottom: 40px; }
-    .service-card { padding: 26px; }
+    .service-card { flex-basis: 82vw; padding: 20px; }
     .program-header, .program-features, .program-footer { padding-left: 20px; padding-right: 20px; }
     .program-divider { margin: 20px; }
     .about-stats { grid-template-columns: 1fr; }
@@ -841,12 +884,6 @@
         <li><a href="/services/nutrition-coaching/">Nutrition Coaching<small>Sustainable guidance for Indian food & lifestyle</small></a></li>
       </ul>
     </li>
-    <li><a href="#watch">Watch</a></li>
-    <li><a href="#instagram">Reels</a></li>
-    <li><a href="/pricing/">Pricing</a></li>
-    <li><a href="/locations/">Locations</a></li>
-    <li><a href="#testimonials">Results</a></li>
-    <li><a href="/blogs/" aria-current="page">Blogs</a></li>
     <li><a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20book%20a%20free%20consultation%20call." class="nav-cta" target="_blank" rel="noopener">Book Free Call</a></li>
   </ul>
 </nav>
@@ -888,6 +925,34 @@
   </div>
 </section>
 <!-- ── SERVICES ───────────────────────────────────────── -->
+<section class="about" id="about">
+  <div class="section-container">
+    <div class="about-grid">
+      <div class="about-visual">
+        <img src="/assets/images/sandhya-arora-personal-fitness-trainer.jpg" alt="Sandhya Arora - certified personal fitness trainer and coach" width="600" height="800" loading="lazy" decoding="async">
+        <div class="about-cert-strip">
+          <div class="cert-item"><span class="cert-label">Certified</span><span class="cert-val">Coach</span></div>
+          <div class="cert-item"><span class="cert-label">Nutrition</span><span class="cert-val">Specialist</span></div>
+          <div class="cert-item"><span class="cert-label">Women's</span><span class="cert-val">Fitness Expert</span></div>
+        </div>
+      </div>
+      <div class="about-content">
+        <p class="section-eyebrow">Meet Your Coach</p>
+        <h2 class="section-title" style="margin-bottom:24px;">Hi, I'm Sandhya Arora.</h2>
+        <p class="about-quote">"I don't train you to be perfect - I train you to be consistent."</p>
+        <p class="about-body">With over 10 years of certified fitness coaching experience, I've helped hundreds of people across India and around the world transform their bodies, rebuild their confidence, and find a sustainable relationship with fitness.</p>
+        <p class="about-body">I blend science-backed training with personalised nutrition guidance, mindset coaching, and genuine accountability - because results aren't built in the gym alone.</p>
+        <div class="about-stats">
+          <div class="astat"><div class="astat-num">500+</div><div class="astat-label">Clients Transformed</div></div>
+          <div class="astat"><div class="astat-num">10+</div><div class="astat-label">Years Experience</div></div>
+          <div class="astat"><div class="astat-num">3</div><div class="astat-label">Certifications</div></div>
+        </div>
+        <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20book%20a%20free%20consultation%20call." class="btn-primary" style="margin-top:8px;" target="_blank" rel="noopener">Book Your Free Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ── SERVICES ───────────────────────────────────────── -->
 <section class="services" id="services">
   <div class="section-container">
     <p class="section-eyebrow">What I Offer</p>
@@ -922,34 +987,6 @@
         <p class="service-desc">Smart, sustainable nutrition guidance tailored to Indian food and your lifestyle. No crash diets - just food that actually fuels your results.</p>
         <a href="/services/nutrition-coaching/" class="service-link">Explore Nutrition Coaching</a>
       </article>
-    </div>
-  </div>
-</section>
-<!-- ── ABOUT ──────────────────────────────────────────── -->
-<section class="about" id="about">
-  <div class="section-container">
-    <div class="about-grid">
-      <div class="about-visual">
-        <img src="/assets/images/sandhya-arora-personal-fitness-trainer.jpg" alt="Sandhya Arora - certified personal fitness trainer and coach" width="600" height="800" loading="lazy" decoding="async">
-        <div class="about-cert-strip">
-          <div class="cert-item"><span class="cert-label">Certified</span><span class="cert-val">Coach</span></div>
-          <div class="cert-item"><span class="cert-label">Nutrition</span><span class="cert-val">Specialist</span></div>
-          <div class="cert-item"><span class="cert-label">Women's</span><span class="cert-val">Fitness Expert</span></div>
-        </div>
-      </div>
-      <div class="about-content">
-        <p class="section-eyebrow">Meet Your Coach</p>
-        <h2 class="section-title" style="margin-bottom:24px;">Hi, I'm Sandhya Arora.</h2>
-        <p class="about-quote">"I don't train you to be perfect - I train you to be consistent."</p>
-        <p class="about-body">With over 10 years of certified fitness coaching experience, I've helped hundreds of people across India and around the world transform their bodies, rebuild their confidence, and find a sustainable relationship with fitness.</p>
-        <p class="about-body">I blend science-backed training with personalised nutrition guidance, mindset coaching, and genuine accountability - because results aren't built in the gym alone.</p>
-        <div class="about-stats">
-          <div class="astat"><div class="astat-num">500+</div><div class="astat-label">Clients Transformed</div></div>
-          <div class="astat"><div class="astat-num">10+</div><div class="astat-label">Years Experience</div></div>
-          <div class="astat"><div class="astat-num">3</div><div class="astat-label">Certifications</div></div>
-        </div>
-        <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20book%20a%20free%20consultation%20call." class="btn-primary" style="margin-top:8px;" target="_blank" rel="noopener">Book Your Free Consultation</a>
-      </div>
     </div>
   </div>
 </section>
@@ -1006,15 +1043,14 @@
       <div class="reel-category-bar" aria-label="Instagram content categories">
       <button class="reel-category-btn active" type="button" data-category="all">All</button>
       <button class="reel-category-btn" type="button" data-category="trainer">Know Your Trainer</button>
-      <button class="reel-category-btn" type="button" data-category="strength">Strength Training</button>
       <button class="reel-category-btn" type="button" data-category="online">Online Training</button>
-      <button class="reel-category-btn" type="button" data-category="offline">Offline / Client Training</button>
-      <button class="reel-category-btn" type="button" data-category="group">Group Training</button>
-      <button class="reel-category-btn" type="button" data-category="results">Testimonials & Results</button>
-      <button class="reel-category-btn" type="button" data-category="nutrition">Nutrition & Education</button>
+      <button class="reel-category-btn" type="button" data-category="results">Testimonials</button>
+      <button class="reel-category-btn" type="button" data-category="podcasts">Interviews & Podcasts</button>
+      <button class="reel-category-btn" type="button" data-category="nutrition">Nutrition</button>
       </div>
 
       <div class="ig-grid" id="reelGrid">
+      <div class="ig-card reel-card" data-category="trainer podcasts"><iframe src="https://www.instagram.com/reel/DeeSu0yzaoI/embed/?utm_source=ig_embed" scrolling="no" allowtransparency="true" allow="encrypted-media; autoplay; clipboard-write; picture-in-picture; web-share"></iframe><div class="reel-card-meta"><span class="reel-pill">Trainer</span><span class="reel-pill">Interview</span></div></div>
       <div class="ig-card reel-card" data-category="online offline"><iframe src="https://www.instagram.com/reel/Ddyw0UtEoRd/embed/?utm_source=ig_embed" scrolling="no" allowtransparency="true" allow="encrypted-media; autoplay; clipboard-write; picture-in-picture; web-share"></iframe><div class="reel-card-meta"><span class="reel-pill">Online</span><span class="reel-pill">Client</span></div></div>
       <div class="ig-card reel-card" data-category="trainer"><iframe src="https://www.instagram.com/reel/Dd1N35_z1_Z/embed/?utm_source=ig_embed" scrolling="no" allowtransparency="true" allow="encrypted-media; autoplay; clipboard-write; picture-in-picture; web-share"></iframe><div class="reel-card-meta"><span class="reel-pill">Trainer</span><span class="reel-pill">Latest</span></div></div>
       <div class="ig-card reel-card" data-category="nutrition"><iframe src="https://www.instagram.com/reel/DdtlgxyT246/embed/?utm_source=ig_embed" scrolling="no" allowtransparency="true" allow="encrypted-media; autoplay; clipboard-write; picture-in-picture; web-share"></iframe><div class="reel-card-meta"><span class="reel-pill">Nutrition</span><span class="reel-pill">Tips</span></div></div>
@@ -1046,7 +1082,58 @@
     </div>
   </div>
 </section>
+<script src="/assets/js/instagram-reels.js" defer></script>
 <script src="assets/js/instagram-reels.js?v=4" defer></script>
+
+<!-- ── LATEST FITNESS ARTICLES ────────────────────────── -->
+<section class="home-blog-section" id="latest-articles">
+  <div class="section-container">
+    <div class="home-blog-head">
+      <div>
+        <p class="section-eyebrow">The Fitness Journal</p>
+        <h2 class="section-title">Latest Guides &amp; Insights</h2>
+        <p class="section-sub">Practical, science-backed reads for training, nutrition, and lasting progress.</p>
+      </div>
+      <a class="home-blog-all" href="/blogs/">Explore all articles <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+  <div class="home-blog-window" tabindex="0" aria-label="Latest fitness articles">
+    <div class="home-blog-track" id="homeBlogTrack">
+      <div class="home-blog-group">
+        <a class="home-blog-card" href="/blogs/articles/online-personal-training/">
+          <div class="home-blog-media"><img src="/assets/images/online-personal-training-sandhya-arora-fitness.png" alt="Online personal training with Sandhya Arora Fitness" loading="lazy" decoding="async"><span class="home-blog-topic">Online Training</span></div>
+          <div class="home-blog-copy"><h3>Online Personal Training: Get Expert Coaching From Anywhere</h3><p>See how live coaching, personalized plans, progress reviews, and clear package terms can make remote training work for your routine.</p><span class="home-blog-read">Read the guide <span aria-hidden="true">→</span></span></div>
+        </a>
+        <a class="home-blog-card" href="/blogs/articles/personal-fitness-trainer-delhi-personalised-coaching/">
+          <div class="home-blog-media"><img src="/assets/images/fitness-trainer-near-me.png" alt="Personalised personal training session with Sandhya Arora in Delhi" loading="lazy" decoding="async"><span class="home-blog-topic">Personal Training</span></div>
+          <div class="home-blog-copy"><h3>Personal Fitness Trainer in Delhi: What Personalised Coaching Looks Like</h3><p>Explore the process from your first assessment and custom training plan to progress reviews and choosing a trainer.</p><span class="home-blog-read">Read the guide <span aria-hidden="true">→</span></span></div>
+        </a>
+        <a class="home-blog-card" href="/blogs/articles/nutrition-coach-guide/">
+          <div class="home-blog-media"><img src="/assets/images/sandhya-arora-fitness-nutrition-coach.png" alt="Nutrition coach guide with a coach and balanced meal" loading="lazy" decoding="async"><span class="home-blog-topic">Nutrition</span></div>
+          <div class="home-blog-copy"><h3>The Ultimate Nutrition Coach Guide: How to Choose the Right Expert</h3><p>Learn what a nutrition coach does, how to check qualifications, and how to find practical support for your goals.</p><span class="home-blog-read">Read the guide <span aria-hidden="true">→</span></span></div>
+        </a>
+        <a class="home-blog-card" href="/blogs/articles/looking-for-a-personal-trainer-9-things-to-check-before-you-pay/">
+          <div class="home-blog-media"><img src="/assets/images/sandhya-arora-fitness-trainer.png" alt="Personal trainer coaching a client during a strength-training session" loading="lazy" decoding="async"><span class="home-blog-topic">Choosing a Coach</span></div>
+          <div class="home-blog-copy"><h3>Looking for a Personal Trainer? 9 Things to Check Before You Pay</h3><p>Use a practical checklist to assess qualifications, safety, coaching style, reviews, and pricing before you commit.</p><span class="home-blog-read">Read the guide <span aria-hidden="true">→</span></span></div>
+        </a>
+        <a class="home-blog-card" href="/blogs/articles/5-reasons-you-need-a-personal-online-fitness-trainer/">
+          <div class="home-blog-media"><img src="/assets/images/5-reasons-online-fitness-trainer.jpg" alt="Reasons to work with a personal online fitness trainer" loading="lazy" decoding="async"><span class="home-blog-topic">Online Coaching</span></div>
+          <div class="home-blog-copy"><h3>5 Reasons You Need a Personal Online Fitness Trainer</h3><p>Discover how one-to-one online coaching can bring expert guidance, flexibility, and accountability to your routine.</p><span class="home-blog-read">Read the guide <span aria-hidden="true">→</span></span></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  const latestBlogTrack = document.getElementById('homeBlogTrack');
+  const latestBlogGroup = latestBlogTrack && latestBlogTrack.querySelector('.home-blog-group');
+  if (latestBlogGroup) {
+    const duplicateBlogGroup = latestBlogGroup.cloneNode(true);
+    duplicateBlogGroup.setAttribute('aria-hidden', 'true');
+    duplicateBlogGroup.inert = true;
+    latestBlogTrack.appendChild(duplicateBlogGroup);
+  }
+</script>
 
 <!-- ── TESTIMONIALS ────────────────────────────────────── -->
 <section class="testimonials" id="testimonials">
@@ -1087,11 +1174,70 @@
   <div class="section-container">
     <p class="section-eyebrow">Pricing</p>
     <h2 class="section-title">Choose What Fits You Best</h2>
-    <p class="section-sub" style="margin-bottom:20px;">Monthly online training packages with live coaching, personalized workouts, and progress support.</p>
-    <p style="margin-bottom:48px; color:var(--muted); font-size:14px;">Compare <a href="/pricing/" style="color:var(--red); font-weight:600;">all online package details</a>.</p>
-    <div class="monthly-pricing-grid">
-      <article class="price-card"><div class="price-card-head"><p class="package-label">Flexible foundation</p><h3>3 Days a Week</h3><p class="sessions">12 live sessions · 1 month</p><p class="original-price">Original: India INR <s>₹15,000</s> · International USD <s>$200</s></p><div class="price"><span class="price-market">India · INR</span>₹11,999<span>International · USD $149</span></div></div><div class="price-card-body"><ul><li>Live online personal training</li><li>Customized workout plan</li><li>Diet and nutrition guidance</li><li>Progress tracking</li><li>WhatsApp support</li></ul></div><div class="price-card-footer"><a class="btn" href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20am%20interested%20in%20the%203%20days%20a%20week%20online%20training%20package." target="_blank" rel="noopener">Ask About This Package</a></div></article>
-      <article class="price-card"><div class="price-card-head"><p class="package-label">Higher weekly frequency</p><h3>5 Days a Week</h3><p class="sessions">20 live sessions · 1 month</p><p class="original-price">Original: India INR <s>₹24,999</s> · International USD <s>$300</s></p><div class="price"><span class="price-market">India · INR</span>₹19,999<span>International · USD $249</span></div></div><div class="price-card-body"><ul><li>Live online personal training</li><li>Customized workout plan</li><li>Diet and nutrition guidance</li><li>Progress tracking</li><li>WhatsApp support</li></ul></div><div class="price-card-footer"><a class="btn" href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20am%20interested%20in%20the%205%20days%20a%20week%20online%20training%20package." target="_blank" rel="noopener">Ask About This Package</a></div></article>
+    <p class="section-sub" style="margin-bottom:20px;">Simple, pay-per-session pricing across online, offline, and group training - so you can start wherever you are.</p>
+    <p style="margin-bottom:48px; color:var(--muted); font-size:14px;">Looking for monthly online coaching packages? <a href="/pricing/" style="color:var(--red); font-weight:600;">Compare online personal training pricing</a>.</p>
+    <div class="pricing-grid">
+      <article class="program-card featured">
+        <span class="popular-badge">Most Popular</span>
+        <div class="program-header">
+          <p class="program-week">Online</p>
+          <h3 class="program-name"><a href="/services/online-fitness-coach/" style="color:inherit;text-decoration:none;">Online Personal Training</a></h3>
+          <p class="program-tagline">1-on-1 live coaching from anywhere in the world.</p>
+        </div>
+        <div class="program-divider"></div>
+        <ul class="program-features">
+          <li>1-on-1 Live Training Sessions</li>
+          <li>Personalized Workout Plans</li>
+          <li>Diet & Nutrition Guidance</li>
+          <li>Progress Tracking & Support</li>
+          <li>Train from Anywhere in the World</li>
+        </ul>
+        <div class="program-footer">
+          <div class="program-price">₹1,000 - ₹1,500</div>
+          <p class="pricing-billing">Per Session</p>
+          <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20am%20interested%20in%20Online%20Personal%20Training.%20Please%20share%20more%20details." class="program-cta" target="_blank" rel="noopener">Book Your Session Now</a>
+        </div>
+      </article>
+      <article class="program-card">
+        <div class="program-header">
+          <p class="program-week">Offline</p>
+          <h3 class="program-name"><a href="/services/personal-fitness-trainer/" style="color:inherit;text-decoration:none;">Offline Personal Training</a></h3>
+          <p class="program-tagline">1-on-1 in-person coaching at my studio or your location.</p>
+        </div>
+        <div class="program-divider"></div>
+        <ul class="program-features">
+          <li>1-on-1 In-Person Training</li>
+          <li>Customized Workout Plans</li>
+          <li>Nutrition & Lifestyle Guidance</li>
+          <li>Form Correction & Motivation</li>
+          <li>At My Studio / Your Location</li>
+        </ul>
+        <div class="program-footer">
+          <div class="program-price">₹1,200 - ₹1,500</div>
+          <p class="pricing-billing">Per Session</p>
+          <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20am%20interested%20in%20Offline%20Personal%20Training.%20Please%20share%20more%20details." class="program-cta" target="_blank" rel="noopener">Book Your Session Now</a>
+        </div>
+      </article>
+      <article class="program-card">
+        <div class="program-header">
+          <p class="program-week">Group</p>
+          <h3 class="program-name"><a href="/services/group-fitness-classes/" style="color:inherit;text-decoration:none;">Group Classes</a></h3>
+          <p class="program-tagline">Fun, energetic group workouts for every fitness level.</p>
+        </div>
+        <div class="program-divider"></div>
+        <ul class="program-features">
+          <li>Fun & Energetic Group Workout</li>
+          <li>Strength, Cardio, Mobility & More</li>
+          <li>All Fitness Levels Welcome</li>
+          <li>Stay Motivated & Consistent</li>
+          <li>Affordable & Effective</li>
+        </ul>
+        <div class="program-footer">
+          <div class="program-price">₹300</div>
+          <p class="pricing-billing">Per Session</p>
+          <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20join%20a%20Group%20Class.%20Please%20share%20more%20details." class="program-cta" target="_blank" rel="noopener">Join A Class Now</a>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -1116,7 +1262,7 @@
   <p>Book a free 30-minute consultation with Sandhya. No commitment required - just an honest conversation about your goals.</p>
   <div class="cta-banner-btns">
     <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20book%20my%20free%2030-minute%20consultation." class="btn-white" target="_blank" rel="noopener">📞 Book on WhatsApp</a>
-    <a href="mailto:sandhyaarorafitness@gmail.com,contact@sandhyaarorafitness.com" class="btn-white-outline">✉ Send an Email</a>
+    <a href="mailto:sandhya@sandhyaarorafitness.com" class="btn-white-outline">✉ Send an Email</a>
   </div>
   <p style="margin-top:24px; font-size:13px; color:rgba(255,255,255,0.5);">No commitment · Online &amp; in-person options · Reply within 24 hours</p>
 </section>
@@ -1162,9 +1308,8 @@
     <div class="footer-col">
       <h4>Get In Touch</h4>
       <ul>
-        <li><a href="mailto:sandhyaarorafitness@gmail.com,contact@sandhyaarorafitness.com">sandhyaarorafitness@gmail.com · contact@sandhyaarorafitness.com</a></li>
+        <li><a href="mailto:sandhya@sandhyaarorafitness.com">sandhya@sandhyaarorafitness.com</a></li>
         <li><a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20know%20more%20about%20your%20fitness%20programs." target="_blank" rel="noopener">WhatsApp: +91 88826 29003</a></li>
-        <li><a href="tel:+917982975764">Phone: +91 79829 75764</a></li>
         <li><a href="https://www.instagram.com/sandhya.arora.fitness?igsi=MTFsdGYyY2JuZjJpcQ==" target="_blank" rel="noopener">@sandhya.arora.fitness</a></li>
       </ul>
       <div style="margin-top:20px; padding:16px; background:rgba(233,69,96,0.1); border:1px solid rgba(233,69,96,0.2); border-radius:10px;">
@@ -1175,7 +1320,7 @@
   </div>
   <div class="footer-bottom">
     <span>© 2026 Sandhya Arora Fitness. All rights reserved.</span>
-    <span><a href="/privacy-policy/" style="color:inherit">Privacy Policy</a> · <a href="/terms-and-conditions/" style="color:inherit">Terms &amp; Conditions</a></span>
+    <span>Privacy Policy · Terms &amp; Conditions · Refund Policy</span>
   </div>
 </footer>
 <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20know%20more%20about%20your%20fitness%20programs." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
