@@ -314,7 +314,7 @@
   }
   .home-blog-window::before { left: 0; background: linear-gradient(to right, var(--dark2), transparent); }
   .home-blog-window::after { right: 0; background: linear-gradient(to left, var(--dark2), transparent); }
-  .home-blog-track { display: flex; width: max-content; animation: home-blog-marquee 64s linear infinite; }
+  .home-blog-track { display: flex; width: max-content; animation: home-blog-marquee 180s linear infinite; }
   .home-blog-track:hover, .home-blog-track:focus-within, .home-blog-track.is-paused { animation-play-state: paused; }
   .home-blog-group { display: flex; flex: 0 0 auto; align-items: stretch; gap: 18px; padding-right: 18px; }
   .home-blog-card {
@@ -649,6 +649,7 @@
   }
   /* ─── RESPONSIVE: LAPTOP / SMALL DESKTOP (≤1180px) ─── */
   @media (max-width: 1180px) {
+    .nav-links { gap: 16px; }
     .hero-grid { gap: 44px; padding: 70px 44px; }
     .section-container { padding: 0 44px; }
     .cta-banner { padding: 80px 44px; }
@@ -889,6 +890,12 @@
         <li><a href="/services/nutrition-coaching/">Nutrition Coaching<small>Sustainable guidance for Indian food & lifestyle</small></a></li>
       </ul>
     </li>
+    <li><a href="#watch">Watch</a></li>
+    <li><a href="#instagram">Reels</a></li>
+    <li><a href="/pricing/">Pricing</a></li>
+    <li><a href="/locations/">Locations</a></li>
+    <li><a href="#testimonials">Results</a></li>
+    <li><a href="/blogs/">Blogs</a></li>
     <li><a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20book%20a%20free%20consultation%20call." class="nav-cta" target="_blank" rel="noopener">Book Free Call</a></li>
   </ul>
 </nav>
@@ -1055,6 +1062,7 @@
       </div>
 
       <div class="ig-grid" id="reelGrid">
+      <div class="ig-card reel-card" data-category="trainer podcasts"><iframe src="https://www.instagram.com/reel/DehUbuDJb9E/embed/?utm_source=ig_embed" scrolling="no" allowtransparency="true" allow="encrypted-media; autoplay; clipboard-write; picture-in-picture; web-share"></iframe><div class="reel-card-meta"><span class="reel-pill">Trainer</span><span class="reel-pill">Interview</span></div></div>
       <div class="ig-card reel-card" data-category="trainer podcasts"><iframe src="https://www.instagram.com/reel/DeeSu0yzaoI/embed/?utm_source=ig_embed" scrolling="no" allowtransparency="true" allow="encrypted-media; autoplay; clipboard-write; picture-in-picture; web-share"></iframe><div class="reel-card-meta"><span class="reel-pill">Trainer</span><span class="reel-pill">Interview</span></div></div>
       <div class="ig-card reel-card" data-category="online offline"><iframe src="https://www.instagram.com/reel/Ddyw0UtEoRd/embed/?utm_source=ig_embed" scrolling="no" allowtransparency="true" allow="encrypted-media; autoplay; clipboard-write; picture-in-picture; web-share"></iframe><div class="reel-card-meta"><span class="reel-pill">Online</span><span class="reel-pill">Client</span></div></div>
       <div class="ig-card reel-card" data-category="trainer"><iframe src="https://www.instagram.com/reel/Dd1N35_z1_Z/embed/?utm_source=ig_embed" scrolling="no" allowtransparency="true" allow="encrypted-media; autoplay; clipboard-write; picture-in-picture; web-share"></iframe><div class="reel-card-meta"><span class="reel-pill">Trainer</span><span class="reel-pill">Latest</span></div></div>
@@ -1087,7 +1095,7 @@
     </div>
   </div>
 </section>
-<script src="/assets/js/instagram-reels.js?v=5" defer></script>
+<script src="/assets/js/instagram-reels.js?v=6" defer></script>
 
 <!-- ── LATEST FITNESS ARTICLES ────────────────────────── -->
 <section class="home-blog-section" id="latest-articles">
@@ -1126,6 +1134,82 @@
         <a class="home-blog-card" href="/blogs/articles/5-reasons-you-need-a-personal-online-fitness-trainer/">
           <div class="home-blog-media"><img src="/assets/images/5-reasons-online-fitness-trainer.jpg" alt="Reasons to work with a personal online fitness trainer" loading="lazy" decoding="async"><span class="home-blog-topic">Online Coaching</span></div>
           <div class="home-blog-copy"><h3>5 Reasons You Need a Personal Online Fitness Trainer</h3><p>Discover how one-to-one online coaching can bring expert guidance, flexibility, and accountability to your routine.</p><span class="home-blog-read">Read the guide <span aria-hidden="true">→</span></span></div>
+        </a>
+        <a class="home-blog-card" href="/blogs/articles/personal-fitness-trainer/">
+          <div class="home-blog-media"><img src="/assets/images/personal-fitness-trainer.png" alt="Personal fitness trainer coaching a client through strength training" loading="lazy" decoding="async"><span class="home-blog-topic">Personal Training</span></div>
+          <div class="home-blog-copy"><h3>Personal Fitness Trainer: Complete Guide to Choosing the Right Coach</h3><p>Learn how 1-on-1 personal fitness training works, compare online and at-home coaching, and choose the right plan for your goals.</p><span class="home-blog-read">Read the guide <span aria-hidden="true">→</span></span></div>
+        </a>
+        <a class="home-blog-card" href="/blogs/articles/online-fitness-trainer/">
+          <div class="home-blog-media"><img src="/assets/images/online-fitness-trainer.png" alt="Online fitness trainer delivering personalized virtual coaching" loading="lazy" decoding="async"><span class="home-blog-topic">Online Coaching</span></div>
+          <div class="home-blog-copy"><h3>Online Fitness Trainer in India: Personalized Coaching From Anywhere</h3><p>Learn how online fitness training, live classes, app support, and progress tracking help you train consistently from anywhere.</p><span class="home-blog-read">Read the guide <span aria-hidden="true">→</span></span></div>
+        </a>
+        <a class="home-blog-card" href="/blogs/articles/personal-trainer-at-home/">
+          <div class="home-blog-media"><img src="https://i.ibb.co/nq5MqJqy/personal-training-at-home.png" alt="Personal trainer coaching client at home" loading="lazy" decoding="async"><span class="home-blog-topic">Home Training</span></div>
+          <div class="home-blog-copy"><h3>Personal Trainer at Home: Get Fitness Coaching in Your Own Space</h3><p>A personal trainer at home brings tailored fitness coaching to your space, eliminating commutes while maximizing results.</p><span class="home-blog-read">Read the guide <span aria-hidden="true">→</span></span></div>
+        </a>
+        <a class="home-blog-card" href="/blogs/articles/muscle-recovery-foods/">
+          <div class="home-blog-media"><img src="https://i.ibb.co/MytS5jWK/muscle-recovery-foods.png" alt="Plate of nutrient-dense muscle recovery foods" loading="lazy" decoding="async"><span class="home-blog-topic">Recovery Diet</span></div>
+          <div class="home-blog-copy"><h3>Best Muscle Recovery Foods Backed by Science</h3><p>Discover foods that reduce muscle soreness, accelerate tissue repair, and support consistent performance in the gym.</p><span class="home-blog-read">Read the guide <span aria-hidden="true">→</span></span></div>
+        </a>
+        <a class="home-blog-card" href="/blogs/articles/online-personal-trainer/">
+          <div class="home-blog-media"><img src="https://i.ibb.co/WNcr8wmb/online-personal-trainer.png" alt="Online personal trainer coaching session on laptop" loading="lazy" decoding="async"><span class="home-blog-topic">Online Training</span></div>
+          <div class="home-blog-copy"><h3>Online Personal Trainer: Achieve Your Fitness Goals from Anywhere</h3><p>Discover the benefits of hiring an online personal trainer with flexible, personalized workouts and weekly accountability.</p><span class="home-blog-read">Read the guide <span aria-hidden="true">→</span></span></div>
+        </a>
+        <a class="home-blog-card" href="/blogs/articles/personal-trainer-for-weight-loss/">
+          <div class="home-blog-media"><img src="https://i.ibb.co/q3R8xC40/personal-trainer-for-fat-loss.png" alt="Personal trainer coaching for sustainable weight loss" loading="lazy" decoding="async"><span class="home-blog-topic">Weight Loss</span></div>
+          <div class="home-blog-copy"><h3>Personal Trainer for Weight Loss: Workouts & Nutrition</h3><p>Discover how a personal trainer provides customized workouts, accountability, and nutritional guidance for sustainable fat loss.</p><span class="home-blog-read">Read the guide <span aria-hidden="true">→</span></span></div>
+        </a>
+        <a class="home-blog-card" href="/blogs/articles/nutrition-for-fat-loss/">
+          <div class="home-blog-media"><img src="https://i.ibb.co/DPVvbj73/nutrition-for-fat-loss.png" alt="Nutritious fat loss meal with lean protein and veggies" loading="lazy" decoding="async"><span class="home-blog-topic">Fat Loss</span></div>
+          <div class="home-blog-copy"><h3>Nutrition for Fat Loss Without Losing Muscle</h3><p>Learn how to lose body fat through sustainable calorie management while protecting your hard-earned lean muscle mass.</p><span class="home-blog-read">Read the guide <span aria-hidden="true">→</span></span></div>
+        </a>
+        <a class="home-blog-card" href="/blogs/articles/nutrition-for-muscle-gain/">
+          <div class="home-blog-media"><img src="https://i.ibb.co/TV8TtWR/nutrition-for-muscle-gain.png" alt="High protein meal for muscle hypertrophy" loading="lazy" decoding="async"><span class="home-blog-topic">Muscle Gain</span></div>
+          <div class="home-blog-copy"><h3>Nutrition for Muscle Gain: A Science-Backed Guide</h3><p>Learn the best nutrition strategies to maximize muscle growth, optimize protein distribution, and improve workout recovery.</p><span class="home-blog-read">Read the guide <span aria-hidden="true">→</span></span></div>
+        </a>
+        <a class="home-blog-card" href="/blogs/articles/benefits-of-personal-training/">
+          <div class="home-blog-media"><img src="https://i.ibb.co/xKr05PZ0/personal-training-benefits.png" alt="Coach and client during a dedicated personal training session" loading="lazy" decoding="async"><span class="home-blog-topic">Coaching</span></div>
+          <div class="home-blog-copy"><h3>10 Powerful Benefits of Personal Training for Your Goals</h3><p>Discover how individualized coaching supports exercise technique, consistency, strength progress, and injury prevention.</p><span class="home-blog-read">Read the guide <span aria-hidden="true">→</span></span></div>
+        </a>
+        <a class="home-blog-card" href="/blogs/articles/personal-training-services/">
+          <div class="home-blog-media"><img src="https://i.ibb.co/hRhw7CyZ/personal-training-services.png" alt="Personal training services for different fitness goals" loading="lazy" decoding="async"><span class="home-blog-topic">Services</span></div>
+          <div class="home-blog-copy"><h3>Personal Training That Fits Your Goals and Lifestyle</h3><p>Discover how personalized coaching helps you build strength, improve fitness, and stay consistent with a plan designed for you.</p><span class="home-blog-read">Read the guide <span aria-hidden="true">→</span></span></div>
+        </a>
+        <a class="home-blog-card" href="/blogs/articles/hydration-for-athletes/">
+          <div class="home-blog-media"><img src="https://i.ibb.co/twNjHVh7/Hydration-for-Athletes-Complete-Performance-Guide.png" alt="Hydration and electrolytes for athletic performance" loading="lazy" decoding="async"><span class="home-blog-topic">Hydration</span></div>
+          <div class="home-blog-copy"><h3>Hydration for Athletes: Complete Performance Guide</h3><p>Learn why fluid balance is essential for endurance and strength, with practical electrolyte timing strategies for athletes.</p><span class="home-blog-read">Read the guide <span aria-hidden="true">→</span></span></div>
+        </a>
+        <a class="home-blog-card" href="/blogs/articles/best-supplements-for-performance/">
+          <div class="home-blog-media"><img src="https://i.ibb.co/ymYD05t2/best-supplements-for-performance.png" alt="Supplements for athletic performance and recovery" loading="lazy" decoding="async"><span class="home-blog-topic">Supplements</span></div>
+          <div class="home-blog-copy"><h3>Best Supplements for Performance Worth Buying</h3><p>Compare the most effective performance supplements backed by research, and learn which ones are actually worth your money.</p><span class="home-blog-read">Read the guide <span aria-hidden="true">→</span></span></div>
+        </a>
+        <a class="home-blog-card" href="/blogs/articles/post-workout-nutrition-that-speeds-recovery/">
+          <div class="home-blog-media"><img src="https://i.ibb.co/6JFV5LJ0/sandhya-arora-fitness-post-workout-nutrition.png" alt="Post-workout meal with carbs and protein" loading="lazy" decoding="async"><span class="home-blog-topic">Post-Workout</span></div>
+          <div class="home-blog-copy"><h3>Post Workout Nutrition That Speeds Recovery</h3><p>Learn the best post-workout nutrition strategies to replenish glycogen, promote protein synthesis, and bounce back faster.</p><span class="home-blog-read">Read the guide <span aria-hidden="true">→</span></span></div>
+        </a>
+        <a class="home-blog-card" href="/blogs/articles/personal-training-cost/">
+          <div class="home-blog-media"><img src="https://i.ibb.co/n9CYkK6/sandhya-arora-fitness-personal-training.png" alt="Personal training cost breakdown and comparison" loading="lazy" decoding="async"><span class="home-blog-topic">Pricing Guide</span></div>
+          <div class="home-blog-copy"><h3>Personal Training Cost: What Should You Expect to Pay?</h3><p>Explore what drives trainer rates, compare in-person vs online pricing models, and understand where the true value lies.</p><span class="home-blog-read">Read the guide <span aria-hidden="true">→</span></span></div>
+        </a>
+        <a class="home-blog-card" href="/blogs/articles/one-on-one-personal-training/">
+          <div class="home-blog-media"><img src="https://i.ibb.co/TDT6G4BY/one-on-one-personal-training.png" alt="One-on-one personal training coaching session" loading="lazy" decoding="async"><span class="home-blog-topic">1-on-1 Coaching</span></div>
+          <div class="home-blog-copy"><h3>One on One Personal Training for Faster, More Focused Progress</h3><p>Discover how dedicated private coaching provides individualized program adjustments and direct accountability.</p><span class="home-blog-read">Read the guide <span aria-hidden="true">→</span></span></div>
+        </a>
+        <a class="home-blog-card" href="/blogs/articles/pre-workout-nutrition/">
+          <div class="home-blog-media"><img src="https://i.ibb.co/JjF2bVny/pre-workout-nutrition.png" alt="Pre-workout nutrition snacks and timing" loading="lazy" decoding="async"><span class="home-blog-topic">Pre-Workout</span></div>
+          <div class="home-blog-copy"><h3>Pre-Workout Nutrition Guide to Fuel Your Workouts</h3><p>Discover what to eat before training for optimal blood sugar, sustained workout stamina, and maximum lifting performance.</p><span class="home-blog-read">Read the guide <span aria-hidden="true">→</span></span></div>
+        </a>
+        <a class="home-blog-card" href="/blogs/articles/the-ultimate-guide-to-protein-for-athletic-performance-how-much-do-you-really-need/">
+          <div class="home-blog-media"><img src="https://i.ibb.co/Mdx3Gch/protein-athletic-performance.png" alt="Protein sources for athletic performance" loading="lazy" decoding="async"><span class="home-blog-topic">Protein</span></div>
+          <div class="home-blog-copy"><h3>Protein for Athletic Performance: How Much Do You Really Need?</h3><p>Optimize your muscle recovery and daily protein intake with clear targets, optimal distribution, and quality protein sources.</p><span class="home-blog-read">Read the guide <span aria-hidden="true">→</span></span></div>
+        </a>
+        <a class="home-blog-card" href="/blogs/articles/human-performance-nutrition/">
+          <div class="home-blog-media"><img src="https://i.ibb.co/Kj90mcVN/human-performance-nutrition.png" alt="Athlete meal plate supporting human performance" loading="lazy" decoding="async"><span class="home-blog-topic">Performance</span></div>
+          <div class="home-blog-copy"><h3>Human Performance Nutrition Guide to Maximize Strength</h3><p>Discover how tailored energy balance, macronutrient ratios, and recovery meals elevate your overall physical capacity.</p><span class="home-blog-read">Read the guide <span aria-hidden="true">→</span></span></div>
+        </a>
+        <a class="home-blog-card" href="/blogs/articles/nutrition-coach/">
+          <div class="home-blog-media"><img src="/assets/images/sandhya-arora-fitness-nutrition-coach.png" alt="Nutrition coach consultation with healthy Indian foods" loading="lazy" decoding="async"><span class="home-blog-topic">Nutrition Coach</span></div>
+          <div class="home-blog-copy"><h3>Nutrition Coach: Sustainable Diet Plans for Real Life</h3><p>Find out how an expert nutrition coach designs realistic meal plans around Indian cuisine, family dinners, and busy schedules.</p><span class="home-blog-read">Read the guide <span aria-hidden="true">→</span></span></div>
         </a>
       </div>
     </div>

@@ -27,6 +27,13 @@
     // ── LATEST REELS (Surfaced first) ─────────────────────────────────
     {
       type: 'instagram',
+      id: 'DehUbuDJb9E',
+      url: 'https://www.instagram.com/reel/DehUbuDJb9E/?utm_source=ig_web_copy_link&exln=NTc4MTIwNjQ2YQ==',
+      categories: ['trainer', 'podcasts'],
+      pills: ['Trainer', 'Interview']
+    },
+    {
+      type: 'instagram',
       id: 'DeeSu0yzaoI',
       url: 'https://www.instagram.com/reel/DeeSu0yzaoI/?utm_source=ig_web_copy_link&xtok=NTc4MTIwNjQ2YQ==',
       categories: ['trainer', 'podcasts'],
