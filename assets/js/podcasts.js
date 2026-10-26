@@ -7,6 +7,10 @@
 
   const PODCASTS_DATA = [
     {
+      id: 'sos77xg6DOE',
+      title: 'Do Detox Drinks Actually Work? Truth About Fat Burners & Diet Pills | Spot Reduction Reality',
+    },
+    {
       id: 'uRnEExysMfk',
       title: 'फिटनेस Facts vs Myths : क्या आपका जिम आपको बेवकूफ बना रहा है?',
     },

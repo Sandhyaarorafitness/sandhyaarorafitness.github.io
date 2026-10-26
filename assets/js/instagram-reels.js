@@ -331,6 +331,15 @@
     // ── PODCASTS ──────────────────────────────────────────────────────
     {
       type: 'preview',
+      id: 'sos77xg6DOE',
+      url: 'https://youtu.be/sos77xg6DOE',
+      image: 'https://img.youtube.com/vi/sos77xg6DOE/hqdefault.jpg',
+      alt: 'Watch Sandhya Arora Podcast - Detox Drinks & Fat Burners Truth',
+      categories: ['podcasts'],
+      pills: ['Podcast', 'Fat Burners']
+    },
+    {
+      type: 'preview',
       id: 'uRnEExysMfk',
       url: 'https://youtu.be/uRnEExysMfk',
       image: 'https://img.youtube.com/vi/uRnEExysMfk/hqdefault.jpg',
