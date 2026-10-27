@@ -34,21 +34,75 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "ExerciseGym",
-      "@id": "https://sandhyaarorafitness.com/#business",
+      "@type": ["ExerciseGym", "HealthAndBeautyBusiness", "SportsActivityLocation"],
+      "@id": "https://sandhyaarorafitness.com/#localbusiness",
       "name": "Sandhya Arora Fitness",
-      "alternateName": "Sandhya Arora",
-      "description": "Certified personal fitness trainer offering 1-on-1 coaching, group fitness classes, online fitness programs and nutrition coaching across Delhi, India and worldwide, available in-person and online.",
+      "alternateName": "Sandhya arora fitness",
       "url": "https://sandhyaarorafitness.com/",
-      "telephone": "+91-8882629003",
-      "email": "sandhya@sandhyaarorafitness.com",
-      "priceRange": "₹₹",
-      "address": { "@type": "PostalAddress", "addressCountry": "IN" },
-      "areaServed": ["Delhi", "Delhi NCR", "Gurugram", "Noida", "India", "Worldwide"],
-      "keywords": "best personal trainer in Delhi, online fitness coach India, personal trainer at home, weight loss coach, online personal training",
-      "founder": { "@id": "https://sandhyaarorafitness.com/#founder" },
+      "logo": "https://i.ibb.co/vvPXz7xR/Sandhya-Arora-Fitness-logo.jpg",
+      "image": "https://i.ibb.co/xt0T9y9H/Sandhya-Arora-Fitness-Hero.png",
+      "description": "Sandhya Arora is a certified personal trainer and nutrition coach in Mayur Vihar Phase I, Delhi helping clients across Delhi NCR (Delhi, Noida, Gurugram) and worldwide through 1-on-1 personal training, group fitness classes, and nutrition coaching.",
+      "telephone": "+91-7982975764",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-7982975764",
+          "contactType": "customer service",
+          "areaServed": "IN",
+          "availableLanguage": ["en", "hi"]
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-8882629003",
+          "contactType": "reservations",
+          "contactOption": "TollFree",
+          "areaServed": "IN",
+          "availableLanguage": ["en", "hi"]
+        }
+      ],
+      "email": "contact@sandhyaarorafitness.com",
+      "priceRange": "₹300 - ₹1,500",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Akashdarshan Apartment, 191, Mayur Vihar Phase I",
+        "addressLocality": "New Delhi",
+        "addressRegion": "Delhi",
+        "postalCode": "110091",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 28.6061,
+        "longitude": 77.2946
+      },
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=Sandhya+Arora+Fitness&query_place_id=ChIJp97KmuvlDDkRip2pxJI0_KE",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "Google Place ID",
+        "value": "ChIJp97KmuvlDDkRip2pxJI0_KE"
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Mayur Vihar Phase I, East Delhi"
+        },
+        {
+          "@type": "City",
+          "name": "New Delhi"
+        },
+        {
+          "@type": "City",
+          "name": "Noida"
+        },
+        {
+          "@type": "City",
+          "name": "Gurugram"
+        }
+      ],
       "sameAs": [
-        "https://www.instagram.com/sandhya.arora.fitness",
+        "https://share.google/ewFYsiNOW5lHnARaC",
+        "https://www.google.com/maps/search/?api=1&query=Sandhya+Arora+Fitness&query_place_id=ChIJp97KmuvlDDkRip2pxJI0_KE",
+        "https://www.instagram.com/sandhya.arora.fitness/",
         "https://youtube.com/@sandhya.arora.fitness",
         "https://www.facebook.com/sandhyaarorafitness",
         "https://www.linkedin.com/company/sandhyaarorafitness"
@@ -70,7 +124,8 @@
         { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "author": { "@type": "Person", "name": "Priya Mehta" }, "reviewBody": "Sandhya completely changed my relationship with fitness. Lost 14 kg in 4 months and never felt stronger." },
         { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "author": { "@type": "Person", "name": "Ritu Sharma" }, "reviewBody": "The online coaching program was exactly what I needed as a busy working mom. Structured, achievable, and motivating." },
         { "@type": "Review", "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "author": { "@type": "Person", "name": "Ananya Kapoor" }, "reviewBody": "Sandhya's group classes are genuinely fun, challenging, and results-driven. Lost inches and gained confidence." }
-      ]
+      ],
+      "founder": { "@id": "https://sandhyaarorafitness.com/#founder" }
     },
     {
       "@type": "Person",
@@ -78,7 +133,7 @@
       "name": "Sandhya Arora",
       "jobTitle": "Certified Personal Fitness Trainer",
       "description": "Certified personal fitness trainer with 10+ years of experience helping clients across India and around the world achieve sustainable body transformation.",
-      "worksFor": { "@id": "https://sandhyaarorafitness.com/#business" }
+      "worksFor": { "@id": "https://sandhyaarorafitness.com/#localbusiness" }
     },
     {
       "@type": "BreadcrumbList",
@@ -1553,6 +1608,62 @@
     </div>
   </div>
 </section>
+<!-- ── STUDIO LOCATION & DELHI NCR COACHING HUB ───────── -->
+<section class="saf-location-section" id="studio-location" aria-labelledby="saf-location-heading" style="padding: clamp(48px, 6vw, 80px) 24px; max-width: 1240px; margin: 0 auto;">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; align-items: center;">
+    
+    <!-- NAP (Name, Address, Phone) & Local Trust Card -->
+    <div class="saf-nap-card">
+      <span style="display: inline-block; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; color: #e94560;">
+        Studio &amp; Delhi NCR Coaching Hub
+      </span>
+      <h2 id="saf-location-heading" style="font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.8rem, 3.5vw, 2.4rem); margin: 0 0 1rem; color: #1a1a2e; line-height: 1.25; font-weight: 700;">
+        Sandhya Arora Fitness — Mayur Vihar Phase I, Delhi
+      </h2>
+      <p style="margin: 0 0 1.25rem; line-height: 1.6; color: #4c4745; font-size: 1rem;">
+        Train in person at our Mayur Vihar Phase I studio (conveniently located on the East Delhi–Noida border), book at-home personal training across <strong>Delhi, Noida, and Gurugram</strong>, or join live 1-on-1 online fitness and nutrition coaching from anywhere.
+      </p>
+
+      <address style="font-style: normal; line-height: 1.8; margin-bottom: 1.5rem; color: #2c2c3a; font-size: 0.95rem;">
+        <strong>Studio Address:</strong><br>
+        Akashdarshan Apartment, 191, Mayur Vihar Phase I,<br>
+        New Delhi, Delhi 110091, India<br><br>
+        <strong>Phone:</strong> <a href="tel:+917982975764" style="color: #e94560; font-weight: 600; text-decoration: none;">+91 79829 75764</a><br>
+        <strong>WhatsApp:</strong> <a href="https://wa.me/918882629003" target="_blank" rel="noopener noreferrer" style="color: #e94560; font-weight: 600; text-decoration: none;">+91 88826 29003</a><br>
+        <strong>Email:</strong> <a href="mailto:contact@sandhyaarorafitness.com" style="color: #e94560; font-weight: 600; text-decoration: none;">contact@sandhyaarorafitness.com</a>
+      </address>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Sandhya+arora+fitness&destination_place_id=ChIJp97KmuvlDDkRip2pxJI0_KE"
+           target="_blank"
+           rel="noopener noreferrer"
+           style="padding: 0.75rem 1.25rem; border-radius: 8px; font-weight: 600; text-decoration: none; background: #e11d48; color: #ffffff; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(225,29,72,0.25); transition: background 0.2s;">
+          Get Directions on Google Maps →
+        </a>
+        <a href="https://search.google.com/local/writereview?placeid=ChIJp97KmuvlDDkRip2pxJI0_KE"
+           target="_blank"
+           rel="noopener noreferrer"
+           style="padding: 0.75rem 1.25rem; border-radius: 8px; font-weight: 600; text-decoration: none; border: 1.5px solid #1a1a2e; color: #1a1a2e; display: inline-flex; align-items: center; gap: 6px; background: transparent; transition: all 0.2s;">
+          ★ Read / Leave a Google Review (5.0 ★)
+        </a>
+      </div>
+    </div>
+
+    <!-- Responsive Lazy-Loaded Google Map Embed -->
+    <div class="saf-map-wrapper" style="position: relative; width: 100%; padding-bottom: 65%; height: 0; overflow: hidden; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.12); border: 1px solid rgba(0,0,0,0.08);">
+      <iframe
+        title="Sandhya Arora Fitness Studio Location — Akashdarshan Apartment, 191, Mayur Vihar Phase I, Delhi 110091"
+        src="https://www.google.com/maps?q=Sandhya+arora+fitness,+Akashdarahan+Apartment,+191,+Mayur+Vihar+Phase+I,+Delhi,+110091&ftid=0x390ce5eb9acad7a7:0xa1fc3492c4a99d8a&hl=en&z=16&output=embed"
+        style="border: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+  </div>
+</section>
+
 <!-- ── CTA BANNER ─────────────────────────────────────── -->
 <section class="cta-banner" id="contact">
   <h2>Ready to Start Your Fitness Journey?</h2>
@@ -1605,9 +1716,10 @@
     <div class="footer-col">
       <h4>Get In Touch</h4>
       <ul>
-        <li><a href="mailto:sandhya@sandhyaarorafitness.com">sandhya@sandhyaarorafitness.com</a></li>
-        <li><a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20know%20more%20about%20your%20fitness%20programs." target="_blank" rel="noopener">WhatsApp: +91 88826 29003</a></li>
-        <li><a href="https://www.instagram.com/sandhya.arora.fitness?igsi=MTFsdGYyY2JuZjJpcQ==" target="_blank" rel="noopener">@sandhya.arora.fitness</a></li>
+        <li><a href="https://www.google.com/maps/search/?api=1&query=Sandhya+Arora+Fitness&query_place_id=ChIJp97KmuvlDDkRip2pxJI0_KE" target="_blank" rel="noopener noreferrer">Akashdarshan Apartment, 191, Mayur Vihar Phase I, New Delhi, Delhi 110091</a></li>
+        <li><a href="tel:+917982975764">Phone: +91 79829 75764</a></li>
+        <li><a href="https://wa.me/918882629003" target="_blank" rel="noopener noreferrer">WhatsApp: +91 88826 29003</a></li>
+        <li><a href="mailto:contact@sandhyaarorafitness.com">contact@sandhyaarorafitness.com</a></li>
       </ul>
       <div style="margin-top:20px; padding:16px; background:rgba(233,69,96,0.1); border:1px solid rgba(233,69,96,0.2); border-radius:10px;">
         <p style="font-size:12px; color:var(--red-light); font-weight:600; margin-bottom:8px;">FREE CONSULTATION</p>
