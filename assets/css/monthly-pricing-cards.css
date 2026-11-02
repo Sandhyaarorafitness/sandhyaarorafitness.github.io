@@ -116,11 +116,159 @@
   font-weight: 600;
   text-align: center;
   text-decoration: none;
+  transition: background 0.2s, color 0.2s;
 }
 
 .monthly-pricing-grid .price-card-footer .btn:hover {
   color: var(--white, #fff);
   background: var(--red, #e94560);
+}
+
+.package-note {
+  margin-top: 28px;
+  color: var(--muted, #6b6b7e);
+  font-size: 13px;
+  text-align: center;
+}
+
+/* --- DIET PACKAGE ONLY --- */
+.diet-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.72fr);
+  gap: 28px;
+  align-items: stretch;
+  max-width: 900px;
+  margin: 48px auto 0;
+}
+
+.diet-copy,
+.diet-price {
+  padding: 34px;
+  border-radius: 14px;
+  border: 1px solid var(--border, rgba(0, 0, 0, 0.08));
+  background: var(--white, #fff);
+  box-shadow: 0 18px 42px -28px rgba(14, 14, 26, 0.45);
+}
+
+.diet-copy .package-label,
+.diet-copy .eyebrow {
+  color: var(--red, #e94560);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.diet-copy h2,
+.diet-copy h3 {
+  margin: 10px 0 14px;
+  color: var(--dark2, #1a1a2e);
+  font-size: 30px;
+  font-family: var(--font-display, 'Playfair Display', serif);
+}
+
+.diet-copy p,
+.diet-copy li {
+  color: var(--muted, #6b6b7e);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.diet-copy ul {
+  list-style: none;
+  margin-top: 18px;
+  padding: 0;
+}
+
+.diet-copy li {
+  margin-top: 8px;
+}
+
+.diet-copy li::before {
+  content: '\2022';
+  margin-right: 10px;
+  color: var(--red, #e94560);
+  font-weight: 700;
+}
+
+.diet-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--dark2, #1a1a2e);
+  color: var(--white, #fff);
+  border: none;
+}
+
+.diet-price .package-label {
+  color: var(--red-light, #ff6b86);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.diet-price h3 {
+  margin-top: 10px;
+  font-family: var(--font-display, 'Playfair Display', serif);
+  font-size: 26px;
+  color: var(--white, #fff);
+}
+
+.diet-price .currency {
+  margin-top: 20px;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--white, #fff);
+  line-height: 1.2;
+}
+
+.diet-price .currency small {
+  display: block;
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.diet-price p {
+  margin-top: 18px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.diet-price .diet-actions,
+.diet-price .hero-actions {
+  margin-top: 24px;
+}
+
+.diet-price .btn-primary {
+  display: block;
+  width: 100%;
+  padding: 14px 20px;
+  background: var(--red, #e94560);
+  color: var(--white, #fff);
+  border: 1px solid var(--red, #e94560);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.diet-price .btn-primary:hover {
+  background: var(--red-light, #ff6b86);
+  border-color: var(--red-light, #ff6b86);
+  color: var(--white, #fff);
+}
+
+@media (max-width: 900px) {
+  .diet-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
 }
 
 @media (max-width: 600px) {

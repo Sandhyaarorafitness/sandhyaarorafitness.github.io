@@ -29,6 +29,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/coach-gallery.css">
+<link rel="stylesheet" href="/assets/css/monthly-pricing-cards.css">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3761890682449632" crossorigin="anonymous"></script>
 <script type="application/ld+json">
 {
@@ -62,7 +63,7 @@
         }
       ],
       "email": "contact@sandhyaarorafitness.com",
-      "priceRange": "₹300 - ₹1,500",
+      "priceRange": "₹4,000 - ₹19,999",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Akashdarshan Apartment, 191, Mayur Vihar Phase I",
@@ -116,9 +117,11 @@
           { "@type": "Offer", "url": "https://sandhyaarorafitness.com/services/group-fitness-classes/", "itemOffered": { "@type": "Service", "name": "Group Fitness Classes", "description": "High-energy HIIT, strength, yoga-fusion, and functional training classes with a supportive community." } },
           { "@type": "Offer", "url": "https://sandhyaarorafitness.com/services/online-fitness-coach/", "itemOffered": { "@type": "Service", "name": "Online Coaching Programs", "description": "Structured online fitness programs with workout plans, nutrition guidance, and weekly check-ins." } },
           { "@type": "Offer", "url": "https://sandhyaarorafitness.com/services/nutrition-coaching/", "itemOffered": { "@type": "Service", "name": "Nutrition Coaching", "description": "Sustainable nutrition guidance tailored to Indian food and lifestyle." } },
-          { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1000", "maxPrice": "1500", "priceCurrency": "INR" }, "itemOffered": { "@type": "Service", "name": "Online Personal Training", "description": "1-on-1 live online training sessions, billed per session." } },
-          { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "minPrice": "1200", "maxPrice": "1500", "priceCurrency": "INR" }, "itemOffered": { "@type": "Service", "name": "Offline Personal Training", "description": "1-on-1 in-person training sessions, billed per session." } },
-          { "@type": "Offer", "price": "300", "priceCurrency": "INR", "itemOffered": { "@type": "Service", "name": "Group Classes", "description": "Group fitness classes, billed per session." } }
+          { "@type": "Offer", "name": "3 Days a Week Online Personal Training - India", "price": "11999", "priceCurrency": "INR", "description": "12 live sessions, valid for 1 month. Original price: INR 15000.", "url": "https://sandhyaarorafitness.com/pricing/" },
+          { "@type": "Offer", "name": "3 Days a Week Online Personal Training - International", "price": "149", "priceCurrency": "USD", "description": "12 live sessions, valid for 1 month. Original price: USD 200.", "url": "https://sandhyaarorafitness.com/pricing/" },
+          { "@type": "Offer", "name": "5 Days a Week Online Personal Training - India", "price": "19999", "priceCurrency": "INR", "description": "20 live sessions, valid for 1 month. Original price: INR 24999.", "url": "https://sandhyaarorafitness.com/pricing/" },
+          { "@type": "Offer", "name": "5 Days a Week Online Personal Training - International", "price": "249", "priceCurrency": "USD", "description": "20 live sessions, valid for 1 month. Original price: USD 300.", "url": "https://sandhyaarorafitness.com/pricing/" },
+          { "@type": "Offer", "name": "Diet Package Only", "price": "4000", "priceCurrency": "INR", "description": "Monthly nutrition package without exercise sessions.", "url": "https://sandhyaarorafitness.com/pricing/" }
         ]
       },
       "review": [
@@ -1981,72 +1984,90 @@
 <!-- ── PRICING ─────────────────────────────────────────── -->
 <section class="pricing" id="pricing">
   <div class="section-container">
-    <p class="section-eyebrow">Pricing</p>
-    <h2 class="section-title">Choose What Fits You Best</h2>
-    <p class="section-sub" style="margin-bottom:20px;">Simple, pay-per-session pricing across online, offline, and group training - so you can start wherever you are.</p>
-    <p style="margin-bottom:48px; color:var(--muted); font-size:14px;">Looking for monthly online coaching packages? <a href="/pricing/" style="color:var(--red); font-weight:600;">Compare online personal training pricing</a>.</p>
-    <div class="pricing-grid">
-      <article class="program-card featured">
-        <span class="popular-badge">Most Popular</span>
-        <div class="program-header">
-          <p class="program-week">Online</p>
-          <h3 class="program-name"><a href="/services/online-fitness-coach/" style="color:inherit;text-decoration:none;">Online Personal Training</a></h3>
-          <p class="program-tagline">1-on-1 live coaching from anywhere in the world.</p>
+    <div style="text-align:center; max-width:680px; margin:0 auto 48px;">
+      <p class="section-eyebrow">Monthly packages</p>
+      <h2 class="section-title">Find Your <em style="font-style:italic; color:var(--red);">Training Rhythm</em></h2>
+      <p class="section-sub" style="margin:0 auto;">Each package includes a defined number of live online sessions for one month. Compare the schedule and choose the format that fits your week.</p>
+    </div>
+    <div class="monthly-pricing-grid">
+      <article class="price-card">
+        <div class="price-card-head">
+          <p class="package-label">Flexible foundation</p>
+          <h3>3 Days a Week</h3>
+          <p class="sessions">12 live sessions · 1 month</p>
+          <p class="original-price">Original: India INR <s>₹15,000</s> · International USD <s>$200</s></p>
+          <div class="price">
+            <span class="price-market">India · INR</span>
+            ₹11,999
+            <span>International · USD $149</span>
+          </div>
         </div>
-        <div class="program-divider"></div>
-        <ul class="program-features">
-          <li>1-on-1 Live Training Sessions</li>
-          <li>Personalized Workout Plans</li>
-          <li>Diet & Nutrition Guidance</li>
-          <li>Progress Tracking & Support</li>
-          <li>Train from Anywhere in the World</li>
-        </ul>
-        <div class="program-footer">
-          <div class="program-price">₹1,000 - ₹1,500</div>
-          <p class="pricing-billing">Per Session</p>
-          <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20am%20interested%20in%20Online%20Personal%20Training.%20Please%20share%20more%20details." class="program-cta" target="_blank" rel="noopener">Book Your Session Now</a>
+        <div class="price-card-body">
+          <ul>
+            <li>Live online personal training</li>
+            <li>Customized workout plan</li>
+            <li>Diet and nutrition guidance</li>
+            <li>Progress tracking</li>
+            <li>WhatsApp support</li>
+          </ul>
         </div>
-      </article>
-      <article class="program-card">
-        <div class="program-header">
-          <p class="program-week">Offline</p>
-          <h3 class="program-name"><a href="/services/personal-fitness-trainer/" style="color:inherit;text-decoration:none;">Offline Personal Training</a></h3>
-          <p class="program-tagline">1-on-1 in-person coaching at my studio or your location.</p>
-        </div>
-        <div class="program-divider"></div>
-        <ul class="program-features">
-          <li>1-on-1 In-Person Training</li>
-          <li>Customized Workout Plans</li>
-          <li>Nutrition & Lifestyle Guidance</li>
-          <li>Form Correction & Motivation</li>
-          <li>At My Studio / Your Location</li>
-        </ul>
-        <div class="program-footer">
-          <div class="program-price">₹1,200 - ₹1,500</div>
-          <p class="pricing-billing">Per Session</p>
-          <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20am%20interested%20in%20Offline%20Personal%20Training.%20Please%20share%20more%20details." class="program-cta" target="_blank" rel="noopener">Book Your Session Now</a>
+        <div class="price-card-footer">
+          <a class="btn" href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20am%20interested%20in%20the%203%20days%20a%20week%20online%20training%20package." target="_blank" rel="noopener">Ask About This Package</a>
         </div>
       </article>
-      <article class="program-card">
-        <div class="program-header">
-          <p class="program-week">Group</p>
-          <h3 class="program-name"><a href="/services/group-fitness-classes/" style="color:inherit;text-decoration:none;">Group Classes</a></h3>
-          <p class="program-tagline">Fun, energetic group workouts for every fitness level.</p>
+      <article class="price-card">
+        <div class="price-card-head">
+          <p class="package-label">Higher weekly frequency</p>
+          <h3>5 Days a Week</h3>
+          <p class="sessions">20 live sessions · 1 month</p>
+          <p class="original-price">Original: India INR <s>₹24,999</s> · International USD <s>$300</s></p>
+          <div class="price">
+            <span class="price-market">India · INR</span>
+            ₹19,999
+            <span>International · USD $249</span>
+          </div>
         </div>
-        <div class="program-divider"></div>
-        <ul class="program-features">
-          <li>Fun & Energetic Group Workout</li>
-          <li>Strength, Cardio, Mobility & More</li>
-          <li>All Fitness Levels Welcome</li>
-          <li>Stay Motivated & Consistent</li>
-          <li>Affordable & Effective</li>
-        </ul>
-        <div class="program-footer">
-          <div class="program-price">₹300</div>
-          <p class="pricing-billing">Per Session</p>
-          <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20join%20a%20Group%20Class.%20Please%20share%20more%20details." class="program-cta" target="_blank" rel="noopener">Join A Class Now</a>
+        <div class="price-card-body">
+          <ul>
+            <li>Live online personal training</li>
+            <li>Customized workout plan</li>
+            <li>Diet and nutrition guidance</li>
+            <li>Progress tracking</li>
+            <li>WhatsApp support</li>
+          </ul>
+        </div>
+        <div class="price-card-footer">
+          <a class="btn" href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20am%20interested%20in%20the%205%20days%20a%20week%20online%20training%20package." target="_blank" rel="noopener">Ask About This Package</a>
         </div>
       </article>
+    </div>
+    <p class="package-note">Package validity: 1 month. Please ask about scheduling, payment, rescheduling, cancellations, and any other terms before purchasing.</p>
+
+    <!-- Diet Package Only -->
+    <div class="diet-layout" id="diet-package">
+      <div class="diet-copy">
+        <p class="package-label">Nutrition-focused support</p>
+        <h2>Diet Package Only</h2>
+        <p>A separate nutrition-focused option for clients seeking diet and fat-loss support without exercise sessions.</p>
+        <ul>
+          <li>Monthly package</li>
+          <li>Exercise sessions are not included</li>
+          <li>Designed for nutrition support, subject to approved service scope</li>
+        </ul>
+      </div>
+      <div class="diet-price">
+        <p class="package-label">Monthly nutrition package</p>
+        <h3>Diet support without exercise</h3>
+        <div class="currency">₹4,000<small>or $69 per month for international clients</small></div>
+        <p>Ask Sandhya about the exact inclusions and whether this option fits your goals before starting.</p>
+        <div class="diet-actions">
+          <a class="btn btn-primary" href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20ask%20about%20the%20diet%20package%20only." target="_blank" rel="noopener">Ask About Diet Support</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:40px;">
+      <p style="color:var(--muted); font-size:14px;">Looking for all inclusions, FAQs and detailed terms? <a href="/pricing/" style="color:var(--red); font-weight:600;">Visit the full Pricing &amp; Packages page</a>.</p>
     </div>
   </div>
 </section>
