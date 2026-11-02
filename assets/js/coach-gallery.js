@@ -1,11 +1,11 @@
 /**
  * Coach Sandhya Arora - Photo Gallery & Visual Slider Component
- * Supports auto-scrolling marquee gallery, pause/play toggle, touch-drag, and full lightbox.
+ * Auto-scrolling gallery with YouTube-style edge fades, active scroll fallback, and full lightbox.
  */
 (function () {
   'use strict';
 
-  function initCoachSliders() {
+  function initCoachGallery() {
     // ── 1. HERO SLIDER IN .about-visual ────────────────────────────────
     const sliderContainers = document.querySelectorAll('.coach-slider-container');
     sliderContainers.forEach(container => {
@@ -91,8 +91,6 @@
 
       container.addEventListener('mouseenter', stopTimer);
       container.addEventListener('mouseleave', startTimer);
-      container.addEventListener('focusin', stopTimer);
-      container.addEventListener('focusout', startTimer);
 
       // Touch swipe support for hero slider
       let startX = 0;
@@ -113,37 +111,41 @@
       startTimer();
     });
 
-    // ── 2. AUTO-SCROLL MARQUEE GALLERY ────────────────────────────────
-    const galleryWindows = document.querySelectorAll('.coach-gallery-window');
+    // ── 2. MARQUEE SCROLL ENGINE (CSS WITH JS FALLBACK) ───────────────
+    const marquees = document.querySelectorAll('.coach-marquee');
+    marquees.forEach(marquee => {
+      // Check if CSS animation is actively moving after 500ms
+      setTimeout(() => {
+        const t1 = window.getComputedStyle(marquee).transform;
+        setTimeout(() => {
+          const t2 = window.getComputedStyle(marquee).transform;
+          // If CSS animation is not actively running (e.g., prefers-reduced-motion in OS),
+          // drive it smoothly via requestAnimationFrame
+          if (t1 === t2 || t1 === 'none') {
+            marquee.style.animation = 'none';
+            let offset = 0;
+            let isPaused = false;
 
-    galleryWindows.forEach(win => {
-      const parent = win.closest('.coach-gallery-section') || win.parentElement;
-      const track = win.querySelector('.coach-gallery-track');
-      const pauseBtn = parent ? parent.querySelector('.coach-gallery-ctrl-btn') : null;
+            marquee.addEventListener('mouseenter', () => { isPaused = true; });
+            marquee.addEventListener('mouseleave', () => { isPaused = false; });
+            marquee.addEventListener('touchstart', () => { isPaused = true; }, { passive: true });
+            marquee.addEventListener('touchend', () => { isPaused = false; }, { passive: true });
 
-      if (!track) return;
-
-      if (pauseBtn) {
-        pauseBtn.addEventListener('click', () => {
-          const isPaused = track.classList.toggle('is-paused');
-          pauseBtn.setAttribute('aria-pressed', String(isPaused));
-
-          const icon = pauseBtn.querySelector('.ctrl-icon');
-          const label = pauseBtn.querySelector('.ctrl-label');
-
-          if (isPaused) {
-            if (icon) icon.textContent = '▶';
-            if (label) label.textContent = 'Play';
-            pauseBtn.setAttribute('title', 'Play auto scroll');
-            pauseBtn.setAttribute('aria-label', 'Play auto scroll');
-          } else {
-            if (icon) icon.textContent = '⏸';
-            if (label) label.textContent = 'Pause';
-            pauseBtn.setAttribute('title', 'Pause auto scroll');
-            pauseBtn.setAttribute('aria-label', 'Pause auto scroll');
+            function anim() {
+              const halfWidth = marquee.scrollWidth / 2;
+              if (!isPaused && halfWidth > 0) {
+                offset += 1.8;
+                if (offset >= halfWidth) {
+                  offset = 0;
+                }
+                marquee.style.transform = `translate3d(-${offset}px, 0, 0)`;
+              }
+              requestAnimationFrame(anim);
+            }
+            requestAnimationFrame(anim);
           }
-        });
-      }
+        }, 500);
+      }, 500);
     });
 
     // ── 3. LIGHTBOX COMPONENT ─────────────────────────────────────────
@@ -183,11 +185,8 @@
     const prevBtn = lightbox.querySelector('.coach-lightbox-prev');
     const nextBtn = lightbox.querySelector('.coach-lightbox-next');
 
-    // Collect gallery cards from the first non-clone group
-    const firstGroup = document.querySelector('.coach-gallery-track .coach-gallery-group:first-child');
-    if (!firstGroup) return;
-
-    const cards = Array.from(firstGroup.querySelectorAll('.coach-gallery-card'));
+    // Collect distinct cards
+    const cards = Array.from(document.querySelectorAll('.coach-photo-card[data-original="true"]'));
     let activeIndex = 0;
     let lastActiveTrigger = null;
 
@@ -198,16 +197,18 @@
       activeIndex = index;
       lastActiveTrigger = triggerEl;
 
-      const card = cards[activeIndex];
+      const card = cards[activeIndex] || cards[0];
+      if (!card) return;
+
       const img = card.querySelector('img');
-      const pill = card.querySelector('.coach-gallery-pill');
+      const badge = card.querySelector('.coach-photo-badge');
 
       if (imgEl && img) {
         imgEl.src = img.src;
         imgEl.alt = img.alt || 'Sandhya Arora Fitness Trainer';
       }
       if (titleEl) {
-        titleEl.textContent = pill ? pill.textContent : (img ? img.alt : '');
+        titleEl.textContent = badge ? badge.textContent : (img ? img.alt : '');
       }
       if (metaEl) {
         metaEl.textContent = `Photo ${activeIndex + 1} of ${cards.length} • Sandhya Arora Fitness`;
@@ -236,8 +237,7 @@
       openLightbox(activeIndex - 1, lastActiveTrigger);
     }
 
-    // Attach click listener to all cards (including cloned group)
-    document.querySelectorAll('.coach-gallery-card').forEach(card => {
+    document.querySelectorAll('.coach-photo-card').forEach(card => {
       card.addEventListener('click', () => {
         const idx = parseInt(card.getAttribute('data-gallery-index'), 10) || 0;
         openLightbox(idx, card);
@@ -270,8 +270,8 @@
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initCoachSliders);
+    document.addEventListener('DOMContentLoaded', initCoachGallery);
   } else {
-    initCoachSliders();
+    initCoachGallery();
   }
 })();
