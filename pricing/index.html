@@ -200,6 +200,23 @@
   @media (max-width: 900px) { nav { padding: 0 24px; } .nav-toggle { display: block; } .nav-links { position: absolute; top: 68px; left: 0; right: 0; display: flex; flex-direction: column; align-items: stretch; gap: 0; max-height: calc(100vh - 68px); overflow-y: auto; background: var(--dark2); opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(-8px); transition: opacity .2s, transform .2s; } .nav-links.open { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0); } .nav-links > li > a, .dropdown-toggle { display: flex; width: 100%; padding: 16px 24px; border-bottom: 1px solid rgba(255,255,255,.06); } .dropdown-toggle { justify-content: space-between; } .dropdown-menu { position: static; display: none; width: 100%; transform: none; opacity: 1; visibility: visible; pointer-events: auto; border: 0; border-radius: 0; } .has-dropdown.open .dropdown-menu { display: block; } .dropdown-menu a { padding-left: 40px; } .hero-layout, .diet-layout, .included-layout { grid-template-columns: 1fr; gap: 34px; } .section-container { padding: 0 28px; } .steps-grid { grid-template-columns: 1fr; } section { padding: 70px 0; } }
   @media (max-width: 600px) { h1 { font-size: 40px; } .page-hero { padding: 116px 0 64px; } .hero-actions { flex-direction: column; } .hero-actions .btn { width: 100%; } .pricing-grid { grid-template-columns: 1fr; } .included-list, .faq-grid { grid-template-columns: 1fr; } .audience-grid { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr; } footer { padding: 44px 28px; } .footer-bottom { flex-direction: column; align-items: flex-start; } .whatsapp { right: 18px; bottom: 18px; width: 52px; height: 52px; } }
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1721719362646005');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1721719362646005&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 <nav aria-label="Primary navigation">
