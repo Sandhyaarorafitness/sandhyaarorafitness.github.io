@@ -7,8 +7,20 @@
 
   const PODCASTS_DATA = [
     {
+      id: 'Me67V9sGaN8',
+      title: '9 to 5 Fitness & Diet Plan: Fix Cervical Pain & Belly Fat | Fitness Coach Sandhya Arora',
+    },
+    {
       id: 'sos77xg6DOE',
       title: 'Do Detox Drinks Actually Work? Truth About Fat Burners & Diet Pills | Spot Reduction Reality',
+    },
+    {
+      id: 'mo8AUAUGCls',
+      title: 'Why Your Belly Fat Isn\'t Going Away (The Harsh Reality)',
+    },
+    {
+      id: 'ZT0imhYvZ50',
+      title: 'How to Transform Your Body? Fitness, Weight Loss & Body Transformation | Sandhya Arora',
     },
     {
       id: 'uRnEExysMfk',
@@ -110,7 +122,7 @@
           display: flex;
           gap: 30px;
           width: max-content;
-          animation: scroll-podcasts 40s linear infinite;
+          animation: scroll-podcasts 55s linear infinite;
           padding: 10px 0 30px;
         }
         .podcast-marquee:hover {

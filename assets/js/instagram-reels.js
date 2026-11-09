@@ -264,7 +264,7 @@
       url: 'https://youtube.com/shorts/Vm-TFA7rOek?si=8UxHuBo4yK95nXxN',
       image: 'assets/images/trainer-Vm-TFA7rOek.jpg',
       alt: 'Watch Sandhya Arora trainer Short on YouTube',
-      categories: ['trainer'],
+      categories: ['trainer', 'youtube'],
       pills: ['Trainer', 'Short']
     },
     {
@@ -273,7 +273,7 @@
       url: 'https://youtube.com/shorts/Ax5acMFQBJg?si=Ot19irapErVm9yYP',
       image: 'assets/images/trainer-Ax5acMFQBJg.jpg',
       alt: 'Watch Sandhya Arora trainer Short on YouTube',
-      categories: ['trainer'],
+      categories: ['trainer', 'youtube'],
       pills: ['Trainer', 'Short']
     },
 
@@ -331,12 +331,39 @@
     // ── PODCASTS ──────────────────────────────────────────────────────
     {
       type: 'preview',
+      id: 'Me67V9sGaN8',
+      url: 'https://youtu.be/Me67V9sGaN8',
+      image: 'https://img.youtube.com/vi/Me67V9sGaN8/hqdefault.jpg',
+      alt: 'Watch Sandhya Arora Podcast - 9 to 5 Fitness & Diet Plan',
+      categories: ['podcasts', 'youtube'],
+      pills: ['Podcast', 'Diet Plan']
+    },
+    {
+      type: 'preview',
       id: 'sos77xg6DOE',
       url: 'https://youtu.be/sos77xg6DOE',
       image: 'https://img.youtube.com/vi/sos77xg6DOE/hqdefault.jpg',
       alt: 'Watch Sandhya Arora Podcast - Detox Drinks & Fat Burners Truth',
-      categories: ['podcasts'],
+      categories: ['podcasts', 'youtube'],
       pills: ['Podcast', 'Fat Burners']
+    },
+    {
+      type: 'preview',
+      id: 'mo8AUAUGCls',
+      url: 'https://youtu.be/mo8AUAUGCls',
+      image: 'https://img.youtube.com/vi/mo8AUAUGCls/hqdefault.jpg',
+      alt: 'Watch Sandhya Arora Podcast - Why Your Belly Fat Isn\'t Going Away',
+      categories: ['podcasts', 'youtube'],
+      pills: ['Podcast', 'Belly Fat']
+    },
+    {
+      type: 'preview',
+      id: 'ZT0imhYvZ50',
+      url: 'https://youtu.be/ZT0imhYvZ50',
+      image: 'https://img.youtube.com/vi/ZT0imhYvZ50/hqdefault.jpg',
+      alt: 'Watch Sandhya Arora Podcast - Body Transformation',
+      categories: ['podcasts', 'youtube'],
+      pills: ['Podcast', 'Transformation']
     },
     {
       type: 'preview',
@@ -344,7 +371,7 @@
       url: 'https://youtu.be/uRnEExysMfk',
       image: 'https://img.youtube.com/vi/uRnEExysMfk/hqdefault.jpg',
       alt: 'Watch Sandhya Arora Podcast',
-      categories: ['podcasts'],
+      categories: ['podcasts', 'youtube'],
       pills: ['Podcast', 'Interview']
     },
     {
@@ -353,7 +380,7 @@
       url: 'https://youtu.be/rk89VpGFi-8',
       image: 'https://img.youtube.com/vi/rk89VpGFi-8/hqdefault.jpg',
       alt: 'Watch Sandhya Arora Podcast',
-      categories: ['podcasts'],
+      categories: ['podcasts', 'youtube'],
       pills: ['Podcast', 'Cardio']
     },
     {
@@ -362,7 +389,7 @@
       url: 'https://youtu.be/4u45AvshKzc',
       image: 'https://img.youtube.com/vi/4u45AvshKzc/hqdefault.jpg',
       alt: 'Watch Sandhya Arora Podcast',
-      categories: ['podcasts'],
+      categories: ['podcasts', 'youtube'],
       pills: ['Podcast', 'Supplements']
     },
     {
@@ -371,7 +398,7 @@
       url: 'https://youtu.be/sSUVB1vAMtc',
       image: 'https://img.youtube.com/vi/sSUVB1vAMtc/hqdefault.jpg',
       alt: 'Watch Sandhya Arora Podcast',
-      categories: ['podcasts'],
+      categories: ['podcasts', 'youtube'],
       pills: ['Podcast', 'Weight Loss']
     },
     {
@@ -380,7 +407,7 @@
       url: 'https://youtu.be/xZrsDhNHck0',
       image: 'https://img.youtube.com/vi/xZrsDhNHck0/hqdefault.jpg',
       alt: 'Watch Sandhya Arora Podcast',
-      categories: ['podcasts'],
+      categories: ['podcasts', 'youtube'],
       pills: ['Podcast', 'Fat Loss']
     },
     {
@@ -389,7 +416,7 @@
       url: 'https://youtu.be/eDiH_oHCT1A',
       image: 'https://img.youtube.com/vi/eDiH_oHCT1A/hqdefault.jpg',
       alt: 'Watch Sandhya Arora Podcast',
-      categories: ['podcasts'],
+      categories: ['podcasts', 'youtube'],
       pills: ['Podcast', 'Protein']
     },
     {
@@ -398,7 +425,7 @@
       url: 'https://youtu.be/Dm4uYBz7eVg',
       image: 'https://img.youtube.com/vi/Dm4uYBz7eVg/hqdefault.jpg',
       alt: 'Watch Sandhya Arora Podcast',
-      categories: ['podcasts'],
+      categories: ['podcasts', 'youtube'],
       pills: ['Podcast', 'Therapy']
     }
   ];
@@ -479,7 +506,10 @@
 
     cards.forEach((card) => {
       const cats = (card.dataset.category || '').split(/\s+/);
-      const match = category === 'all' || cats.includes(category);
+      const match = category === 'all' || 
+                    cats.includes(category) || 
+                    (category === 'youtube' && (cats.includes('podcasts') || cats.includes('youtube'))) ||
+                    (category === 'podcasts' && (cats.includes('podcasts') || cats.includes('youtube')));
       card.classList.toggle('hidden', !match);
     });
 
