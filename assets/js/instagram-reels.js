@@ -27,6 +27,55 @@
     // ── LATEST REELS (Surfaced first) ─────────────────────────────────
     {
       type: 'instagram',
+      id: 'Dfb13sBzxGY',
+      url: 'https://www.instagram.com/reel/Dfb13sBzxGY/?utm_source=ig_web_copy_link&vrfl=NTc4MTIwNjQ2YQ==',
+      categories: ['online', 'offline'],
+      pills: ['Personal', 'Online']
+    },
+    {
+      type: 'instagram',
+      id: 'Dfb5sE9zDw7',
+      url: 'https://www.instagram.com/reel/Dfb5sE9zDw7/?utm_source=ig_web_copy_link&exln=NTc4MTIwNjQ2YQ==',
+      categories: ['online', 'offline'],
+      pills: ['Personal', 'Online']
+    },
+    {
+      type: 'instagram',
+      id: 'Dfbsa8xzyio',
+      url: 'https://www.instagram.com/reel/Dfbsa8xzyio/?utm_source=ig_web_copy_link&rpxt=NTc4MTIwNjQ2YQ==',
+      categories: ['online', 'offline'],
+      pills: ['Personal', 'Online']
+    },
+    {
+      type: 'instagram',
+      id: 'DfhVd0Vh4FP',
+      url: 'https://www.instagram.com/reel/DfhVd0Vh4FP/?utm_source=ig_web_copy_link&psln=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==',
+      categories: ['online', 'offline'],
+      pills: ['Personal', 'Online']
+    },
+    {
+      type: 'instagram',
+      id: 'DfgSSI7KcL_',
+      url: 'https://www.instagram.com/reel/DfgSSI7KcL_/?utm_source=ig_web_copy_link&vrfl=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==',
+      categories: ['podcasts'],
+      pills: ['Podcast', 'Latest']
+    },
+    {
+      type: 'instagram',
+      id: 'DfewsLWhPqH',
+      url: 'https://www.instagram.com/reel/DfewsLWhPqH/?utm_source=ig_web_copy_link&cplk=NTc4MTIwNjQ2YQ==',
+      categories: ['podcasts'],
+      pills: ['Podcast', 'Latest']
+    },
+    {
+      type: 'instagram',
+      id: 'DfXXRftTwM8',
+      url: 'https://www.instagram.com/reel/DfXXRftTwM8/?utm_source=ig_web_copy_link&dlrf=NTc4MTIwNjQ2YQ==',
+      categories: ['podcasts'],
+      pills: ['Podcast', 'Latest']
+    },
+    {
+      type: 'instagram',
       id: 'DehUbuDJb9E',
       url: 'https://www.instagram.com/reel/DehUbuDJb9E/?utm_source=ig_web_copy_link&exln=NTc4MTIwNjQ2YQ==',
       categories: ['trainer', 'podcasts'],
@@ -327,7 +376,7 @@
       categories: ['nutrition'],
       pills: ['Education', 'Workout']
     },
-    
+
     // ── PODCASTS ──────────────────────────────────────────────────────
     {
       type: 'preview',
@@ -433,8 +482,10 @@
   function resolveImagePath(path) {
     if (/^https?:\/\//i.test(path)) return path;
     if (window.location.protocol === 'file:') {
-      const isSub = window.location.pathname.replace(/\\/g, '/').includes('/services/');
-      return (isSub ? '../../' : '') + path;
+      const p = window.location.pathname.replace(/\\/g, '/');
+      if (p.includes('/services/')) return '../../' + path;
+      if (p.includes('/online-personal-fitness-trainer/')) return '../' + path;
+      return path;
     }
     return '/' + path.replace(/^\/+/, '');
   }
@@ -442,7 +493,7 @@
   function renderCard(item) {
     const cats = (item.categories || []).join(' ');
     const pillsHtml = (item.pills || []).map(p => `<span class="reel-pill">${p}</span>`).join('');
-    
+
     if (item.type === 'preview') {
       const imgSrc = resolveImagePath(item.image);
       return `<div class="ig-card reel-card" data-category="${cats}">` +
@@ -506,10 +557,10 @@
 
     cards.forEach((card) => {
       const cats = (card.dataset.category || '').split(/\s+/);
-      const match = category === 'all' || 
-                    cats.includes(category) || 
-                    (category === 'youtube' && (cats.includes('podcasts') || cats.includes('youtube'))) ||
-                    (category === 'podcasts' && (cats.includes('podcasts') || cats.includes('youtube')));
+      const match = category === 'all' ||
+        cats.includes(category) ||
+        (category === 'youtube' && (cats.includes('podcasts') || cats.includes('youtube'))) ||
+        (category === 'podcasts' && (cats.includes('podcasts') || cats.includes('youtube')));
       card.classList.toggle('hidden', !match);
     });
 
