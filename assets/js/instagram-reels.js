@@ -27,6 +27,13 @@
     // ── LATEST REELS (Surfaced first) ─────────────────────────────────
     {
       type: 'instagram',
+      id: 'DfrcX7qyVuk',
+      url: 'https://www.instagram.com/reel/DfrcX7qyVuk/?utm_source=ig_web_copy_link&obrf=NTc4MTIwNjQ2YQ==',
+      categories: ['podcasts'],
+      pills: ['Podcast', 'Interview']
+    },
+    {
+      type: 'instagram',
       id: 'Dfb13sBzxGY',
       url: 'https://www.instagram.com/reel/Dfb13sBzxGY/?utm_source=ig_web_copy_link&vrfl=NTc4MTIwNjQ2YQ==',
       categories: ['online', 'offline'],
