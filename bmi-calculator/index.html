@@ -288,7 +288,8 @@
     }
 
     /* ─── NAVIGATION (Same as Website Template) ───────── */
-    nav {
+    nav,
+    body > nav {
       position: fixed;
       top: 0;
       left: 0;
@@ -844,6 +845,33 @@
       gap: 12px;
     }
 
+    
+    .btn-primary {
+      background: linear-gradient(135deg, #FF5376 0%, #E94560 100%);
+      color: var(--white);
+      border: none;
+      padding: 14px 30px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-align: center;
+      box-shadow: 0 8px 24px -4px rgba(233, 69, 96, 0.45);
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #FF6B86 0%, #E94560 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px -4px rgba(233, 69, 96, 0.6);
+      color: var(--white);
+    }
+
     .btn-calc {
       width: 100%;
       display: flex;
@@ -1390,17 +1418,95 @@
       transform: translateX(4px);
     }
 
-    /* ─── ABOUT THE TUTOR / COACH SECTION ─────────────── */
-    .about-coach-section {
+    /* ─── ABOUT / MEET YOUR COACH SECTION ──────────────── */
+    .about {
       padding: 90px 0;
       background: var(--white);
+    }
+
+    .section-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .section-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 700;
+      color: var(--dark2);
+      line-height: 1.15;
+      margin-bottom: 16px;
+      letter-spacing: -0.8px;
     }
 
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 70px;
+      gap: 80px;
       align-items: center;
+    }
+
+    .about-visual {
+      width: 100%;
+      aspect-ratio: 3/4;
+      min-height: 480px;
+      background: var(--dark2);
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(233, 69, 96, 0.15);
+      box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.45);
+    }
+
+    .about-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .about-cert-strip {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(14, 14, 26, 0.9);
+      padding: 18px 24px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+      border-top: 1px solid rgba(233, 69, 96, 0.2);
+      z-index: 5;
+    }
+
+    .cert-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cert-label {
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.4);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .cert-val {
+      font-size: 13px;
+      color: var(--white);
+      font-weight: 600;
+      margin-top: 2px;
     }
 
     .about-quote {
@@ -1409,8 +1515,8 @@
       font-style: italic;
       color: var(--dark2);
       line-height: 1.5;
-      margin-bottom: 24px;
-      padding-left: 20px;
+      margin-bottom: 28px;
+      padding-left: 24px;
       border-left: 3px solid var(--red);
     }
 
@@ -1424,12 +1530,12 @@
     .about-stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin: 32px 0;
+      gap: 20px;
+      margin: 36px 0;
     }
 
     .astat {
-      padding: 18px;
+      padding: 20px;
       background: var(--cream);
       border-radius: 10px;
       text-align: center;
@@ -1437,7 +1543,7 @@
     }
 
     .astat-num {
-      font-size: 28px;
+      font-size: 30px;
       font-weight: 700;
       color: var(--red);
       font-family: var(--font-display);
@@ -1831,7 +1937,7 @@
       background: rgba(255, 255, 255, 0.08);
     }
 
-    /* ─── FOOTER (Matches Website Template) ───────────── */
+        /* ─── FOOTER (Matches Website Template) ───────────── */
     footer {
       background: var(--dark);
       padding: 60px 40px 30px;
@@ -1842,7 +1948,7 @@
     .footer-grid {
       display: grid;
       grid-template-columns: 2fr 1fr 1fr 1.5fr;
-      gap: 40px;
+      gap: 48px;
       max-width: 1200px;
       margin: 0 auto;
     }
@@ -1853,43 +1959,44 @@
     }
 
     .footer-tagline {
-      max-width: 290px;
-      font-size: 13.5px;
+      max-width: 280px;
+      font-size: 14px;
       line-height: 1.6;
-      color: rgba(255, 255, 255, 0.5);
+      color: rgba(255, 255, 255, 0.35);
     }
 
     .footer-social {
       display: flex;
-      gap: 10px;
-      margin-top: 18px;
+      gap: 12px;
+      margin-top: 20px;
     }
 
     .soc-btn {
       width: 36px;
       height: 36px;
-      border-radius: 50%;
+      border-radius: 8px;
       background: rgba(255, 255, 255, 0.08);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--white);
+      color: rgba(255, 255, 255, 0.5);
       text-decoration: none;
-      font-size: 12px;
-      font-weight: 700;
-      transition: background 0.2s;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background 0.2s, color 0.2s;
     }
 
     .soc-btn:hover {
       background: var(--red);
+      color: var(--white);
     }
 
     .footer-col h4 {
       color: var(--white);
-      font-size: 14px;
-      font-weight: 700;
-      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 600;
       letter-spacing: 1px;
+      text-transform: uppercase;
       margin-bottom: 16px;
     }
 
@@ -1902,9 +2009,9 @@
     }
 
     .footer-col a {
-      color: rgba(255, 255, 255, 0.6);
+      color: rgba(255, 255, 255, 0.45);
       text-decoration: none;
-      font-size: 13.5px;
+      font-size: 14px;
       transition: color 0.2s;
     }
 
@@ -1913,44 +2020,121 @@
     }
 
     .footer-bottom {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
       max-width: 1200px;
       margin: 48px auto 0;
-      padding-top: 24px;
+      padding-top: 28px;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
-      font-size: 12.5px;
-      color: rgba(255, 255, 255, 0.4);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.25);
       flex-wrap: wrap;
+      gap: 8px;
     }
 
-    /* Floating WhatsApp Button */
+    /* ─── FLOATING WHATSAPP & ENQUIRY ACTIONS ─────────── */
     .whatsapp-float {
       position: fixed;
-      right: 24px;
       bottom: 24px;
-      z-index: 100;
-      width: 56px;
-      height: 56px;
-      background: #25D366;
+      right: 24px;
+      z-index: 300;
+      width: 58px;
+      height: 58px;
       border-radius: 50%;
+      background: #25D366;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
-      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      text-decoration: none;
+      transition: transform 0.2s;
     }
 
     .whatsapp-float:hover {
       transform: scale(1.08);
-      box-shadow: 0 14px 28px rgba(37, 211, 102, 0.45);
     }
 
     .whatsapp-float svg {
       width: 30px;
       height: 30px;
       fill: #FFFFFF;
+    }
+
+    .home-floating-actions {
+      position: fixed;
+      right: max(24px, env(safe-area-inset-right));
+      bottom: max(24px, env(safe-area-inset-bottom));
+      z-index: 9998;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+      width: min(280px, calc(100vw - 32px));
+    }
+
+    .home-floating-enquiry,
+    #saf-lead-popup {
+      display: contents;
+    }
+
+    .home-floating-actions .whatsapp-float {
+      position: static;
+      z-index: auto;
+      align-self: flex-end;
+      flex-shrink: 0;
+    }
+
+    .home-floating-actions .saf-floating-btn {
+      position: static;
+      box-sizing: border-box;
+      width: 100%;
+      justify-content: center;
+      padding: 18px 20px;
+      font-size: 16px;
+      font-weight: 700;
+      animation: enquiry-bob 1.8s ease-in-out infinite;
+    }
+
+    .home-floating-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      box-sizing: border-box;
+      padding: 12px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      background: rgba(14, 14, 26, 0.96);
+      color: var(--white);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.3;
+      text-align: center;
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .home-floating-link:hover {
+      background: var(--dark2);
+      border-color: var(--red-light);
+    }
+
+    @keyframes enquiry-bob {
+      0%,
+      100% {
+        translate: 0 0;
+      }
+      50% {
+        translate: 0 -6px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .home-floating-actions .saf-floating-btn {
+        animation: none;
+      }
     }
 
     /* ─── RESPONSIVE BREAKPOINTS ──────────────────────── */
@@ -2023,50 +2207,54 @@
 </head>
 
 <body>
-  <!-- ── SITE NAVIGATION HEADER ────────────────────────── -->
-  <header>
-    <nav aria-label="Main Navigation">
-      <a href="/" class="nav-logo">
-        <img src="https://i.ibb.co/vvPXz7xR/Sandhya-Arora-Fitness-logo.jpg" alt="Sandhya Arora Fitness Logo">
-      </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false"
-        aria-controls="navLinks">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="/#about">About</a></li>
-        <li class="has-dropdown">
-          <button class="dropdown-toggle" id="servicesDropdownToggle" aria-expanded="false"
-            aria-controls="servicesDropdownMenu">
-            <span>Services</span>
-            <span class="dropdown-caret" aria-hidden="true"></span>
-          </button>
-          <ul class="dropdown-menu" id="servicesDropdownMenu">
-            <li><a href="/services/personal-fitness-trainer/">1-on-1 Personal Training<small>In-person or online coaching</small></a></li>
-            <li><a href="/services/online-fitness-coach/">Online Coaching Programs<small>Live 1-on-1 training from anywhere</small></a></li>
-            <li><a href="/services/group-fitness-classes/">Group Fitness Classes<small>HIIT, strength &amp; functional training</small></a></li>
-            <li><a href="/services/nutrition-coaching/">Nutrition Coaching<small>Tailored to Indian food &amp; lifestyle</small></a></li>
-          </ul>
-        </li>
-        <li><a href="/pricing/">Pricing</a></li>
-        <li><a href="/locations/">Locations</a></li>
-        <li><a href="/bmi-calculator/" aria-current="page">BMI Calculator</a></li>
-        <li><a href="/#testimonials">Results</a></li>
-        <li><a href="/blogs/">Blogs</a></li>
-        <li><a
-            href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20book%20a%20free%20consultation%20call."
-            class="nav-cta" target="_blank" rel="noopener">Book Free Call</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- ── SITE NAVIGATION (Exact Global Header) ────────── -->
+  <nav aria-label="Main Navigation">
+    <a href="/" class="nav-logo">
+      <img src="https://i.ibb.co/vvPXz7xR/Sandhya-Arora-Fitness-logo.jpg" alt="Sandhya Arora Fitness Logo">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false"
+      aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/#about">About</a></li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" id="servicesDropdownToggle" aria-expanded="false"
+          aria-controls="servicesDropdownMenu">
+          <a href="/#services" style="pointer-events:none;">Services</a>
+          <span class="dropdown-caret" aria-hidden="true"></span>
+        </button>
+        <ul class="dropdown-menu" id="servicesDropdownMenu">
+          <li><a href="/services/personal-fitness-trainer/">1-on-1 Personal Training<small>Fully customised in-person or
+                online coaching</small></a></li>
+          <li><a href="/services/online-fitness-coach/">Online Coaching Programs<small>Live 1-on-1 training from
+                anywhere</small></a></li>
+          <li><a href="/services/group-fitness-classes/">Group Fitness Classes<small>HIIT, strength & functional
+                training</small></a></li>
+          <li><a href="/services/nutrition-coaching/">Nutrition Coaching<small>Sustainable guidance for Indian food &
+                lifestyle</small></a></li>
+        </ul>
+      </li>
+      <li><a href="/#watch">Watch</a></li>
+      <li><a href="/#instagram">Reels</a></li>
+      <li><a href="/pricing/">Pricing</a></li>
+      <li><a href="/locations/">Locations</a></li>
+      <li><a href="/bmi-calculator/" style="color:var(--red-light); font-weight:600;" aria-current="page">BMI Calculator</a></li>
+      <li><a href="/#testimonials">Results</a></li>
+      <li><a href="/blogs/">Blogs</a></li>
+      <li><a
+          href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20book%20a%20free%20consultation%20call."
+          class="nav-cta" target="_blank" rel="noopener">Book Free Call</a></li>
+    </ul>
+  </nav>
 
   <main>
     <!-- ── HERO SECTION: HERO BANNER & INTERACTIVE CALCULATOR ── -->
     <section class="hero-bmi" id="calculator" aria-labelledby="bmi-title">
       <div class="wrap">
-        <nav class="breadcrumb" aria-label="Breadcrumb">
+        <p class="breadcrumb" aria-label="Breadcrumb">
           <a href="/">Home</a> / <span>BMI Calculator</span>
-        </nav>
+        </p>
 
         <div class="hero-grid-main">
           <!-- Left Column: Copy, Trust Badges & Attached Visual -->
@@ -2488,16 +2676,14 @@
       </div>
     </section>
 
-    <!-- ── SECTION 6: ABOUT THE TUTOR / COACH ── -->
-    <section class="about-coach-section" id="about" aria-labelledby="heading-coach">
-      <div class="wrap">
+        <!-- ── MEET YOUR COACH & MENTOR (Exact Component from Homepage) ── -->
+    <section class="about" id="about">
+      <div class="section-container">
         <div class="about-grid">
-          <!-- Visual Gallery Slider Component -->
           <div class="about-visual" id="aboutCoachVisual">
             <div class="coach-slider-container">
-              <img class="coach-slide active"
-                src="/assets/images/sandhya-arora-fitness-trainer-meet-your-coach-bg.jpg"
-                alt="Sandhya Arora - Certified Personal Fitness Trainer &amp; Coach" width="600" height="800"
+              <img class="coach-slide active" src="/assets/images/sandhya-arora-fitness-trainer-meet-your-coach-bg.jpg"
+                alt="Sandhya Arora - Certified Personal Fitness Trainer & Coach" width="600" height="800"
                 loading="eager" decoding="async">
               <img class="coach-slide"
                 src="/assets/images/coach-gallery/sandhya-arora-certified-personal-fitness-trainer.jpg"
@@ -2505,39 +2691,51 @@
                 loading="lazy" decoding="async">
               <img class="coach-slide"
                 src="/assets/images/coach-gallery/sandhya-arora-online-personal-trainer-india.jpg"
-                alt="Sandhya Arora - Best Online Personal Trainer in India for Women &amp; Men" width="800" height="1200"
+                alt="Sandhya Arora - Best Online Personal Trainer in India for Women & Men" width="800" height="1200"
                 loading="lazy" decoding="async">
+              <img class="coach-slide" src="/assets/images/coach-gallery/female-fitness-trainer-sandhya-arora.jpg"
+                alt="Female Fitness Trainer Sandhya Arora - Expert Coaching & Transformation" width="800" height="1198"
+                loading="lazy" decoding="async">
+              <img class="coach-slide" src="/assets/images/coach-gallery/online-fitness-coach-sandhya-arora-delhi.jpg"
+                alt="Online Fitness Coach Sandhya Arora - Customized Workout & Nutrition Plans" width="800"
+                height="1200" loading="lazy" decoding="async">
               <img class="coach-slide"
-                src="/assets/images/coach-gallery/female-fitness-trainer-sandhya-arora.jpg"
-                alt="Female Fitness Trainer Sandhya Arora - Expert Coaching &amp; Transformation" width="800" height="1198"
-                loading="lazy" decoding="async">
+                src="/assets/images/coach-gallery/sandhya-arora-strength-conditioning-trainer.jpg"
+                alt="Strength & Conditioning Personal Trainer Sandhya Arora" width="800" height="1200" loading="lazy"
+                decoding="async">
 
-              <button class="coach-slide-btn coach-slide-prev" type="button" aria-label="Previous coach photo">&#10094;</button>
-              <button class="coach-slide-btn coach-slide-next" type="button" aria-label="Next coach photo">&#10095;</button>
+              <button class="coach-slide-btn coach-slide-prev" type="button"
+                aria-label="Previous coach photo">&#10094;</button>
+              <button class="coach-slide-btn coach-slide-next" type="button"
+                aria-label="Next coach photo">&#10095;</button>
 
               <div class="coach-slide-dots" aria-label="Coach slide navigation">
-                <button class="coach-dot active" type="button" aria-label="Slide 1" data-slide="0" aria-current="true"></button>
+                <button class="coach-dot active" type="button" aria-label="Slide 1" data-slide="0"
+                  aria-current="true"></button>
                 <button class="coach-dot" type="button" aria-label="Slide 2" data-slide="1"></button>
                 <button class="coach-dot" type="button" aria-label="Slide 3" data-slide="2"></button>
                 <button class="coach-dot" type="button" aria-label="Slide 4" data-slide="3"></button>
+                <button class="coach-dot" type="button" aria-label="Slide 5" data-slide="4"></button>
+                <button class="coach-dot" type="button" aria-label="Slide 6" data-slide="5"></button>
+              </div>
+            </div>
+            <div class="about-cert-strip">
+              <div class="cert-item"><span class="cert-label">Certified</span><span class="cert-val">Coach</span></div>
+              <div class="cert-item"><span class="cert-label">Nutrition</span><span class="cert-val">Specialist</span>
+              </div>
+              <div class="cert-item"><span class="cert-label">Women's</span><span class="cert-val">Fitness Expert</span>
               </div>
             </div>
           </div>
-
-          <!-- Coach Biography & Stats -->
           <div class="about-content">
             <p class="section-eyebrow">Meet Your Coach &amp; Mentor</p>
-            <h2 class="section-title" id="heading-coach">Sandhya Arora</h2>
-            <div class="about-quote">
-              "I don't train you to be perfect — I train you to be consistent."
-            </div>
-            <p class="about-body">
-              Sandhya Arora is a certified personal fitness trainer and nutrition specialist with over <strong>10+ years of dedicated coaching experience</strong>. She has personally helped more than 500+ clients across Delhi NCR, pan-India, and internationally lose stubborn fat, reverse lifestyle health flags, build lean strength, and develop confidence in their bodies.
-            </p>
-            <p class="about-body">
-              Her evidence-based coaching integrates customized functional movement, corrective form guidance, progressive overload, and practical nutrition designed around real Indian family meals. Whether training online via live 1-on-1 video or in person at Mayur Vihar Phase I, Delhi, sessions are calibrated to meet you exactly where you are today.
-            </p>
-
+            <h2 class="section-title" style="margin-bottom:24px;">Hi, I'm Sandhya Arora.</h2>
+            <p class="about-quote">"I don't train you to be perfect — I train you to be consistent."</p>
+            <p class="about-body">With over 10 years of certified fitness coaching experience, I've helped hundreds of
+              people across India and around the world transform their bodies, rebuild their confidence, and find a
+              sustainable relationship with fitness.</p>
+            <p class="about-body">I blend science-backed training with personalised nutrition guidance, mindset
+              coaching, and genuine accountability — because results aren't built in the gym alone. Whether training online via live 1-on-1 video or in person at Mayur Vihar Phase I, Delhi, sessions are calibrated to meet you exactly where you are today.</p>
             <div class="about-stats">
               <div class="astat">
                 <div class="astat-num">500+</div>
@@ -2548,25 +2746,16 @@
                 <div class="astat-label">Years Experience</div>
               </div>
               <div class="astat">
-                <div class="astat-num">4.9★</div>
-                <div class="astat-label">Client Rating</div>
+                <div class="astat-num">3</div>
+                <div class="astat-label">Certifications</div>
               </div>
             </div>
-
-            <div style="display:flex; gap:14px; flex-wrap:wrap;">
-              <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20consult%20with%20you%20regarding%20my%20fitness%20and%20BMI%20goals."
-                class="btn-calc" style="display:inline-flex; width:auto; text-decoration:none;" target="_blank" rel="noopener">
-                Book a Free Discovery Call
-              </a>
-              <a href="/pricing/" class="btn-calc" style="display:inline-flex; width:auto; background:transparent; color:var(--dark2); border:1.5px solid var(--border); box-shadow:none; text-decoration:none;">
-                View Monthly Packages
-              </a>
-            </div>
+            <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20book%20a%20free%20consultation%20call."
+              class="btn-primary" style="margin-top:8px;" target="_blank" rel="noopener">Book Your Free Consultation</a>
           </div>
         </div>
       </div>
     </section>
-    <script src="/assets/js/coach-gallery.js" defer></script>
 
     <!-- ── SECTION 7: BLOGS AUTO-SCROLL MARQUEE ── -->
     <section class="home-blog-section" id="latest-articles" aria-labelledby="heading-blogs">
@@ -2836,23 +3025,26 @@
     </section>
   </main>
 
-  <!-- ── SITE FOOTER ───────────────────────────────────── -->
+    <!-- ── SITE FOOTER (Exact Global Footer) ────────────── -->
   <footer>
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="/" class="nav-logo">
           <img src="https://i.ibb.co/vvPXz7xR/Sandhya-Arora-Fitness-logo.jpg" alt="Sandhya Arora Fitness Logo">
         </a>
-        <p class="footer-tagline">Certified personal fitness trainer and nutrition coach helping clients across India and around the world build strength, lose fat, and transform sustainably.</p>
-        <p style="margin-top:12px; font-size:12px; color:rgba(255,255,255,0.3);">Tagline: Transform. Strengthen. Thrive.</p>
+        <p class="footer-tagline">Certified personal trainer helping hundreds of people across India and around the
+          world transform their bodies and reclaim their lives.</p>
+        <p style="margin-top:16px; font-size:12px; color:rgba(255,255,255,0.25);">Tagline: Transform. Strengthen.
+          Thrive.</p>
         <div class="footer-social">
-          <a href="https://www.instagram.com/sandhya.arora.fitness?igsi=MTFsdGYyY2JuZjJpcQ==" class="soc-btn" aria-label="Instagram" target="_blank" rel="noopener">IG</a>
-          <a href="https://youtube.com/@sandhya.arora.fitness" class="soc-btn" aria-label="YouTube" target="_blank" rel="noopener">YT</a>
-          <a href="https://www.facebook.com/sandhyaarorafitness" class="soc-btn" aria-label="Facebook" target="_blank" rel="noopener">FB</a>
-          <a href="https://www.linkedin.com/company/sandhyaarorafitness" class="soc-btn" aria-label="LinkedIn" target="_blank" rel="noopener">IN</a>
+          <a href="https://www.instagram.com/sandhya.arora.fitness?igsi=MTFsdGYyY2JuZjJpcQ==" class="soc-btn"
+            aria-label="Instagram" target="_blank" rel="noopener">IG</a>
+          <a href="https://youtube.com/@sandhya.arora.fitness" class="soc-btn" aria-label="YouTube" target="_blank"
+            rel="noopener">YT</a>
+          <a href="#" class="soc-btn" aria-label="Facebook">FB</a>
+          <a href="#" class="soc-btn" aria-label="LinkedIn">IN</a>
         </div>
       </div>
-
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
@@ -2860,101 +3052,139 @@
           <li><a href="/services/group-fitness-classes/">Group Fitness Classes</a></li>
           <li><a href="/services/online-fitness-coach/">Online Coaching Programs</a></li>
           <li><a href="/services/nutrition-coaching/">Nutrition Coaching</a></li>
-          <li><a href="/bmi-calculator/" style="color:var(--red-light); font-weight:600;">Free BMI Calculator</a></li>
+          <li><a href="/bmi-calculator/">Free BMI Calculator</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
         <h4>Quick Links</h4>
         <ul>
           <li><a href="/#about">About Sandhya</a></li>
-          <li><a href="/bmi-calculator/" style="color:var(--red-light); font-weight:600;">BMI Calculator</a></li>
-          <li><a href="/pricing/">Pricing &amp; Packages</a></li>
+          <li><a href="/bmi-calculator/">BMI Calculator</a></li>
+          <li><a href="/blogs/">Blogs</a></li>
+          <li><a href="/#watch">Watch</a></li>
+          <li><a href="/#instagram">Reels</a></li>
+          <li><a href="/pricing/">Pricing</a></li>
           <li><a href="/locations/">Locations</a></li>
           <li><a href="/#testimonials">Client Results</a></li>
-          <li><a href="/blogs/">Fitness Blogs</a></li>
           <li><a href="/#faq">FAQs</a></li>
           <li><a href="/#contact">Contact</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
         <h4>Get In Touch</h4>
         <ul>
-          <li><a href="https://www.google.com/maps/search/?api=1&query=Sandhya+Arora+Fitness&query_place_id=ChIJp97KmuvlDDkRip2pxJI0_KE" target="_blank" rel="noopener">Akashdarshan Apartment, 191, Mayur Vihar Phase I, New Delhi 110091</a></li>
+          <li><a
+              href="https://www.google.com/maps/search/?api=1&query=Sandhya+Arora+Fitness&query_place_id=ChIJp97KmuvlDDkRip2pxJI0_KE"
+              target="_blank" rel="noopener noreferrer">Akashdarshan Apartment, 191, Mayur Vihar Phase I, New Delhi,
+              Delhi 110091</a></li>
           <li><a href="tel:+917982975764">Phone: +91 79829 75764</a></li>
-          <li><a href="https://wa.me/918882629003" target="_blank" rel="noopener">WhatsApp: +91 88826 29003</a></li>
+          <li><a href="https://wa.me/918882629003" target="_blank" rel="noopener noreferrer">WhatsApp: +91 88826
+              29003</a></li>
           <li><a href="mailto:contact@sandhyaarorafitness.com">contact@sandhyaarorafitness.com</a></li>
         </ul>
-        <div style="margin-top:16px; padding:14px; background:rgba(233,69,96,0.1); border:1px solid rgba(233,69,96,0.2); border-radius:8px;">
-          <p style="font-size:11px; color:var(--red-light); font-weight:700; margin-bottom:6px; letter-spacing:0.5px;">FREE CONSULTATION</p>
+        <div
+          style="margin-top:20px; padding:16px; background:rgba(233,69,96,0.1); border:1px solid rgba(233,69,96,0.2); border-radius:10px;">
+          <p style="font-size:12px; color:var(--red-light); font-weight:600; margin-bottom:8px;">FREE CONSULTATION</p>
           <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20book%20my%20free%2030-minute%20discovery%20call."
-            style="color:var(--white); font-size:13px; text-decoration:none; font-weight:500;" target="_blank" rel="noopener">
-            Book your free 30-min call →
-          </a>
+            style="color:var(--white); font-size:14px; text-decoration:none; font-weight:500;" target="_blank"
+            rel="noopener">Book your free 30-minute discovery call →</a>
         </div>
       </div>
     </div>
-
     <div class="footer-bottom">
       <span>© 2026 Sandhya Arora Fitness. All rights reserved.</span>
-      <span>
-        <a href="/privacy-policy/" style="color:inherit; text-decoration:none;">Privacy Policy</a> · 
-        <a href="/terms-and-conditions/" style="color:inherit; text-decoration:none;">Terms &amp; Conditions</a> · 
-        <a href="/bmi-calculator/" style="color:inherit; text-decoration:none;">Free BMI Calculator</a>
-      </span>
+      <span>Privacy Policy · Terms &amp; Conditions · Refund Policy</span>
     </div>
   </footer>
-
-  <!-- Floating WhatsApp CTA -->
+  <div class="home-floating-actions">
+    <div class="home-floating-enquiry" data-saf-lead-actions></div>
+    <a class="home-floating-link"
+      href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20book%20a%20free%20consultation."
+      target="_blank" rel="noopener">Book a Free Consultation</a>
+    <a class="home-floating-link"
+      href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20book%20a%20one-day%20paid%20trial."
+      target="_blank" rel="noopener">Book a One Day Paid Trial</a>
+  </div>
   <a href="https://wa.me/918882629003?text=Hi%20Sandhya%2C%20I%20would%20like%20to%20know%20more%20about%20your%20fitness%20programs."
-    class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat with Sandhya on WhatsApp">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-      <path d="M12.004 2.003c-5.514 0-9.997 4.483-9.997 9.997 0 1.763.464 3.482 1.345 4.997L2 22l5.117-1.341a9.96 9.96 0 0 0 4.887 1.245h.004c5.514 0 9.997-4.483 9.997-9.997 0-2.671-1.04-5.182-2.928-7.07a9.937 9.937 0 0 0-7.07-2.831zm0 18.166h-.003a8.163 8.163 0 0 1-4.16-1.14l-.298-.177-3.037.796.811-2.96-.194-.304a8.163 8.163 0 0 1-1.253-4.361c0-4.509 3.669-8.178 8.178-8.178 2.184 0 4.238.851 5.783 2.398a8.126 8.126 0 0 1 2.396 5.783c-.001 4.509-3.67 8.178-8.223 8.178z"/>
+    class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+      <path
+        d="M12.004 2.003c-5.514 0-9.997 4.483-9.997 9.997 0 1.763.464 3.482 1.345 4.997L2 22l5.117-1.341a9.96 9.96 0 0 0 4.887 1.245h.004c5.514 0 9.997-4.483 9.997-9.997 0-2.671-1.04-5.182-2.928-7.07a9.937 9.937 0 0 0-7.07-2.831zm0 18.166h-.003a8.163 8.163 0 0 1-4.16-1.14l-.298-.177-3.037.796.811-2.96-.194-.304a8.163 8.163 0 0 1-1.253-4.361c0-4.509 3.669-8.178 8.178-8.178 2.184 0 4.238.851 5.783 2.398a8.126 8.126 0 0 1 2.396 5.783c-.001 4.509-3.67 8.178-8.223 8.178z" />
     </svg>
   </a>
 
-  <!-- ── SCRIPTS ───────────────────────────────────────── -->
+<!-- ── SCRIPTS ───────────────────────────────────────── -->
   <script>
-    // ── MOBILE NAVIGATION ──
+        // Smooth scroll for same-page anchor links only
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href');
+        if (id.length > 1) {
+          const target = document.querySelector(id);
+          if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+        }
+      });
+    });
+    // Mobile nav toggle
     const navToggle = document.getElementById('navToggle');
     const navLinks = document.getElementById('navLinks');
-    const servicesDropdownToggle = document.getElementById('servicesDropdownToggle');
-    const servicesDropdownParent = servicesDropdownToggle ? servicesDropdownToggle.closest('.has-dropdown') : null;
-
-    if (navToggle && navLinks) {
-      navToggle.addEventListener('click', () => {
-        const isOpen = navLinks.classList.toggle('open');
-        navToggle.classList.toggle('open');
-        navToggle.setAttribute('aria-expanded', String(isOpen));
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+      if (!isOpen) closeDropdown();
+    });
+    // Close mobile menu when a plain link (not the dropdown toggle) is clicked
+    navLinks.querySelectorAll('a:not(.dropdown-toggle a)').forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (link.closest('.dropdown-toggle')) return;
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
       });
+    });
+    // Services dropdown: click/tap toggle (works for touch + keyboard; hover handles desktop via CSS)
+    const dropdownToggle = document.getElementById('servicesDropdownToggle');
+    const dropdownParent = dropdownToggle ? dropdownToggle.closest('.has-dropdown') : null;
+    function closeDropdown() {
+      if (dropdownParent) {
+        dropdownParent.classList.remove('open');
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+      }
     }
-
-    if (servicesDropdownToggle && servicesDropdownParent) {
-      servicesDropdownToggle.addEventListener('click', (e) => {
-        if (window.innerWidth <= 960) {
+    if (dropdownToggle && dropdownParent) {
+      dropdownToggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 900) {
           e.preventDefault();
-          const isOpen = servicesDropdownParent.classList.toggle('open');
-          servicesDropdownToggle.setAttribute('aria-expanded', String(isOpen));
+          const isOpen = dropdownParent.classList.toggle('open');
+          dropdownToggle.setAttribute('aria-expanded', String(isOpen));
         }
       });
     }
-
-    // Close menu on link click
-    if (navLinks) {
-      navLinks.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => {
-          if (window.innerWidth <= 960) {
-            navLinks.classList.remove('open');
-            if (navToggle) {
-              navToggle.classList.remove('open');
-              navToggle.setAttribute('aria-expanded', 'false');
-            }
-          }
-        });
-      });
-    }
+    // Close dropdown / mobile menu on outside click
+    document.addEventListener('click', (e) => {
+      if (dropdownParent && !dropdownParent.contains(e.target)) closeDropdown();
+      if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && e.target !== navToggle && !navToggle.contains(e.target)) {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    // Close dropdown on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeDropdown();
+    });
+    // Reset everything on resize back to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 900) {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        closeDropdown();
+      }
+    });
 
     // ── INTERACTIVE BMI CALCULATOR LOGIC ──
     (function () {
@@ -3161,6 +3391,7 @@
       });
     })();
   </script>
+  <script src="/assets/js/coach-gallery.js" defer></script>
   <script src="/scripts/lead-form.js" defer></script>
 </body>
 
