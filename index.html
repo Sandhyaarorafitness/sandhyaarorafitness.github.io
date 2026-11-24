@@ -126,6 +126,10 @@
         "name": "Fitness Services",
         "itemListElement": [
           { "@type": "Offer", "url": "https://sandhyaarorafitness.com/services/personal-fitness-trainer/", "itemOffered": { "@type": "Service", "name": "1-on-1 Personal Training", "description": "Fully customised training sessions designed around individual goals, fitness level, and schedule." } },
+          { "@type": "Offer", "url": "https://sandhyaarorafitness.com/services/weight-loss-training/", "itemOffered": { "@type": "Service", "name": "Weight Loss Training", "description": "Personalised fat loss coaching combining strength training, daily movement, and sustainable Indian nutrition." } },
+          { "@type": "Offer", "url": "https://sandhyaarorafitness.com/services/yoga-training/", "price": "750", "priceCurrency": "INR", "itemOffered": { "@type": "Service", "name": "Online Yoga Classes", "description": "20 online yoga sessions covering hatha postures, alignment, pranayama, and relaxation." } },
+          { "@type": "Offer", "url": "https://sandhyaarorafitness.com/services/aerobics-training/", "price": "750", "priceCurrency": "INR", "itemOffered": { "@type": "Service", "name": "Online Aerobics Classes", "description": "20 online aerobics sessions offering low-impact and high-energy rhythmic cardio workouts." } },
+          { "@type": "Offer", "url": "https://sandhyaarorafitness.com/services/meditation-training/", "price": "750", "priceCurrency": "INR", "itemOffered": { "@type": "Service", "name": "Online Meditation Classes", "description": "20 online guided meditation, mindfulness, yoga nidra, and pranayama sessions." } },
           { "@type": "Offer", "url": "https://sandhyaarorafitness.com/services/group-fitness-classes/", "itemOffered": { "@type": "Service", "name": "Group Fitness Classes", "description": "High-energy HIIT, strength, yoga-fusion, and functional training classes with a supportive community." } },
           { "@type": "Offer", "url": "https://sandhyaarorafitness.com/services/online-fitness-coach/", "itemOffered": { "@type": "Service", "name": "Online Coaching Programs", "description": "Structured online fitness programs with workout plans, nutrition guidance, and weekly check-ins." } },
           { "@type": "Offer", "url": "https://sandhyaarorafitness.com/services/nutrition-coaching/", "itemOffered": { "@type": "Service", "name": "Nutrition Coaching", "description": "Sustainable nutrition guidance tailored to Indian food and lifestyle." } },
@@ -2631,7 +2635,9 @@
       top: calc(100% + 14px);
       left: 50%;
       transform: translate(-50%, -8px);
-      min-width: 260px;
+      min-width: 270px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
       background: var(--dark2);
       border: 1px solid rgba(233, 69, 96, 0.22);
       border-radius: 12px;
@@ -2730,6 +2736,7 @@
         pointer-events: auto;
         display: none;
         min-width: 0;
+        max-height: none;
         width: 100%;
         box-shadow: none;
         border: none;
@@ -2794,6 +2801,13 @@
         <ul class="dropdown-menu" id="servicesDropdownMenu">
           <li><a href="/services/personal-fitness-trainer/">1-on-1 Personal Training<small>Fully customised in-person or
                 online coaching</small></a></li>
+          <li><a href="/services/weight-loss-training/">Weight Loss Training<small>Fat loss workouts &amp; Indian diet
+                coaching</small></a></li>
+          <li><a href="/services/yoga-training/">Yoga Training<small>Hatha yoga, pranayama &amp; mobility online</small></a></li>
+          <li><a href="/services/aerobics-training/">Aerobics Training<small>High-energy &amp; low-impact online
+                cardio</small></a></li>
+          <li><a href="/services/meditation-training/">Meditation Training<small>Guided mindfulness, stress relief &amp;
+                sleep</small></a></li>
           <li><a href="/services/online-fitness-coach/">Online Coaching Programs<small>Live 1-on-1 training from
                 anywhere</small></a></li>
           <li><a href="/services/group-fitness-classes/">Group Fitness Classes<small>HIIT, strength & functional
@@ -3590,6 +3604,38 @@
             <p class="service-desc">Smart, sustainable nutrition guidance tailored to Indian food and your lifestyle. No
               crash diets - just food that actually fuels your results.</p>
             <a href="/services/nutrition-coaching/" class="service-link">Explore Nutrition Coaching</a>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">⚖️</div>
+            <p class="service-tag">Sustainable Fat Loss</p>
+            <h3 class="service-title">Weight Loss Training</h3>
+            <p class="service-desc">Structured resistance workouts, daily movement targets, and Indian diet guidance
+              built for steady fat loss without crash restriction.</p>
+            <a href="/services/weight-loss-training/" class="service-link">Explore Weight Loss Training</a>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🧘</div>
+            <p class="service-tag">20 Sessions · ₹750</p>
+            <h3 class="service-title">Online Yoga Classes</h3>
+            <p class="service-desc">Beginner-friendly hatha postures, joint alignment, pranayama breathing, and closing
+              relaxation taught live online from home.</p>
+            <a href="/services/yoga-training/" class="service-link">Explore Yoga Training</a>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">❤️</div>
+            <p class="service-tag">20 Sessions · ₹750</p>
+            <h3 class="service-title">Online Aerobics Classes</h3>
+            <p class="service-desc">Rhythmic low-impact and progressive online cardio workouts that boost stamina,
+              heart health, and daily energy from home.</p>
+            <a href="/services/aerobics-training/" class="service-link">Explore Aerobics Training</a>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">🧠</div>
+            <p class="service-tag">20 Sessions · ₹750</p>
+            <h3 class="service-title">Online Meditation Classes</h3>
+            <p class="service-desc">Guided breath awareness, body scan, yoga nidra, and slow pranayama for calmer stress
+              handling, deeper sleep, and daily focus.</p>
+            <a href="/services/meditation-training/" class="service-link">Explore Meditation Training</a>
           </article>
         </div>
       </div>
@@ -4601,6 +4647,10 @@
         <h4>Services</h4>
         <ul>
           <li><a href="/services/personal-fitness-trainer/">1-on-1 Personal Training</a></li>
+          <li><a href="/services/weight-loss-training/">Weight Loss Training</a></li>
+          <li><a href="/services/yoga-training/">Yoga Training</a></li>
+          <li><a href="/services/aerobics-training/">Aerobics Training</a></li>
+          <li><a href="/services/meditation-training/">Meditation Training</a></li>
           <li><a href="/services/group-fitness-classes/">Group Fitness Classes</a></li>
           <li><a href="/services/online-fitness-coach/">Online Coaching Programs</a></li>
           <li><a href="/services/nutrition-coaching/">Nutrition Coaching</a></li>

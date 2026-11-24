@@ -627,7 +627,7 @@ crossorigin="anonymous"></script>
   li.has-dropdown.open .dropdown-caret { transform: rotate(-135deg); margin-top: 3px; }
   .dropdown-menu {
     list-style: none; position: absolute; top: calc(100% + 14px); left: 50%;
-    transform: translate(-50%, -8px); min-width: 260px;
+    transform: translate(-50%, -8px); min-width: 270px; max-height: calc(100vh - 96px); overflow-y: auto;
     background: var(--dark2); border: 1px solid rgba(233,69,96,0.22);
     border-radius: 12px; padding: 10px; box-shadow: 0 24px 48px -14px rgba(0,0,0,0.55);
     opacity: 0; visibility: hidden; pointer-events: none;
@@ -710,9 +710,13 @@ src="https://www.facebook.com/tr?id=1721719362646005&ev=PageView&noscript=1"
       </button>
       <ul class="dropdown-menu" id="servicesDropdownMenu">
         <li><a href="/services/personal-fitness-trainer/">1-on-1 Personal Training<small>Fully customised in-person or online coaching</small></a></li>
+        <li><a href="/services/weight-loss-training/">Weight Loss Training<small>Fat loss workouts &amp; Indian diet coaching</small></a></li>
+        <li><a href="/services/yoga-training/">Yoga Training<small>Hatha yoga, pranayama &amp; mobility online</small></a></li>
+        <li><a href="/services/aerobics-training/">Aerobics Training<small>High-energy &amp; low-impact online cardio</small></a></li>
+        <li><a href="/services/meditation-training/">Meditation Training<small>Guided mindfulness, stress relief &amp; sleep</small></a></li>
         <li><a href="/services/online-fitness-coach/">Online Coaching Programs<small>Live 1-on-1 training from anywhere</small></a></li>
-        <li><a href="/services/group-fitness-classes/">Group Fitness Classes<small>HIIT, strength & functional training</small></a></li>
-        <li><a href="/services/nutrition-coaching/">Nutrition Coaching<small>Sustainable guidance for Indian food & lifestyle</small></a></li>
+        <li><a href="/services/group-fitness-classes/" aria-current="page">Group Fitness Classes<small>HIIT, strength &amp; functional training</small></a></li>
+        <li><a href="/services/nutrition-coaching/">Nutrition Coaching<small>Sustainable guidance for Indian food &amp; lifestyle</small></a></li>
       </ul>
     </li>
     <li><a href="/pricing/">Pricing</a></li>
@@ -1043,10 +1047,14 @@ src="https://www.facebook.com/tr?id=1721719362646005&ev=PageView&noscript=1"
     <div class="footer-col">
       <h4>Services</h4>
       <ul>
-        <li><a href="personal-training.html">1-on-1 Personal Training</a></li>
-        <li><a href="group-classes.html">Group Fitness Classes</a></li>
-        <li><a href="online-coaching.html">Online Coaching Programs</a></li>
-        <li><a href="nutrition-coaching.html">Nutrition Coaching</a></li>
+        <li><a href="/services/personal-fitness-trainer/">1-on-1 Personal Training</a></li>
+        <li><a href="/services/weight-loss-training/">Weight Loss Training</a></li>
+        <li><a href="/services/yoga-training/">Yoga Training</a></li>
+        <li><a href="/services/aerobics-training/">Aerobics Training</a></li>
+        <li><a href="/services/meditation-training/">Meditation Training</a></li>
+        <li><a href="/services/group-fitness-classes/">Group Fitness Classes</a></li>
+        <li><a href="/services/online-fitness-coach/">Online Coaching Programs</a></li>
+        <li><a href="/services/nutrition-coaching/">Nutrition Coaching</a></li>
       </ul>
     </div>
     <div class="footer-col">

@@ -6,6 +6,10 @@ This page map reflects the public HTML routes currently in the repository and th
 
 - https://sandhyaarorafitness.com/
 - https://sandhyaarorafitness.com/services/personal-fitness-trainer/
+- https://sandhyaarorafitness.com/services/weight-loss-training/
+- https://sandhyaarorafitness.com/services/yoga-training/
+- https://sandhyaarorafitness.com/services/aerobics-training/
+- https://sandhyaarorafitness.com/services/meditation-training/
 - https://sandhyaarorafitness.com/services/group-fitness-classes/
 - https://sandhyaarorafitness.com/services/online-fitness-coach/
 - https://sandhyaarorafitness.com/services/nutrition-coaching/
@@ -32,6 +36,42 @@ This page map reflects the public HTML routes currently in the repository and th
 - Recommended title: Personal Fitness Training in Delhi & Online | Sandhya Arora Fitness
 - H1: Personal fitness training designed around your goals
 - Canonical: https://sandhyaarorafitness.com/services/personal-fitness-trainer/
+- Index: Yes
+
+- URL: https://sandhyaarorafitness.com/services/weight-loss-training/
+- Type: Service landing page
+- Intent: Commercial / conversion
+- Topic: weight loss trainer and nutrition coaching
+- Title: Weight Loss Trainer & Nutrition Coach | Sandhya Arora
+- H1: Weight Loss Trainer & Nutrition Coach for Lasting Fat Loss
+- Canonical: https://sandhyaarorafitness.com/services/weight-loss-training/
+- Index: Yes
+
+- URL: https://sandhyaarorafitness.com/services/yoga-training/
+- Type: Service landing page
+- Intent: Commercial / conversion
+- Topic: online yoga classes and hatha yoga training
+- Title: Yoga Classes for Beginners & Stress Relief | Sandhya Arora
+- H1: Yoga Classes & Yoga Training for Flexibility, Strength & Calm
+- Canonical: https://sandhyaarorafitness.com/services/yoga-training/
+- Index: Yes
+
+- URL: https://sandhyaarorafitness.com/services/aerobics-training/
+- Type: Service landing page
+- Intent: Commercial / conversion
+- Topic: online aerobics classes and cardio training
+- Title: Aerobics Classes & Online Cardio Training | Sandhya Arora
+- H1: Aerobics Classes & Training for Weight Loss, Stamina & Heart Health
+- Canonical: https://sandhyaarorafitness.com/services/aerobics-training/
+- Index: Yes
+
+- URL: https://sandhyaarorafitness.com/services/meditation-training/
+- Type: Service landing page
+- Intent: Commercial / conversion
+- Topic: online meditation classes and breathwork
+- Title: Meditation Classes for Stress & Sleep | Sandhya Arora
+- H1: Meditation Classes & Guided Mindfulness for Stress Relief, Sleep & Focus
+- Canonical: https://sandhyaarorafitness.com/services/meditation-training/
 - Index: Yes
 
 - URL: https://sandhyaarorafitness.com/services/group-fitness-classes/
