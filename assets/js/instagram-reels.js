@@ -27,6 +27,55 @@
     // ── LATEST REELS (Surfaced first) ─────────────────────────────────
     {
       type: 'instagram',
+      id: 'DgJ4awuNsuV',
+      url: 'https://www.instagram.com/reel/DgJ4awuNsuV/?utm_source=ig_web_copy_link&bqrl=NTc4MTIwNjQ2YQ==',
+      categories: ['podcasts'],
+      pills: ['Podcast', 'Interview']
+    },
+    {
+      type: 'instagram',
+      id: 'DgHt9P-BHjf',
+      url: 'https://www.instagram.com/reel/DgHt9P-BHjf/?utm_source=ig_web_copy_link&dmpr=NTc4MTIwNjQ2YQ==',
+      categories: ['podcasts'],
+      pills: ['Podcast', 'Interview']
+    },
+    {
+      type: 'instagram',
+      id: 'DgAcZdHyV8r',
+      url: 'https://www.instagram.com/reel/DgAcZdHyV8r/?utm_source=ig_web_copy_link&evlk=NTc4MTIwNjQ2YQ==',
+      categories: ['podcasts'],
+      pills: ['Podcast', 'Interview']
+    },
+    {
+      type: 'instagram',
+      id: 'DgHFFWxTTrs',
+      url: 'https://www.instagram.com/reel/DgHFFWxTTrs/?utm_source=ig_web_copy_link&avpt=NTc4MTIwNjQ2YQ==',
+      categories: ['nutrition'],
+      pills: ['Nutrition', 'Tips']
+    },
+    {
+      type: 'instagram',
+      id: 'DgFVH2xhn4T',
+      url: 'https://www.instagram.com/reel/DgFVH2xhn4T/?utm_source=ig_web_copy_link&avpt=NTc4MTIwNjQ2YQ==',
+      categories: ['online', 'offline'],
+      pills: ['Personal', 'Online']
+    },
+    {
+      type: 'instagram',
+      id: 'Df__TxKTcLd',
+      url: 'https://www.instagram.com/reel/Df__TxKTcLd/?utm_source=ig_web_copy_link&knvt=NTc4MTIwNjQ2YQ==',
+      categories: ['online', 'offline'],
+      pills: ['Personal', 'Online']
+    },
+    {
+      type: 'instagram',
+      id: 'Df_DJ5lTpvp',
+      url: 'https://www.instagram.com/reel/Df_DJ5lTpvp/?utm_source=ig_web_copy_link&avpt=NTc4MTIwNjQ2YQ==',
+      categories: ['online', 'offline'],
+      pills: ['Personal', 'Online']
+    },
+    {
+      type: 'instagram',
       id: 'Dfwi6ELyzhz',
       url: 'https://www.instagram.com/reel/Dfwi6ELyzhz/?utm_source=ig_web_copy_link&psln=NTc4MTIwNjQ2YQ==',
       categories: ['podcasts'],
@@ -392,6 +441,15 @@
     },
 
     // ── PODCASTS ──────────────────────────────────────────────────────
+    {
+      type: 'preview',
+      id: 'rrwsbaOudi4',
+      url: 'https://youtu.be/rrwsbaOudi4',
+      image: 'https://img.youtube.com/vi/rrwsbaOudi4/hqdefault.jpg',
+      alt: 'Watch Sandhya Arora Podcast - Reverse PCOS Naturally Without Pills',
+      categories: ['podcasts', 'youtube'],
+      pills: ['Podcast', 'PCOS']
+    },
     {
       type: 'preview',
       id: 'Me67V9sGaN8',
